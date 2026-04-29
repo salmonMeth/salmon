@@ -74,11 +74,6 @@ alldif_raw$chr_num = lookup[alldif_raw$chr]
 alldif_raw$chr_num = as.character(alldif_raw$chr_num)
 #we added the "ssa__" format chromosome number to our diff-methy dataset
 
-gene_parts <- list(
-  promoters = promoters(gene, upstream=2000, downstream=200),
-  exons     = exons(gene),
-  introns   = unlist(intronsByTranscript(gene))
-)
 #convert our diff-meth object to GRanges obj
 sitesGr = as(all.diff, "GRanges")
 #rename our ssa genes to NCBI format
@@ -91,12 +86,16 @@ names(trg) = refs
 name_dict =renameSeqlevels(sitesGr, trg)
 
 #creat intron,exon etc mappings
-
+gene=txdbmaker::makeTxDbFromGFF(path_annot_genes)
+#gene=genes(gene)
+gene_gr <- genes(gene)
+exon_gr <- exons(gene)
+intron_gr <- unlist(intronsByTranscript(gene))
 #WE MIGHT WANT TO MAKE SURE THESE UPST-DOWNST VALUES ARE GOOD
 gene_parts <- list(
   promoters = promoters(gene, upstream=2000, downstream=200),
-  exons     = exons(gene),
-  introns   = unlist(intronsByTranscript(gene))
+  exons     = exon_gr,
+  introns   = intron_gr
 )
 
 proms <- gene_parts$promoters
