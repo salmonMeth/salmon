@@ -73,8 +73,7 @@ alldif_raw = getData(alldif_df)
 alldif_raw$chr_num = lookup[alldif_raw$chr]
 alldif_raw$chr_num = as.character(alldif_raw$chr_num)
 #we added the "ssa__" format chromosome number to our diff-methy dataset
-#find the missing code
-gene=txdbmaker::makeTxDbFromGFF(pathAnnot)geneDf = as.data.frame(gene)
+
 gene_parts <- list(
   promoters = promoters(gene, upstream=2000, downstream=200),
   exons     = exons(gene),
@@ -89,7 +88,7 @@ refs = colnames(map_names)
 trg = as.character(1:length(refs))
 names(trg) = refs
 #name_dict is still a 'GRanges' obj
-name_dict =renameSeqlevels(sitesGr, map2)
+name_dict =renameSeqlevels(sitesGr, trg)
 
 #creat intron,exon etc mappings
 
@@ -124,27 +123,29 @@ final_table$is_intergenic <- ifelse(
   1, 0
 )
 
-near_idx <- nearest(name_dict, proms)
-# Extract the Transcript name
-final_table$nearest_transcript <- proms$tx_name[near_idx]
+#get the distance to the nearest promoter
+near_idx = nearest(name_dict, proms)
+final_table$nearest_transcript = proms$tx_name[near_idx]
+final_table$dist_to_tss = distance(name_dict, proms[near_idx])
+#NOTE, we could limit this to upstream TSS?
+#we can get whether the sequence we are looking at is uo or downsteram from the tss
+#get the index of the TSS and whether it is on the + strand or -
+tss = promoters(proms, upstream = 0, downstream = 1)
+#finds the closest TSS(subjectHits) to the sites in our diffmeth results
+near = distanceToNearest(name_dict, tss)
+#stores the ids of the TSS hits we get
+idx = subjectHits(near)
+site_pos= start(name_dict)
+tss_pos = start(tss[idx])
+strand_dir = ifelse(as.character(strand(tss[idx])) == "+", 1, -1)
+signed_dist = (site_pos - tss_pos) * strand_dir
+hist(signed_dist, breaks = 100)
+final_table$is_upstream = signed_dist < 0
+#NOTE, we might want to visualize which are downstream/upstream 
+#AND check their methylation levels
 
-final_table$dist_to_tss <- distance(sitesGr2, proms[near_idx])
 
-#########???????????????????????
-geneDf$seqnames <- as.character(geneDf$seqnames)
+write.csv(final_table, "SalmonAnnot.csv", row.names = FALSE)
 
 
-###
-allDiffFinal <- merge(alldif_raw,
-                      geneDf,
-                      by.x = "chr_num",
-                      by.y = "seqnames")
-#NOW this version will map to way too many genes, so if we have chromose 28 for example,
-#it will map to all genes on that so we have to restrict that
-annot <- allDiffFinal[allDiffFinal$start.x >= allDiffFinal$start.y &
-                        allDiffFinal$start.x <= allDiffFinal$end.y, ]
-# we do this
-#but then this only gets the parts that are exactly in the gene so our
-#dataset of 42 becomes a dataset of 16
-# if we want to get the promoters etc we have to do sth else
 
