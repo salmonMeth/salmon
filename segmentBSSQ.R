@@ -70,3 +70,10 @@ bs <- BSseq(
 )
 pData(bs)$group <- factor(treat)
 res <- dmrseq(bs, testCovariate = "group")
+
+##################
+
+#we will want to parallelize the chromosomes 
+#to do that we will want to have the list of all chromosome names
+writeLines(sort(unique(chr)), "chrom_list.txt")
+#we will use the path of this chrom_list in the shell script so we need to modify that accordingly
