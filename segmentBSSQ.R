@@ -55,3 +55,18 @@ pos <- pos[keep]
 #bs <- BSmooth(bs)
 treat <- db@treatment
 names(treat) <- db@sample.ids
+
+ord <- order(chr, pos)
+M <- M[ord, ]
+Cov <- Cov[ord, ]
+chr <- chr[ord]
+pos <- pos[ord]
+bs <- BSseq(
+  chr = chr,
+  pos = pos,
+  M = M,
+  Cov = Cov,
+  sampleNames = colnames(M)
+)
+pData(bs)$group <- factor(treat)
+res <- dmrseq(bs, testCovariate = "group")
