@@ -4,7 +4,8 @@
 library(methylKit)
 library(dmrseq)
 library(bsseq)
-
+#
+source("~/rSalmon/diffMeth.R")
 ####
 df <- getData(db)
 sample_ids <- db@sample.ids

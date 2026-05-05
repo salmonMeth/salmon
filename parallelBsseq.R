@@ -1,3 +1,8 @@
+###
+source("~/rSalmon/segmentBSSQ.R")
+
+
+
 args <- commandArgs(trailingOnly = TRUE)
 target_chr <- args[1]
 
