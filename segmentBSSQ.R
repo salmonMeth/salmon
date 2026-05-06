@@ -38,7 +38,7 @@ keep <- rowSums(Cov >= 5, na.rm = TRUE) >= 2
 #or we can allow max 20% NAs
 keep_na <- rowSums(is.na(Cov)) <= (0.2 * ncol(Cov))
 
-keep <- keep_cov & keep_na
+keep <- keep & keep_na
 #we can also add variance filtering to get rid of uninformative rows
 #var_keep <- apply(M_filt, 1, var, na.rm = TRUE) > 0
 #we should try these and pick one 
