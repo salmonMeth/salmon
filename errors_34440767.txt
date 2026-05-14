@@ -77,7 +77,25 @@ treatment (group: 1) - control (group: 0)
 checking wether tabix file already exists:
 /scratch/project_2010912/ezel/methylDiff_7x_40ind.txt.bgz
 tabix file already exists, renaming output file:
-/scratch/project_2010912/ezel/methylDiff_7x_40ind_1.txt.bgz
+/scratch/project_2010912/ezel/methylDiff_7x_40ind_3.txt.bgz
 HINT: consider using 'suffix' argument to write different function calls to different files
 continuing now ...
 
+compressing the file with bgzip...
+making tabix index...
+flatfile located at: /scratch/project_2010912/ezel/methylDiff_7x_40ind_3.txt.bgz
+There were 50 or more warnings (use warnings() to see the first 50)
+
+checking wether tabix file already exists:
+/scratch/project_2010912/ezel/methylDiff_7x_40ind_3_all.txt.bgz
+tabix file is new.
+continuing now ...
+
+compressing the file with bgzip...
+making tabix index...
+Error in headTabix(x@dbpath, nrow = max(i), return.type = "data.frame") : 
+  no slot of name "cell.ids" for this object of class "methylDiffDB"
+Calls: select -> select -> headTabix
+Execution halted
+srun: error: r15c32: task 0: Exited with exit code 1
+srun: Terminating StepId=34440767.0

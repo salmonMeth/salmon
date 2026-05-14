@@ -70,30 +70,30 @@ The following objects are masked from ‘package:methylKit’:
 
 Warning message:
 replacing previous import ‘Biostrings::pattern’ by ‘grid::pattern’ when loading ‘genomation’ 
+message 1
+message 2
 two groups detected:
  will calculate methylation difference as the difference of
 treatment (group: 1) - control (group: 0)
 
 checking wether tabix file already exists:
 /scratch/project_2010912/ezel/methylDiff_7x_40ind.txt.bgz
-tabix file is new.
+tabix file already exists, renaming output file:
+/scratch/project_2010912/ezel/methylDiff_7x_40ind_2.txt.bgz
+HINT: consider using 'suffix' argument to write different function calls to different files
 continuing now ...
 
 compressing the file with bgzip...
 making tabix index...
-flatfile located at: /scratch/project_2010912/ezel/methylDiff_7x_40ind.txt.bgz
+flatfile located at: /scratch/project_2010912/ezel/methylDiff_7x_40ind_2.txt.bgz
 There were 50 or more warnings (use warnings() to see the first 50)
+message 3
 
 checking wether tabix file already exists:
-/scratch/project_2010912/ezel/methylDiff_7x_40ind_all.txt.bgz
+/scratch/project_2010912/ezel/methylDiff_7x_40ind_2_all.txt.bgz
 tabix file is new.
 continuing now ...
 
 compressing the file with bgzip...
 making tabix index...
-Error in as.data.frame.default(x[[i]], optional = TRUE) : 
-  cannot coerce class ‘structure("methylDiffDB", package = "methylKit")’ to a data.frame
-Calls: write.csv ... data.frame -> as.data.frame -> as.data.frame.default
-Execution halted
-srun: error: r13c05: task 0: Exited with exit code 1
-srun: Terminating StepId=34439383.0
+message 4
