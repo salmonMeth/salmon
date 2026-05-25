@@ -1,0 +1,2 @@
+"chr","start","end","strand","pvalue","qvalue","meth.diff","in_cpg","cpg_id","chr_num","annotation"
+"NC_059442.1",42413171,42413171,"*",6.98792265938451e-20,1.65860898953284e-17,-25.5499068468414,FALSE,NA,59442,
