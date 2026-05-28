@@ -7,28 +7,10 @@ library(GenomicRanges)
 library(readxl)
 
 #paths
-#path = "C:/Users/ezele/Downloads/Salmo_salar.Ssal_v3.1.dna_sm.toplevel.fa.gz"
-#path ="/scratch/project_2010912/ezel/Salmo_salar.Ssal_v3.1.dna_sm.toplevel.fa.gz"
-#path2 ="C:/Users/ezele/Downloads/Salmo_salar.Ssal_v3.1.dna_sm.toplevel.fa"
-#path2 ="/scratch/project_2010912/ezel/Salmo_salar.Ssal_v3.1.dna_sm.toplevel.fa"
-
-#pathDiff ="C:/Users/ezele/Downloads/diff_meth_results_T1_vs_T2_Full.csv"
 pathDiff="/scratch/project_2010912/ezel/diff_meth_results_T1_vs_T2_Full.csv"
-
 pathIslands="/scratch/project_2010912/ezel/islands.bed"
 gff_url <- "https://salmobase.org/datafiles/genomes/AtlanticSalmon/Ssal_v3.1/annotations/Ensembl/Salmo_salar.Ssal_v3.1.106_filtered.gff.gz"
-homeol_path <- "C:/Users/ezele/Downloads/homeologs.xlsx"
-
-
-
-#top_level_url <- "https://ftp.ensembl.org/pub/release-106/fasta/salmo_salar/dna/Salmo_salar.Ssal_v3.1.dna_sm.toplevel.fa.gz"
 # Download the top_level
-#download.file(url = top_level_url, destfile = path, mode = "wb")
-#R.utils::gunzip(path,remove = FALSE)
-
-#R.utils::gunzip(filename = path, destname = path2, remove = FALSE, overwrite = TRUE)
-#this genome is not needed I am pretty sure
-#genome <- readDNAStringSet(path2)
 
 download.file(gff_url, destfile = "salmon.gff.gz", mode = "wb")
 
@@ -60,8 +42,8 @@ dat$chr_num <- dat$chr
 
 ####
 #save csv
-pathOutput="C:/Users/ezele/Downloads/diff_meth_with_cpg_islands.csv"
-write.csv(dat, pathOutput, row.names = FALSE)
+#pathOutput="C:/Users/ezele/Downloads/diff_meth_with_cpg_islands.csv"
+#write.csv(dat, pathOutput, row.names = FALSE)
 # we have no diff meth nucleotides in the 22nd chromosome
 
 ##we want to annotate the other chromosome segments first
