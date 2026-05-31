@@ -74,8 +74,27 @@ saveRDS(bs, file = "bsseq_object.rds")
 res <- dmrseq(bs, testCovariate = "group")
 
 ##################
+#plot
+# Compute group-wise mean methylation per sample
+t1_means <- colMeans(meth[, group == 0], na.rm = TRUE)
+t2_means <- colMeans(meth[, group == 1], na.rm = TRUE)
 
-#we will want to parallelize the chromosomes 
-#to do that we will want to have the list of all chromosome names
-writeLines(sort(unique(chr)), "chrom_list.txt")
-#we will use the path of this chrom_list in the shell script so we need to modify that accordingly
+values <- list(
+  "T1" = t1_means,
+  "T2" = t2_means
+)
+
+# Boxplot
+boxplot(values,
+        col = c("pink", "skyblue"),
+        main = "Average Methylation Levels: T1 vs T2",
+        ylab = "Mean methylation (per sample)",
+        xlab = "Time point",
+        border = "grey40")
+
+stripchart(values,
+           vertical = TRUE,
+           method = "jitter",
+           pch = 16,
+           col = rgb(0, 0, 0, 0.4),
+           add = TRUE)
