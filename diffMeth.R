@@ -32,6 +32,7 @@ cols <- c(
   "#E6E6FA"  # Lavender (Lightest/End)
 )#
 db = readMethylDB(path)
+saveRDS(db, file = "db.rds")
 n=db@num.records
 #this is just a random sampling we do to work on a smaller subset of the data first
 #inds = sample(1:n,1e5)

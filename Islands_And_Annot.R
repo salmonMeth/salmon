@@ -63,5 +63,5 @@ dat$annotation[as.integer(names(annots))] <-sapply(annots, function(x) paste(uni
 dat$annotation[is.na(dat$annotation)] <- "intergenic"
 
 
-pathOutputAnnot="/scratch/project_2010912/ezel/diff_meth_Full_Annot.csv"
-write.csv(dat, pathOutputAnnot, row.names = FALSE)
+path_output_annot="/scratch/project_2010912/ezel/diff_meth_Full_Annot.csv"
+write.csv(dat, path_output_annot, row.names = FALSE)
