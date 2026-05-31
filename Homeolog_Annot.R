@@ -1,6 +1,8 @@
 #paths
 path_output_annot="/scratch/project_2010912/ezel/diff_meth_Full_Annot.csv"
 
+#we get this from the supplement of the paper
+#https://pmc.ncbi.nlm.nih.gov/articles/PMC8127823/
 homeol_path <- "/scratch/project_2010912/ezel/homeologs.xlsx"
 #now we get the homeologs and match them
 
