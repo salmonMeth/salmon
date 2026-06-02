@@ -139,32 +139,32 @@ saveRDS(
 T1_mean <- rowMeans(tile_mat_5K[, T1_idx], na.rm=TRUE)
 T2_mean <- rowMeans(tile_mat_5K[, T2_idx], na.rm=TRUE)
 #######################
+#SOME INSPECTION OF THE TILES
 
-#rest might be redundant
-#TBD
-db <- readRDS("db.rds")
-df <- getData(db)
-sample_ids <- db@sample.ids
+#we can check the withing sample varaince etc of our tiles
+#then we could possibly filter out ones with very low variance etc
+obj <- readRDS("methylation_tiles_all.rds")
+tiled_mat <- obj$mat_20K
+# or obj$mat_10K
+# or obj$mat_5K
+tile_var <- apply(
+  tiled_mat,
+  1,
+  var,
+  na.rm = TRUE
+)
+n_high_var <- sum(tile_var > 0.05, na.rm = TRUE)
+n_high_var
+n_low_var <- sum(tile_var < 0.01, na.rm = TRUE)
+n_low_var
+prop_high_var <- mean(tile_var > 0.05, na.rm = TRUE)
+prop_high_var
+prop_low_var <- mean(tile_var < .01, na.rm = TRUE)
+prop_low_var
 
-cs_cols <- grep("^numCs", colnames(df))
-ts_cols <- grep("^numTs", colnames(df))
-cov_cols <- grep("^coverage", colnames(df))
+#find the coordinates of the high variance tiles
+high_var_idx <- which(tile_var > 0.05)
 
-gr_list <- lapply(seq_along(sample_ids), function(i) {
-  numCs <- df[[cs_cols[i]]]
-  numTs <- df[[ts_cols[i]]]
-  cov   <- df[[cov_cols[i]]]
-  denom <- numCs + numTs
-  ok <- !is.na(denom) & denom > 0
-  meth <- rep(NA_real_, length(denom))
-  meth[ok] <- numCs[ok] / denom[ok]
-  GRanges(
-    seqnames = df$chr,
-    ranges   = IRanges(df$start, df$end),
-    strand   = df$strand,
-    methylation = meth,
-    coverage = cov
-  )
-})
-#we can make it 500 as well
-tile_size <- 1000
+high_var_tiles <- obj$coord_20K[high_var_idx, ]
+
+head(high_var_tiles)

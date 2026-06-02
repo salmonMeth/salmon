@@ -1,3 +1,5 @@
+library(readxl)
+
 #paths
 path_output_annot="/scratch/project_2010912/ezel/diff_meth_Full_Annot.csv"
 
