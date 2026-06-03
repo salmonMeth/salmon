@@ -10,8 +10,9 @@ path_genome = "/scratch/project_2010912/ezel/Salmo_salar.Ssal_v3.1.dna_sm.toplev
 #
 fai <- scanFaIndex(path_genome)
 seqlens <- seqlengths(fai)
-#
-db <- readRDS("db.rds")
+#what was this db.rds?
+#bs <- BSseq(chr = chr,pos = pos,M = M,Cov = Cov,sampleNames = colnames(M))
+db <- readRDS("data_files/db.rds")
 df <- getData(db)
 sample_ids <- db@sample.ids
 ##
@@ -27,26 +28,25 @@ names(chr_seqlens) <- chr_map[names(chr_seqlens)]
 build_tile_matrix <- function(df,
                               sample_ids,
                               chr_seqlens,
-                              tile_size = 5000,
-                              verbose = TRUE) {
+                              tile_size = 5000) {
 
-  # 1. Build tiles
+  # get the tiles
   tiles <- tileGenome(
     seqlengths = chr_seqlens,
     tilewidth = tile_size,
     cut.last.tile.in.chrom = TRUE
   )
   
-  # 2. CpG GRanges
+  # gr objet
   cpg_gr <- GRanges(
     seqnames = df$chr,
     ranges = IRanges(df$start, df$end)
   )
-  # 3. Map CpGs to tiles (done once)
+  # cpg to tile
   hits <- findOverlaps(cpg_gr, tiles)
   qh <- queryHits(hits)
   sh <- subjectHits(hits)
-  # 4. Output matrix
+  # Output matrix
   n_tiles <- length(tiles)
   n_samples <- length(sample_ids)
   
@@ -57,7 +57,6 @@ build_tile_matrix <- function(df,
     dimnames = list(NULL, sample_ids)
   )
   
-  # 5. Loop over samples
   for (i in seq_along(sample_ids)) {
     
     numCs <- df[[paste0("numCs", i)]]
@@ -83,13 +82,10 @@ build_tile_matrix <- function(df,
       as.integer(names(meth_tile)),
       i
     ] <- meth_tile
-    
-    if (verbose && i %% 10 == 0) {
-      cat("Finished sample", i, "of", n_samples, "\n")
-    }
+
   }
   
-  # 6. Tile metadata
+  #metadata
   tile_info <- data.frame(
     chr = as.character(seqnames(tiles)),
     start = start(tiles),
@@ -133,7 +129,7 @@ saveRDS(
     coord_20K=tile_20K_coord,
     sample_ids = sample_ids
   ),
-  file = "methylation_tiles_all.rds",
+  file = "data_files/methylation_tiles_all.rds",
   compress = "xz"
 )
 T1_mean <- rowMeans(tile_mat_5K[, T1_idx], na.rm=TRUE)
@@ -143,7 +139,7 @@ T2_mean <- rowMeans(tile_mat_5K[, T2_idx], na.rm=TRUE)
 
 #we can check the withing sample varaince etc of our tiles
 #then we could possibly filter out ones with very low variance etc
-obj <- readRDS("methylation_tiles_all.rds")
+obj <- readRDS("data_files/methylation_tiles_all.rds")
 tiled_mat <- obj$mat_20K
 # or obj$mat_10K
 # or obj$mat_5K

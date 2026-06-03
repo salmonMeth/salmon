@@ -11,10 +11,8 @@ path= "/scratch/project_2010912/ezel/methylBase_7x_40ind.txt.bgz"
 #path_diff_meth="/scratch/project_2010912/ezel/diff_meth_results_T1_vs_T2.csv"
 path_diff_meth="/scratch/project_2010912/ezel/diff_meth_results_T1_vs_T2_Full.csv"
 
-#to get the annotations and save them
-trg_dir = "/scratch/project_2010912/ezel/"
-#for raw data with chromosome numbers
-path_annot = paste0(trg_dir, "salmon_assembly_report.txt")
+
+path_annot = "/scratch/project_2010912/ezel/salmon_assembly_report.txt"
 #for the gene info
 path_annot_genes ="/scratch/project_2010912/ezel/Salmo_salar.Ssal_v3.1.106_filtered.gff.gz"
 #
@@ -32,7 +30,7 @@ cols <- c(
   "#E6E6FA"  # Lavender (Lightest/End)
 )#
 db = readMethylDB(path)
-saveRDS(db, file = "db.rds")
+saveRDS(db, file = "data_files/db.rds")
 n=db@num.records
 #this is just a random sampling we do to work on a smaller subset of the data first
 #inds = sample(1:n,1e5)

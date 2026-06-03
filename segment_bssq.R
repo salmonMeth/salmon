@@ -70,7 +70,7 @@ bs <- BSseq(
   sampleNames = colnames(M)
 )
 pData(bs)$group <- factor(treat)
-saveRDS(bs, file = "bsseq_object.rds")
+saveRDS(bs, file = "data_files/bsseq_object.rds")
 res <- dmrseq(bs, testCovariate = "group")
 
 ##################
