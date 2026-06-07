@@ -164,3 +164,68 @@ high_var_idx <- which(tile_var > 0.05)
 high_var_tiles <- obj$coord_20K[high_var_idx, ]
 
 head(high_var_tiles)
+
+
+# filtering the tiles according to NA %
+# we want to get rid off fully NA rows, 
+#but we can also make sure there is a certain not-NA percentage
+#max_na_prop is the maximum NA proportion we will allow
+filter_tiles <- function(obj,
+                         tile_size = c(5, 10, 20),
+                         min_samples = 1,
+                         max_na_prop = NULL) {
+  
+  tile_size <- match.arg(as.character(tile_size),
+                         choices = c("5", "10", "20"))
+  if (tile_size == "5") {
+    mat <- obj$mat_5K
+    coord <- obj$coord_5K
+  } else if (tile_size == "10") {
+    mat <- obj$mat_10K
+    coord <- obj$coord_10K
+  } else {
+    mat <- obj$mat_20K
+    coord <- obj$coord_20K
+  }
+  
+  # potential filters 
+  #1) we can make sure every row has at least some number of non-NAs
+  #2) we can make sure every row has some proportion of non-NAs
+  #filter 1
+  #keep <- (rowSums(!is.na(mat))) >= min_samples
+  
+  #filter 2
+  if (!is.null(max_na_prop)) {
+    na_frac <- rowMeans(is.na(mat))
+    keep <- (na_frac <= max_na_prop)
+  }
+  
+  mat_filt <- mat[keep, , drop = FALSE]
+  coord_filt <- coord[keep, , drop = FALSE]
+  
+  return(list(
+    matrix = mat_filt,
+    coordinates = coord_filt,
+    keep = keep
+  ))
+}
+
+#
+filtered_10_m=(filter_tiles(obj,10,max_na_prop=.9))$matrix
+filtered_10_c=(filter_tiles(obj,10,max_na_prop=.9))$coordinates
+
+filtered_20_m=(filter_tiles(obj,20,max_na_prop=.9))$matrix
+filtered_20_c=(filter_tiles(obj,20,max_na_prop=.9))$coordinates
+
+#save
+
+saveRDS(
+  list(
+    filtered_10_m = filtered_10_m,
+    filtered_10_c = filtered_10_c,
+    filtered_20_m = filtered_20_m,
+    filtered_20_c = filtered_20_c
+  ),
+  file = "data_files/filtered_methylation_tiles.rds",
+  compress = "xz"
+)
