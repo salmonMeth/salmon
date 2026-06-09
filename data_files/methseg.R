@@ -31,7 +31,7 @@ meth_mat <- M / Cov
 sum(is.na(meth_mat))/(dim(meth_mat)[1]*dim(meth_mat)[2])
 #6% NA
 
-consensus <- rowMeans(meth_mat, na.rm = TRUE)
+#consensus <- rowMeans(meth_mat, na.rm = TRUE)
 consensus_median <- apply(meth_mat, 1, median, na.rm = TRUE)
 
 keep <- !is.na(consensus_median)
@@ -93,22 +93,24 @@ write.table(
   col.names = FALSE
 )
 ###now we want to do this over all chromosomes as a loop
-#tiny more basic loop that wurks
+#####LOOP
 chroms <- seqlevels(gr)
 
 for (i in seq_along(chroms)) {
-  
   chr <- chroms[i]
-  
   message("Processing: ", chr)
-  
   gr_chr <- gr[seqnames(gr) == chr]
-  
-  gr_chr <- dropSeqlevels(
+    gr_chr <- dropSeqlevels(
     gr_chr,
     setdiff(seqlevels(gr_chr), chr),
     pruning.mode = "coarse"
   )
+  out_dir <- "segmentation_output/diagnostics"
+  dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+  #we want to capture the diagnostic plots as well
+  
+  png(paste0("segmentation_output/diagnostics/", chr, "_diagnostic.png"),
+      width = 1200, height = 800)
   
   seg_chr <- methSeg(
     gr_chr,
@@ -117,6 +119,7 @@ for (i in seq_along(chroms)) {
     maxInt = 100
   )
   
+  dev.off()
   
   #bed file creation parts
   out_dir <- "segmentation_output/beds"
