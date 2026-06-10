@@ -5,7 +5,17 @@
 #and we add that naming convention to our DMR db 
 
 
+#libraries
+library(GenomicFeatures)
+library(methylKit)
+library(genomation)
+library(GenomeInfoDb)
+###
 source("~/rSalmon/diffMeth.R")
+##paths
+path_annot = "/scratch/project_2010912/ezel/salmon_assembly_report.txt"
+#for the gene info
+path_annot_genes ="/scratch/project_2010912/ezel/Salmo_salar.Ssal_v3.1.106_filtered.gff.gz"
 
 #download the annot file
 download.file("https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/905/237/065/GCF_905237065.1_Ssal_v3.1/GCF_905237065.1_Ssal_v3.1_assembly_report.txt",
@@ -71,7 +81,7 @@ e_hits <- findOverlaps(name_dict, exs)
 i_hits <- findOverlaps(name_dict, ints)
 
 ##
-# convert 42 GRanges  into a standard table
+# convert GRanges  into a standard table
 final_table <- as.data.frame(name_dict)
 # initialize 
 final_table$is_promoter <- 0
