@@ -1,0 +1,48 @@
+---
+title: "Column Name Explanations"
+output: html_document
+---
+
+## Segment Group Summary:
+
+- **seg.group**: Identifier of the segment group within a chromosome  
+- **chromosome**: Chromosome name or identifier  
+- **n_segments**: Number of segments in the segment group  
+- **total_bp**: Total base pairs covered by all segments in the group  
+- **mean_length**: Mean segment length within the group  
+- **median_length**: Median segment length within the group  
+- **sd_length**: Standard deviation of segment lengths  
+- **min_length**: Minimum segment length  
+- **q25_length**: 25th percentile of segment lengths  
+- **q75_length**: 75th percentile of segment lengths  
+- **max_length**: Maximum segment length  
+- **mean_meth**: Mean methylation across segments in the group  
+- **median_meth**: Median methylation across segments in the group  
+- **sd_meth**: Standard deviation of methylation values  
+- **min_meth**: Minimum methylation value  
+- **q25_meth**: 25th percentile of methylation values  
+- **q75_meth**: 75th percentile of methylation values  
+- **max_meth**: Maximum methylation value  
+- **cv_meth**: Coefficient of variation of methylation (sd_meth / mean_meth)  
+- **largest_segment**: Largest segment length in the group  
+- **smallest_segment**: Smallest segment length in the group  
+- **prop_genome**: Proportion of genome covered (total_bp / genome_size)
+
+---
+
+## Chromosome Summary: 
+
+- **chromosome**: Chromosome identifier  
+- **n_segment_groups**: Number of segment groups on the chromosome  
+- **n_segments**: Total number of segments on the chromosome  
+- **total_bp**: Total base pair coverage across all segments  
+- **mean_segment_length**: Mean segment length on the chromosome  
+- **median_segment_length**: Median segment length on the chromosome  
+- **sd_segment_length**: Standard deviation of segment lengths  
+- **mean_methylation**: Mean methylation across all segments  
+- **median_methylation**: Median methylation across all segments  
+
+---
+
+- Methylation stats are calculated using the segment-level mean methylation values.
+
