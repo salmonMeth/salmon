@@ -4,6 +4,7 @@
 
 #libs
 library(GenomicRanges)
+library(dplyr)
 
 
 #all this from segment_bssq.R
@@ -160,3 +161,133 @@ for (i in seq_along(chroms)) {
   )
 }
 #
+#these bed files dont have column names to keeo it compatible with the
+#IGV browser but we can add them later if we want
+
+add_col_names= function(bed_file) {
+  df <- read.table(bed_file, sep = "\t", header = FALSE)
+  colnames(df) <- c(
+    "chr",
+    "start",
+    "end",
+    "segment_group", #tells us which segment group this segment belongs to
+    "segment_mean", #tells us the mean methylartion value of the defined segment
+    "strand",
+    "thickStart",
+    "thickEnd",
+    "rgb"
+  )
+  return(df)
+}
+###########################################################
+######getting the stats from the bed files
+
+bed_dir <- "segmentation_output/beds"
+
+bed_files <- list.files(
+  bed_dir,
+  pattern = "_segments\\.bed$",
+  full.names = TRUE
+)
+
+chr_summary <- list()
+group_summary <- list()
+
+for (f in bed_files) {
+  
+  chr_name <- sub("_segments\\.bed$", "", basename(f))
+  
+  df <- read.table(
+    f,
+    sep = "\t",
+    header = FALSE
+  )
+  
+  colnames(df) <- c(
+    "chr",
+    "start",
+    "end",
+    "seg.group",
+    "seg.mean",
+    "strand",
+    "thickStart",
+    "thickEnd",
+    "rgb"
+  )
+  
+  df$width <- df$end - df$start
+  
+  chr_summary[[chr_name]] <- data.frame(
+    chromosome = chr_name,
+    n_segment_groups = length(unique(df$seg.group)),
+    n_segments = nrow(df),
+    total_bp = sum(df$width),
+    mean_segment_length = mean(df$width),
+    median_segment_length = median(df$width),
+    sd_segment_length = sd(df$width),
+    mean_methylation = mean(df$seg.mean),
+    median_methylation = median(df$seg.mean)
+  )
+  
+  group_summary[[chr_name]] <- df %>%
+    group_by(seg.group) %>%
+    summarise(
+      chromosome = chr_name,
+      
+      n_segments = n(),
+      total_bp = sum(width),
+      
+      mean_length = mean(width),
+      median_length = median(width),
+      sd_length = sd(width),
+      
+      min_length = min(width),
+      q25_length = quantile(width, 0.25),
+      q75_length = quantile(width, 0.75),
+      max_length = max(width),
+      
+      mean_meth = mean(seg.mean),
+      median_meth = median(seg.mean),
+      sd_meth = sd(seg.mean),
+      
+      min_meth = min(seg.mean),
+      q25_meth = quantile(seg.mean, 0.25),
+      q75_meth = quantile(seg.mean, 0.75),
+      max_meth = max(seg.mean),
+      cv_meth = sd(seg.mean) / mean(seg.mean),
+      
+      largest_segment = max(width),
+      smallest_segment = min(width),
+      
+      .groups = "drop"
+    ) %>%
+    mutate(
+      prop_genome = total_bp / sum(total_bp),
+    )
+}
+
+chr_summary <- bind_rows(chr_summary)
+group_summary <- bind_rows(group_summary)
+
+chr_summary <- chr_summary %>%
+  mutate(across(where(is.numeric), ~ round(.x, 4)))
+
+group_summary <- group_summary %>%
+  mutate(across(where(is.numeric), ~ round(.x, 4)))
+
+
+dir.create("segmentation_output/summaries",
+           recursive = TRUE,
+           showWarnings = FALSE)
+
+write.csv(
+  chr_summary,
+  "segmentation_output/summaries/chromosome_summary.csv",
+  row.names = FALSE
+)
+
+write.csv(
+  group_summary,
+  "segmentation_output/summaries/segment_group_summary.csv",
+  row.names = FALSE
+)
