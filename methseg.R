@@ -5,6 +5,7 @@
 #libs
 library(GenomicRanges)
 library(dplyr)
+library(GenomeInfoDb)
 
 
 #all this from segment_bssq.R

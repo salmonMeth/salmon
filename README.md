@@ -9,3 +9,4 @@ So, the latest order of documents:
 7. smooth_plot.R : takes the tiles and applies two different kinds of smoothing, loess and averaging and also contains some plots to compare the results.
 ##This no longer uses the tiled matrices but goes back to using the methylation&coverage matrices obtained from "db.rds", can be found in segment_bssq.R
 8. methseg.R : extracts the methylation and coverage matrices and loops over all the chromosomes to find segments using the methSeg function, and saves the results as bed files that can be viewed in IGV.
+9. methseg_per_sample.R : creates separate segmentations for each sample, and extracts some stats.
