@@ -6,7 +6,7 @@
 library(GenomicRanges)
 library(dplyr)
 library(GenomeInfoDb)
-
+library(methylKit)
 
 #all this from segment_bssq.R
 db=readRDS("db.rds")
@@ -27,7 +27,8 @@ M <- as.matrix(df[, grep("^numCs_", colnames(df))])
 Cov <- as.matrix(df[, grep("^coverage_", colnames(df))])
 colnames(M) <- sample_ids
 colnames(Cov) <- sample_ids
-
+#to do coverage weighted consensus
+#consensus_meth <- rowSums(M, na.rm = TRUE) / rowSums(Cov, na.rm = TRUE)
 meth_mat <- M / Cov
 
 sum(is.na(meth_mat))/(dim(meth_mat)[1]*dim(meth_mat)[2])
