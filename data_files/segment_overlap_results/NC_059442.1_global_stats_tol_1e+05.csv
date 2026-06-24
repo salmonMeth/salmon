@@ -1,0 +1,2 @@
+T1_segments,T2_segments,Weighted_segments,average_segments,min_segments,max_segments,ABC_matches,ABC_ratio_to_average_segments,ABC_ratio_to_min_segments,ABC_ratio_to_max_segments
+53,67,55,58.3333333333333,53,67,40,0.6857,0.7547,0.597
