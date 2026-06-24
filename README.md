@@ -8,7 +8,7 @@ So, the latest order of documents:
 2. islands_and_annot.R : takes that diff_meth_results_T1_vs_T2_Full.csv and annotates them and checks if any of the DMCs are in CpG islands.
 3. homeolog_annot.R: uses the result from step 2 and adds information about the homeologs, using the homeologs.xlsx file found in the supplement of the homeolog/duplication paper.
 
-##Differentially methylated regions
+## Differentially methylated regions
 
 4. segment_bssq.R: used this to generate the bsseq object "bsseq_object.rds" and the plot for then mean methylation level
 5. run_dmrseq.R: uses the bsseq object and parallelizes the segmentation.
@@ -16,6 +16,7 @@ So, the latest order of documents:
 7. smooth_plot.R : takes the tiles and applies two different kinds of smoothing, loess and averaging and also contains some plots to compare the results.
 
 ## Segmentation 
+
 This no longer uses the tiled matrices but goes back to using the methylation&coverage matrices obtained from "db.rds", can be found in segment_bssq.R
 ---
 NOTE: all the results obtained here and downstream analysis is done using the default parameters
@@ -36,19 +37,19 @@ except the ones specified as different params in the data files.
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 
-#Data files/plots
+# Data files/plots
 
-##Segmentation using consensus profiles:
+## Segmentation using consensus profiles:
 
 *** All this except the ones specified otherwise are using the default parameters.
 
-###Consensus using the median:
+### Consensus using the median:
 
 a) data_files/segmentation_output/beds : contains the segmented chromosomes obtained using the median methylation value over all the samples as consensus.
 b) data_files/segmentation_output/diagnostics : contains the diagnostic plots for those.
 c) data_files/segmentation_output/summaries: contains the summary stats of the segments, per chromosome.
 
-###Consensus using coverage weighted mean:
+### Consensus using coverage weighted mean:
 
 a) data_files/segmentation_output_cov_weighted_consensus/beds: contains the segmented chromosomes obtained using the coverage weighted mean methylation value over all the samples as consensus.
 b) data_files/segmentation_output_cov_weighted_consensus/diagnostics: contains the diagnostic plots for those.
@@ -70,7 +71,12 @@ a) data_files/segment_annotations: contains one file per chromosome.
 Each file annotates the segments found based on the median consensus profile, adding new columns to the beds present in "data_files/segmentation_output/beds"
 Mainly looks at the number of genes, promoters found in each segment as well as their lengths and the number of each per base pairs(can be greater than 1 due to overlap)
 
-## Visualization
+## Bed files of the segments suitable for UCSC browser
+
+a) /data_files/segmentation_output/beds_fixed: contains the beds for the segmentation creates separately using the T1 coverage weighted consensus, T2 coverage weighted consensus, and the one
+created from all the samples, the "fixed" refers to the chromosome number which is in these files in NCIB format. The purpose of these is to be used in the UCSC browser.
+
+# Visualization
 
 a) data_files/segmentation_output/T1_vs_T2_plots: contains various plots to compare the segmentations of individual samples, color coded for T1 vs T2 samples
 
