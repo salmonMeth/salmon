@@ -31,8 +31,10 @@ except the ones specified as different params in the data files.
 10. annot_segments.R : we annotated the segments we got using the consensus profile. Also contains the code used to get the stats and create the plots for the group_level_stats_by_K (K being the number of segment groups)
 -The results of this are in data_files/segment_annotations.
 - This uses the median consensus profile
-
-
+---
+11. methSeg_T1_vs_T2.R : creates the segments, diagnostic plots, and summary stats for T1 and T2 samples separately, using the consensus profile based on the coverage weighted mean of the subsetted samples
+12. segment_overlap.R : compares the segments obtained from T1, T2 and cumulative consensus profiles
+13. segment_disagree.R : finds the chunks where there is no 3way agreement among all the sections, merges the overlapping/adjacent ones and then annotates them
 
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
@@ -46,13 +48,17 @@ except the ones specified as different params in the data files.
 ### Consensus using the median:
 
 a) data_files/segmentation_output/beds : contains the segmented chromosomes obtained using the median methylation value over all the samples as consensus.
+
 b) data_files/segmentation_output/diagnostics : contains the diagnostic plots for those.
+
 c) data_files/segmentation_output/summaries: contains the summary stats of the segments, per chromosome.
 
 ### Consensus using coverage weighted mean:
 
 a) data_files/segmentation_output_cov_weighted_consensus/beds: contains the segmented chromosomes obtained using the coverage weighted mean methylation value over all the samples as consensus.
+
 b) data_files/segmentation_output_cov_weighted_consensus/diagnostics: contains the diagnostic plots for those.
+
 c) data_files/segmentation_output_cov_weighted_consensus/summaries: contains the summary stats for these, the details of the contents are listed in "data_files/segmentation_output/summaries/colum_names.Rmd"
 
 ***
@@ -60,8 +66,10 @@ c) data_files/segmentation_output_cov_weighted_consensus/summaries: contains the
 ## Segmentation of each sample individually
 
 a) data_files/segmentation_output/per_sample: contains one folder for each sample, within those folders there are beds and the diagnostic plots
+
 b) data_files/segmentation_output/per_sample_different_params: contains folders named after the different parameters tried for methSeg
 NOTE: this wasnt done on all the samples, just some were chosen randomly to see the differences.
+
 c) data_files/segmentation_output/sample_summaries: contains the summaries for each sample, default parameters
 
 ## Annotations for the segments (based on the median consensus profile)
@@ -75,6 +83,13 @@ Mainly looks at the number of genes, promoters found in each segment as well as 
 
 a) /data_files/segmentation_output/beds_fixed: contains the beds for the segmentation creates separately using the T1 coverage weighted consensus, T2 coverage weighted consensus, and the one
 created from all the samples, the "fixed" refers to the chromosome number which is in these files in NCIB format. The purpose of these is to be used in the UCSC browser.
+
+## Results from the comparison of the segments seperately obtained from T1, T2 and the cumulative consensus
+
+a) data_files/segment_overlap_results : contains information on all the chromosomes regarding the 3way and 2way intersections
+
+b) data_files/segment_overlap_results/disagreement_regions: contains the disagreeing segments and their annotations
+
 
 # Visualization
 
