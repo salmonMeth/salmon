@@ -36,6 +36,9 @@ except the ones specified as different params in the data files.
 12. segment_overlap.R : compares the segments obtained from T1, T2 and cumulative consensus profiles
 13. segment_disagree.R : finds the chunks where there is no 3way agreement among all the sections, merges the overlapping/adjacent ones and then annotates them
 
+## Methylation of the segments
+
+14. segment_methyl.R : calculates the methylation levels using the segments obtained from the cumulative coverage weighted consensus
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 
@@ -90,6 +93,15 @@ a) data_files/segment_overlap_results : contains information on all the chromoso
 
 b) data_files/segment_overlap_results/disagreement_regions: contains the disagreeing segments and their annotations
 
+##3way segmentation matches
+
+a)data_files/segmentation_3way_overlap: the csv files contain information about the mathcing segments found for each chromosome,
+the cumulative consensus is used as the reference.
+
+## Segment methylation levels
+
+a)data_files/segment_methylation : has one csv file per chromosome, rows are the segments
+of the chromosome and there is one column per sample.
 
 # Visualization
 
@@ -125,3 +137,8 @@ a) gene_density_boxplot: to compare the mean gene density per segment for segmen
 b) methylation_boxplot: to compare the mean methylation level
 c) segment_length_boxplot: to compare the mean segment length
 d) group_stats.csv : contains some stats regarding the segment groups. The empty cells are due to there being only one chromosome with the specified number of segment groups, hence standard deviation etc can't be calculated.
+
+
+## 3way segment overlap to compare how the segments found using just T1 or T2 differ from the ones from all the samples
+
+a) data_files/segmentation_3way_overlap/__plots : folders contains the visualizations to compare how the matching segments align
