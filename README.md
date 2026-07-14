@@ -35,10 +35,17 @@ except the ones specified as different params in the data files.
 11. methSeg_T1_vs_T2.R : creates the segments, diagnostic plots, and summary stats for T1 and T2 samples separately, using the consensus profile based on the coverage weighted mean of the subsetted samples
 12. segment_overlap.R : compares the segments obtained from T1, T2 and cumulative consensus profiles
 13. segment_disagree.R : finds the chunks where there is no 3way agreement among all the sections, merges the overlapping/adjacent ones and then annotates them
+14. plot_segment_overlap.R : plots the overlapping parts of the T1, T2 and cumulative segments for all chromosomes.
 
 ## Methylation of the segments
 
-14. segment_methyl.R : calculates the methylation levels using the segments obtained from the cumulative coverage weighted consensus
+15. segment_methyl.R : calculates the methylation levels using the segments obtained from the cumulative coverage weighted consensus
+
+## Testing the segment approach (against individual CpGs) using a model
+
+16. construct_cs_cov_matrices.R : constructs the methylation&coverage count matrices we need to run the model.
+
+
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 
@@ -102,6 +109,15 @@ the cumulative consensus is used as the reference.
 
 a)data_files/segment_methylation : has one csv file per chromosome, rows are the segments
 of the chromosome and there is one column per sample.
+
+b)data_files/objects_intermediary/segment_matrix.rds : has the methylation matrix for the segments, one row per segment, one col per sample
+
+
+## To run the weight model
+
+a) data_files/segment_cs_cov_3_samples_removed: has the counts needed to run the weight model, two files per chromosome,
+each row is one segment, columns have the 92 samples
+
 
 # Visualization
 

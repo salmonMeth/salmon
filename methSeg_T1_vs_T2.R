@@ -8,7 +8,9 @@ library(dplyr)
 library(GenomeInfoDb)
 library(methylKit)
 #
-db <- readRDS("db.rds")
+path_db="/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/db.rds"
+#all this from segment_bssq.R
+db <- readRDS(path_db)
 df <- getData(db)
 
 sample_ids <- db@sample.ids
@@ -23,12 +25,40 @@ colnames(df) <- c(
     )
   }))
 )
+###########################################
+###########################################
+################remove the 3 samples
+# Samples to remove
+remove_samples <- c("746_T2", "176_T1", "861_T2")
+
+# Keep the remaining sample IDs
+sample_ids_keep <- setdiff(sample_ids, remove_samples)
+
+# Columns to retain
+cols_to_keep <- c(
+  "chr", "start", "end", "strand",
+  as.vector(sapply(sample_ids_keep, function(id) {
+    c(
+      paste0("coverage_", id),
+      paste0("numCs_", id),
+      paste0("numTs_", id)
+    )
+  }))
+)
+
+# Subset the data frame
+df <- df[, cols_to_keep]
+
+# Update sample IDs and sample count if you'll use them later
+sample_ids <- sample_ids_keep
+n_samples <- length(sample_ids)
 
 M <- as.matrix(df[, grep("^numCs_", colnames(df))])
 Cov <- as.matrix(df[, grep("^coverage_", colnames(df))])
-
 colnames(M) <- sample_ids
 colnames(Cov) <- sample_ids
+##################################
+##################################
 
 T1_samples <- sample_ids[grepl("_T1$", sample_ids)]
 T2_samples <- sample_ids[grepl("_T2$", sample_ids)]
@@ -67,24 +97,47 @@ mcols(gr_T2)$meth <- consensus_T2[keep_T2]
 
 ############################################
 #####LOOP
-gr= gr_T1
+
+############################################
+###########################################
+#set the dir names
+gr <- gr_T1
+
+group_name <- "T1"
+
+output_dir <- paste0("/scratch/project_2010912/ezel/salmon/data_files/segmentation_output_3_samples_removed_", group_name, "_consensus")
+diagnostic_dir <- file.path(output_dir, "diagnostics")
+bed_dir <- file.path(output_dir, "beds")
+summary_dir <- file.path(output_dir, "summaries")
+
+dir.create(diagnostic_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(bed_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(summary_dir, recursive = TRUE, showWarnings = FALSE)
+
+###########################################
+###########################################
+#####################loop
+
 chroms <- seqlevels(gr)
 
 for (i in seq_along(chroms)) {
+  
   chr <- chroms[i]
   message("Processing: ", chr)
+  
   gr_chr <- gr[seqnames(gr) == chr]
+  
   gr_chr <- dropSeqlevels(
     gr_chr,
     setdiff(seqlevels(gr_chr), chr),
     pruning.mode = "coarse"
   )
-  out_dir <- "segmentation_output_T1_consensus/diagnostics"
-  dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
-  #we want to capture the diagnostic plots as well
   
-  png(paste0("segmentation_output_T1_consensus/diagnostics/", chr, "_diagnostic.png"),
-      width = 1200, height = 800)
+  png(
+    file.path(diagnostic_dir, paste0(chr, "_diagnostic.png")),
+    width = 1200,
+    height = 800
+  )
   
   seg_chr <- methSeg(
     gr_chr,
@@ -95,11 +148,7 @@ for (i in seq_along(chroms)) {
   
   dev.off()
   
-  #bed file creation parts
-  out_dir <- "segmentation_output_T1_consensus/beds"
-  dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
-  
-  bed_file <- file.path(out_dir, paste0(chr, "_segments.bed"))
+  bed_file <- file.path(bed_dir, paste0(chr, "_segments.bed"))
   
   methSeg2bed(seg_chr, bed_file)
   
@@ -133,29 +182,27 @@ for (i in seq_along(chroms)) {
     col.names = FALSE
   )
 }
-#
-#these bed files dont have column names to keeo it compatible with the
-#IGV browser but we can add them later if we want
 
-add_col_names= function(bed_file) {
+#########################stats from beds
+
+add_col_names <- function(bed_file) {
+  
   df <- read.table(bed_file, sep = "\t", header = FALSE)
+  
   colnames(df) <- c(
     "chr",
     "start",
     "end",
-    "segment_group", #tells us which segment group this segment belongs to
-    "segment_mean", #tells us the mean methylartion value of the defined segment
+    "segment_group",
+    "segment_mean",
     "strand",
     "thickStart",
     "thickEnd",
     "rgb"
   )
-  return(df)
+  
+  df
 }
-###########################################################
-######getting the stats from the bed files
-
-bed_dir <- "segmentation_output_T1_consensus/beds"
 
 bed_files <- list.files(
   bed_dir,
@@ -227,6 +274,7 @@ for (f in bed_files) {
       q25_meth = quantile(seg.mean, 0.25),
       q75_meth = quantile(seg.mean, 0.75),
       max_meth = max(seg.mean),
+      
       cv_meth = sd(seg.mean) / mean(seg.mean),
       
       largest_segment = max(width),
@@ -235,7 +283,7 @@ for (f in bed_files) {
       .groups = "drop"
     ) %>%
     mutate(
-      prop_genome = total_bp / sum(total_bp),
+      prop_genome = total_bp / sum(total_bp)
     )
 }
 
@@ -248,19 +296,14 @@ chr_summary <- chr_summary %>%
 group_summary <- group_summary %>%
   mutate(across(where(is.numeric), ~ round(.x, 4)))
 
-
-dir.create("segmentation_output_T1_consensus/summaries",
-           recursive = TRUE,
-           showWarnings = FALSE)
-
 write.csv(
   chr_summary,
-  "segmentation_output_T1_consensus/summaries/chromosome_summary.csv",
+  file.path(summary_dir, "chromosome_summary.csv"),
   row.names = FALSE
 )
 
 write.csv(
   group_summary,
-  "segmentation_output_T1_consensus/summaries/segment_group_summary.csv",
+  file.path(summary_dir, "segment_group_summary.csv"),
   row.names = FALSE
 )

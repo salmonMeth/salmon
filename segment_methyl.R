@@ -22,21 +22,39 @@ colnames(df) <- c(
   }))
 )
 
-M <- as.matrix(df[, grep("^numCs_", colnames(df))])
-Cov <- as.matrix(df[, grep("^coverage_", colnames(df))])
-colnames(M) <- sample_ids
-colnames(Cov) <- sample_ids
-meth_mat <- M / Cov
+#to remove the corrupted samples
+# Samples to remove
+remove_samples <- c("746_T2", "176_T1", "861_T2")
 
-sum(is.na(meth_mat))/(dim(meth_mat)[1]*dim(meth_mat)[2])
-#6% NA
+# Keep the remaining sample IDs
+sample_ids_keep <- setdiff(sample_ids, remove_samples)
 
-#consensus <- rowMeans(meth_mat, na.rm = TRUE)
-consensus_median <- apply(meth_mat, 1, median, na.rm = TRUE)
+# Columns to retain
+cols_to_keep <- c(
+  "chr", "start", "end", "strand",
+  as.vector(sapply(sample_ids_keep, function(id) {
+    c(
+      paste0("coverage_", id),
+      paste0("numCs_", id),
+      paste0("numTs_", id)
+    )
+  }))
+)
 
-keep <- !is.na(consensus_median)
+# Subset the data frame
+df <- df[, cols_to_keep]
+sample_ids <- sample_ids_keep
+n_samples <- length(sample_ids)
 
-consensus_median <- consensus_median[keep]
+path_segment_matrix="/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/cpg_meth_matrix.rds"
+saveRDS(segment_matrix,path_segment_matrix)
+
+consensus_meth <- rowSums(M, na.rm = TRUE) / rowSums(Cov, na.rm = TRUE)
+
+
+keep <- !is.na(consensus_meth)
+
+consensus_meth <- consensus_meth[keep]
 
 df_cons <- df[keep, ]
 gr <- GRanges(
@@ -174,3 +192,92 @@ for(segment_file in bed_files){
 }
 
 cat("Done.\n")
+
+##############################################
+##############################################
+#PCA to visualize
+segment_dir <- "/scratch/project_2010912/ezel/salmon/data_files/segment_methylation"
+files <- list.files(
+  segment_dir,
+  pattern = "_segment_methylation\\.csv$",
+  full.names = TRUE
+)
+all_segments <- lapply(files, fread)
+# create unique segment IDs
+for(i in seq_along(all_segments)){
+  dt <- all_segments[[i]]
+  dt$segment_id <- paste(
+    dt$chr,
+    dt$start,
+    dt$end,
+    sep = "_"
+  )
+  all_segments[[i]] <- dt
+}
+all_segments <- rbindlist(all_segments, fill = TRUE)
+sample_cols <- setdiff(names(all_segments),c("chr","start","end","segment_id"))
+segment_matrix <- as.matrix(all_segments[, ..sample_cols])
+rownames(segment_matrix) <- all_segments$segment_id
+na_frac <- rowMeans(is.na(segment_matrix))
+
+for(i in seq_len(nrow(segment_matrix))){
+  idx <- is.na(segment_matrix[i, ])
+  if(any(idx)){
+    segment_matrix[i, idx] <- mean(segment_matrix[i, ], na.rm = TRUE)
+  }
+}
+########################
+########################
+#save the methylation matrix
+path_segment_matrix="/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/segment_matrix.rds"
+saveRDS(segment_matrix,path_segment_matrix)
+#########################
+#pca
+#########################
+
+pca <- prcomp(
+  t(segment_matrix),
+  center = TRUE,
+  scale. = TRUE
+)
+sample_names <- colnames(segment_matrix)
+group <- ifelse(
+  grepl("_T1$", sample_names),
+  "T1",
+  "T2"
+)
+pca_df <- data.frame(
+  Sample = sample_names,
+  Group = group,
+  PC1 = pca$x[,1],
+  PC2 = pca$x[,2]
+)
+
+
+p <- ggplot(
+  pca_df,
+  aes(x = PC1, y = PC2, color = Group)
+) +
+  geom_point(size = 3) +
+  theme_bw() +
+  labs(
+    title = "PCA of segment methylation",
+    x = paste0(
+      "PC1 (",
+      round(100 * summary(pca)$importance[2,1], 1),
+      "%)"
+    ),
+    y = paste0(
+      "PC2 (",
+      round(100 * summary(pca)$importance[2,2], 1),
+      "%)"
+    )
+  )
+
+pca_segment="/scratch/project_2010912/ezel/salmon/data_files/segment_methylation/pca_segment_meth.png"
+ggsave(pca_segment,
+       plot = p,
+       width = 8,
+       height = 6,
+       dpi = 300
+)
