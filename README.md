@@ -45,6 +45,13 @@ except the ones specified as different params in the data files.
 
 16. construct_cs_cov_matrices.R : constructs the methylation&coverage count matrices we need to run the model.
 
+17. model_segment_counts.R : has the code needed to model the methylated&unmethylated Cpg counts using weight, ma&pa ID has covariates.
+Has code both for the pooled model and one where we fit two different models to T1 and T2 samples. Also fits two different models, one with weight scaled and one not.
+
+## Assesing the model performance
+
+18. model_problem_segments.R : checks out the segments where the model didn't converge, trying to identify the coverage, coefs etc. Also has code
+to compare the performance of different models (with weight scaled or unscaled) regarding how many segments throw errors.
 
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
@@ -113,11 +120,18 @@ of the chromosome and there is one column per sample.
 b)data_files/objects_intermediary/segment_matrix.rds : has the methylation matrix for the segments, one row per segment, one col per sample
 
 
-## To run the weight model
+## To run the model count model
 
 a) data_files/segment_cs_cov_3_samples_removed: has the counts needed to run the weight model, two files per chromosome,
 each row is one segment, columns have the 92 samples
 
+b) data_files/model_results/model_results_T1_T2_separated : has the UNSCALED weight model outputs, one file per chromosome.
+
+c)data_files/model_results/weight_rescaled_T1_T2_separated : has the model outputs for the scaled weight model.
+Also contains the subfolder:
+
+c.2) data_files/model_results/weight_rescaled_T1_T2_separated/problem_segments: which has some stats and example model outputs of the segments where the model
+didn't converge.
 
 # Visualization
 

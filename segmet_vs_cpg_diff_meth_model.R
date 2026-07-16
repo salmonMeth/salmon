@@ -2,7 +2,9 @@
 library(limma)
 library(ggplot2)
 library(qvalue)
-
+#library(dendextend)
+library ( glmmTMB )
+#library(snow)
 ############
 #modeling the segmented methylation
 path_segment_matrix="/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/segment_matrix.rds"
@@ -131,10 +133,10 @@ compare_limma_results(
 
 ############model
 path_ids="/scratch/project_2010912/ezel/hannu_methylation.selectedIDs_10Dec24.txt"
-path_chr_1_cs="/scratch/project_2010912/ezel/salmon/data_files/segment_methylation_cov_cs/NC_059442.1_segment_cs.csv"
-path_chr_1_cov="/scratch/project_2010912/ezel/salmon/data_files/segment_methylation_cov_cs/NC_059442.1_segment_coverage.csv"
-
-meth <- fread(path_chr_1)
+path_chr_1_cs="/scratch/project_2010912/ezel/salmon/data_files/segment_cs_cov_3_samples_removed/NC_059442.1_segment_cs.csv"
+path_chr_1_cov="/scratch/project_2010912/ezel/salmon/data_files/segment_cs_cov_3_samples_removed/NC_059442.1_segment_coverage.csv"
+meth <- fread(path_chr_1_cs)
+cov=fread(path_chr_1_cov)
 meta <- fread(path_ids)
 meta[, sample := paste(Running.ID, TimePoint, sep = "_")]
 
@@ -154,6 +156,12 @@ cov_long <- melt(
   value.name = "coverage"
 )
 dat <- merge(
+  meth_long,
+  cov_long,
+  by = c("chr", "start", "end", "sample")
+)
+
+dat <- merge(
   dat,
   meta,
   by = "sample"
@@ -162,20 +170,13 @@ dat <- merge(
 dat$unmeth_reads <- dat$coverage - dat$meth_reads
 #try fitting the model to 1 region first
 regions <- unique(dat[, .(chr, start, end)])
-
 fit_region <- function(i) {
   
-  r <- regions[i, ]
-  
   d <- dat[
-    chr == r$chr &
-      start == r$start &
-      end == r$end
+    chr == regions$chr[i] &
+      start == regions$start[i] &
+      end == regions$end[i]
   ]
-  
-  if (nrow(d) < 10) {
-    return(NULL)
-  }
   
   tryCatch({
     
@@ -188,19 +189,16 @@ fit_region <- function(i) {
       family = betabinomial(link = "logit")
     )
     
-    coef <- summary(model)$coefficients$cond["Weight.g", ]
+    coefs <- summary(model)$coefficients$cond
     
     data.table(
-      chr = r$chr,
-      start = r$start,
-      end = r$end,
-      estimate = coef["Estimate"],
-      SE = coef["Std. Error"],
-      z = coef["z value"],
-      pvalue = coef["Pr(>|z|)"],
-      n = nrow(d)
-    )
-    
+      chr = regions$chr[i],
+      start = regions$start[i],
+      end = regions$end[i],
+      estimate = unname(coefs["Weight.g", "Estimate"]),
+      SE = unname(coefs["Weight.g", "Std. Error"]),
+      z = unname(coefs["Weight.g", "z value"]),
+      pvalue = unname(coefs["Weight.g", "Pr(>|z|)"]),)
   }, error = function(e) {
     NULL
   })
@@ -214,9 +212,10 @@ results <- rbindlist(
   fill = TRUE
 )
 
-path_results="/scratch/project_2010912/ezel/salmon/data_files/segment_methylation_cov_cs/model_NC_059442.1"
+path_results="/scratch/project_2010912/ezel/salmon/data_files/segment_methylation_cov_cs/model_NC_059442.1.csv"
 # save
 fwrite(
   results,
   path_results
 )
+

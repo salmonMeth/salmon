@@ -1,0 +1,70 @@
+
+=====================================
+           chr    start      end estimate_T1    SE_T1      z_T1 pvalue_T1
+        <char>    <int>    <int>       <num>    <num>     <num>     <num>
+1: NC_059442.1 16575848 16576171   -56.80458 34.85125 -1.629915 0.1031195
+              status_T1 estimate_T2    SE_T2       z_T2 pvalue_T2            status_T2
+                 <char>       <num>    <num>      <num>     <num>               <char>
+1: NON_POSITIVE_HESSIAN   -3.092382 3.245485 -0.9528257 0.3406784 NON_POSITIVE_HESSIAN
+
+Loading chromosome: NC_059442.1 
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   71.0   141.8   177.5   177.6   215.2   297.0 
+
+Number of zero coverage samples: 0 
+
+========== T1 ==========
+ Family: betabinomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g + (1 | ID_ma) + (1 |  
+    ID_pa)
+Data: d_t1
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+       NA        NA        NA        NA        41 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance  Std.Dev. 
+ ID_ma  (Intercept) 1.004e-02 1.002e-01
+ ID_pa  (Intercept) 8.273e-11 9.096e-06
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Dispersion parameter for betabinomial family ():  300 
+
+Conditional model:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)   1.6909     0.2336   7.239 4.53e-13 ***
+Weight.g    -56.8046    34.8513  -1.630    0.103    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: betabinomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g + (1 | ID_ma) + (1 |  
+    ID_pa)
+Data: d_t2
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+       NA        NA        NA        NA        41 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance  Std.Dev. 
+ ID_ma  (Intercept) 7.497e-10 2.738e-05
+ ID_pa  (Intercept) 1.726e-07 4.154e-04
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Dispersion parameter for betabinomial family (): 1.5e+03 
+
+Conditional model:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)   0.7706     0.1789   4.307 1.66e-05 ***
+Weight.g     -3.0924     3.2455  -0.953    0.341    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

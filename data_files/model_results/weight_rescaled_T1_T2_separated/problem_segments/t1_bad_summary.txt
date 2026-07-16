@@ -1,0 +1,64 @@
+
+=====================================
+           chr   start     end estimate_T1     SE_T1      z_T1  pvalue_T1
+        <char>   <int>   <int>       <num>     <num>     <num>      <num>
+1: NC_059443.1 7300155 7300432  -0.3261267 0.1656665 -1.968573 0.04900216
+              status_T1 estimate_T2     SE_T2      z_T2  pvalue_T2 status_T2
+                 <char>       <num>     <num>     <num>      <num>    <char>
+1: NON_POSITIVE_HESSIAN     -0.3755 0.2022897 -1.856248 0.06341817        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   48.0   125.2   154.0   151.6   179.0   257.0 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: betabinomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g + (1 | ID_ma) + (1 |  
+    ID_pa)
+Data: d_t1
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+       NA        NA        NA        NA        41 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance   Std.Dev.  
+ ID_ma  (Intercept) 2.021e-238 1.422e-119
+ ID_pa  (Intercept)  7.666e-50  2.769e-25
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Dispersion parameter for betabinomial family (): 9.34e+07 
+
+Conditional model:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept)   -3.466        NaN     NaN      NaN
+Weight.g    -280.317        NaN     NaN      NaN
+
+========== T2 ==========
+ Family: betabinomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g + (1 | ID_ma) + (1 |  
+    ID_pa)
+Data: d_t2
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+       NA        NA        NA        NA        41 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance  Std.Dev. 
+ ID_ma  (Intercept) 4.178e-30 2.044e-15
+ ID_pa  (Intercept) 1.009e-36 1.005e-18
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Dispersion parameter for betabinomial family ():  481 
+
+Conditional model:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept)   -2.783        NaN     NaN      NaN
+Weight.g     -49.525        NaN     NaN      NaN

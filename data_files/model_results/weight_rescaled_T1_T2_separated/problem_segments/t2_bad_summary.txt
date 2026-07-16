@@ -1,0 +1,68 @@
+
+=====================================
+           chr     start       end  estimate_T1       SE_T1      z_T1 pvalue_T1 status_T1
+        <char>     <int>     <int>        <num>       <num>     <num>     <num>    <char>
+1: NC_059442.1 110256504 111977873 -0.006931955 0.005901169 -1.174675 0.2401248        OK
+    estimate_T2       SE_T2       z_T2 pvalue_T2            status_T2
+          <num>       <num>      <num>     <num>               <char>
+1: -0.001519342 0.004379218 -0.3469437 0.7286336 NON_POSITIVE_HESSIAN
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  34519   53078   55756   55877   60275   70343 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: betabinomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g + (1 | ID_ma) + (1 |  
+    ID_pa)
+Data: d_t1
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    619.3     628.4    -304.6     609.3        41 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance  Std.Dev.
+ ID_ma  (Intercept) 0.0001702 0.01305 
+ ID_pa  (Intercept) 0.0001520 0.01233 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Dispersion parameter for betabinomial family (): 1.21e+04 
+
+Conditional model:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  2.25756    0.03396   66.47   <2e-16 ***
+Weight.g    -5.95713    5.07130   -1.17     0.24    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: betabinomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g + (1 | ID_ma) + (1 |  
+    ID_pa)
+Data: d_t2
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+       NA        NA        NA        NA        41 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance  Std.Dev. 
+ ID_ma  (Intercept) 3.966e-07 0.0006297
+ ID_pa  (Intercept) 1.349e-08 0.0001161
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Dispersion parameter for betabinomial family (): 1.55e+04 
+
+Conditional model:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  2.12660    0.03176   66.97   <2e-16 ***
+Weight.g    -0.20034    0.57730   -0.35    0.729    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

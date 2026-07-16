@@ -1,0 +1,52 @@
+chromosome_file,chr,start,end,type,message
+NC_059443.1,NC_059443.1,8402820,8475074,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059443.1,NC_059443.1,9153267,9161353,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059443.1,NC_059443.1,9167650,9198204,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059443.1,NC_059443.1,71402210,71402540,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059443.1,NC_059443.1,80941952,80943624,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059443.1,NC_059443.1,85748893,85778934,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059444.1,NC_059444.1,1274604,1289552,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059444.1,NC_059444.1,1274604,1289552,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059444.1,NC_059444.1,101430160,101430383,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059444.1,NC_059444.1,101430160,101430383,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059446.1,NC_059446.1,45250316,45250672,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059446.1,NC_059446.1,77007588,77010338,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059446.1,NC_059446.1,77007588,77010338,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059446.1,NC_059446.1,82287152,82288694,warning,"Model convergence problem; singular convergence (7). See vignette('troubleshooting'), help('diagnose')"
+NC_059447.1,NC_059447.1,27456994,27493682,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059449.1,NC_059449.1,200674,201630,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059449.1,NC_059449.1,15287722,15288059,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059449.1,NC_059449.1,15287722,15288059,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059450.1,NC_059450.1,43288206,43288436,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059450.1,NC_059450.1,114903661,114903764,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059450.1,NC_059450.1,114903661,114903764,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059452.1,NC_059452.1,44827025,44831537,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059452.1,NC_059452.1,59827198,59827962,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059452.1,NC_059452.1,88707293,88713495,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059452.1,NC_059452.1,110598226,110598463,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059452.1,NC_059452.1,110598226,110598463,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059453.1,NC_059453.1,14838449,14893587,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059454.1,NC_059454.1,36814315,41240953,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059455.1,NC_059455.1,52661385,52665667,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059456.1,NC_059456.1,23028119,23090812,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059456.1,NC_059456.1,23028119,23090812,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059456.1,NC_059456.1,88867600,88868360,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059456.1,NC_059456.1,88867600,88868360,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059457.1,NC_059457.1,79708743,79709015,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059457.1,NC_059457.1,83040468,83041280,warning,"Model convergence problem; singular convergence (7). See vignette('troubleshooting'), help('diagnose')"
+NC_059458.1,NC_059458.1,20290655,20290767,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059458.1,NC_059458.1,36157963,36276100,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059458.1,NC_059458.1,36504955,36506021,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059459.1,NC_059459.1,1381727,1384078,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059459.1,NC_059459.1,78483751,78484276,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059459.1,NC_059459.1,78483751,78484276,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059460.1,NC_059460.1,12616662,19281900,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059460.1,NC_059460.1,12616662,19281900,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059460.1,NC_059460.1,57049438,57892970,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059462.1,NC_059462.1,19169402,19169539,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059462.1,NC_059462.1,19169402,19169539,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059463.1,NC_059463.1,251579,251705,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059463.1,NC_059463.1,251579,251705,warning,"Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+NC_059464.1,NC_059464.1,45414978,45415708,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059466.1,NC_059466.1,38450991,38475058,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')
+NC_059470.1,NC_059470.1,42176890,42177006,warning,Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')

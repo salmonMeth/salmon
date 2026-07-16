@@ -1,0 +1,658 @@
+===== Segment 1 =====
+
+=====================================
+           chr  start    end estimate_T1       SE_T1    z_T1   pvalue_T1 status_T1
+        <char>  <int>  <int>       <num>       <num>   <num>       <num>    <char>
+1: NC_059442.1 126432 132632  0.02638467 0.009289785 2.84018 0.004508803        OK
+   estimate_T2       SE_T2     z_T2    pvalue_T2 status_T2
+         <num>       <num>    <num>        <num>    <char>
+1:  0.04523836 0.009089861 4.976793 6.464624e-07        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   3848    5269    6291    6487    7360   12302 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    757.5     764.8    -374.7     749.5        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance  Std.Dev.
+ ID_ma  (Intercept) 0.0073491 0.08573 
+ ID_pa  (Intercept) 0.0007273 0.02697 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      1.80366    0.02653   67.98  < 2e-16 ***
+Weight.g.scaled  0.02638    0.00929    2.84  0.00451 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    870.4     877.7    -431.2     862.4        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.002547 0.05047 
+ ID_pa  (Intercept) 0.005511 0.07423 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      1.59951    0.02639   60.60  < 2e-16 ***
+Weight.g.scaled  0.04524    0.00909    4.98 6.46e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+===== Segment 2 =====
+
+=====================================
+           chr  start    end  estimate_T1       SE_T1       z_T1 pvalue_T1 status_T1
+        <char>  <int>  <int>        <num>       <num>      <num>     <num>    <char>
+1: NC_059442.1 132649 132991 0.0006653071 0.009651408 0.06893368 0.9450424        OK
+    estimate_T2      SE_T2       z_T2 pvalue_T2 status_T2
+          <num>      <num>      <num>     <num>    <char>
+1: -0.006824621 0.01088531 -0.6269567 0.5306876        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   3705    5505    6041    6012    6532    7760 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    761.6     769.0    -376.8     753.6        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.003367 0.05803 
+ ID_pa  (Intercept) 0.011419 0.10686 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                  Estimate Std. Error z value Pr(>|z|)    
+(Intercept)     -1.8840322  0.0356237  -52.89   <2e-16 ***
+Weight.g.scaled  0.0006653  0.0096514    0.07    0.945    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    682.0     689.3    -337.0     674.0        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.009895 0.09947 
+ ID_pa  (Intercept) 0.009218 0.09601 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)     -1.996001   0.040347  -49.47   <2e-16 ***
+Weight.g.scaled -0.006825   0.010885   -0.63    0.531    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+===== Segment 3 =====
+
+=====================================
+           chr  start     end estimate_T1       SE_T1     z_T1  pvalue_T1 status_T1
+        <char>  <int>   <int>       <num>       <num>    <num>      <num>    <char>
+1: NC_059442.1 132991 2961469 0.006090383 0.003668915 1.659996 0.09691529        OK
+   estimate_T2       SE_T2      z_T2    pvalue_T2 status_T2
+         <num>       <num>     <num>        <num>    <char>
+1: -0.01772007 0.002934763 -6.037989 1.560467e-09        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  49397   66857   74178   74269   80740  103630 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    893.3     900.6    -442.6     885.3        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.001062 0.03258 
+ ID_pa  (Intercept) 0.001367 0.03697 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)     2.285173   0.014371  159.01   <2e-16 ***
+Weight.g.scaled 0.006090   0.003669    1.66   0.0969 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    994.1    1001.4    -493.0     986.1        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance  Std.Dev.
+ ID_ma  (Intercept) 0.0002057 0.01434 
+ ID_pa  (Intercept) 0.0006193 0.02489 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      2.053064   0.008467  242.48  < 2e-16 ***
+Weight.g.scaled -0.017720   0.002935   -6.04 1.56e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+===== Segment 4 =====
+
+=====================================
+           chr   start     end estimate_T1      SE_T1      z_T1   pvalue_T1 status_T1
+        <char>   <int>   <int>       <num>      <num>     <num>       <num>    <char>
+1: NC_059442.1 2961530 2961685 -0.01740317 0.00548795 -3.171161 0.001518311        OK
+   estimate_T2       SE_T2      z_T2    pvalue_T2 status_T2
+         <num>       <num>     <num>        <num>    <char>
+1: -0.02126704 0.005692589 -3.735918 0.0001870319        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   5344    9245   10466   10273   11360   13921 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+   1204.0    1211.4    -598.0    1196.0        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.004010 0.06333 
+ ID_pa  (Intercept) 0.005598 0.07482 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)     -0.104210   0.028472  -3.660 0.000252 ***
+Weight.g.scaled -0.017403   0.005488  -3.171 0.001518 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+   1153.7    1161.0    -572.8    1145.7        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.004107 0.06409 
+ ID_pa  (Intercept) 0.004817 0.06940 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)     -0.183371   0.027429  -6.685  2.3e-11 ***
+Weight.g.scaled -0.021267   0.005693  -3.736 0.000187 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+===== Segment 5 =====
+
+=====================================
+           chr   start      end estimate_T1       SE_T1     z_T1 pvalue_T1 status_T1
+        <char>   <int>    <int>       <num>       <num>    <num>     <num>    <char>
+1: NC_059442.1 2962163 16575741 0.006149703 0.004490097 1.369615 0.1708072        OK
+   estimate_T2       SE_T2      z_T2 pvalue_T2 status_T2
+         <num>       <num>     <num>     <num>    <char>
+1: 0.002081285 0.003894105 0.5344708 0.5930159        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  40210   48162   52484   52537   56572   65976 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    788.9     796.3    -390.5     780.9        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.001338 0.03658 
+ ID_pa  (Intercept) 0.001095 0.03309 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      2.35163    0.01445  162.72   <2e-16 ***
+Weight.g.scaled  0.00615    0.00449    1.37    0.171    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    737.4     744.8    -364.7     729.4        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance  Std.Dev.
+ ID_ma  (Intercept) 0.0005170 0.02274 
+ ID_pa  (Intercept) 0.0004445 0.02108 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)     2.178463   0.009206  236.64   <2e-16 ***
+Weight.g.scaled 0.002081   0.003894    0.53    0.593    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+===== Segment 6 =====
+
+=====================================
+           chr    start      end estimate_T1      SE_T1    z_T1  pvalue_T1 status_T1
+        <char>    <int>    <int>       <num>      <num>   <num>      <num>    <char>
+1: NC_059442.1 16575848 16576171 -0.06469005 0.03594691 -1.7996 0.07192387        OK
+   estimate_T2      SE_T2       z_T2 pvalue_T2 status_T2
+         <num>      <num>      <num>     <num>    <char>
+1:  -0.0227554 0.02334513 -0.9747384 0.3296901        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   71.0   141.8   177.5   177.6   215.2   297.0 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    324.3     331.6    -158.1     316.3        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.011721 0.10826 
+ ID_pa  (Intercept) 0.007764 0.08811 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      1.31943    0.04935   26.74   <2e-16 ***
+Weight.g.scaled -0.06469    0.03595   -1.80   0.0719 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    308.6     315.9    -150.3     300.6        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance  Std.Dev. 
+ ID_ma  (Intercept) 2.121e-11 4.606e-06
+ ID_pa  (Intercept) 8.555e-04 2.925e-02
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      0.60225    0.02489  24.193   <2e-16 ***
+Weight.g.scaled -0.02276    0.02335  -0.975     0.33    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+===== Segment 7 =====
+
+=====================================
+           chr    start      end estimate_T1      SE_T1       z_T1 pvalue_T1 status_T1
+        <char>    <int>    <int>       <num>      <num>      <num>     <num>    <char>
+1: NC_059442.1 16576906 16594931 -0.01054049 0.01488972 -0.7079038  0.479005        OK
+    estimate_T2      SE_T2       z_T2 pvalue_T2 status_T2
+          <num>      <num>      <num>     <num>    <char>
+1: -0.004701077 0.01481659 -0.3172848 0.7510275        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    284    1564    2200    2029    2408    2804 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    416.5     423.8    -204.3     408.5        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.001649 0.04061 
+ ID_pa  (Intercept) 0.000591 0.02431 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      2.32547    0.01803  128.96   <2e-16 ***
+Weight.g.scaled -0.01054    0.01489   -0.71    0.479    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    419.5     426.9    -205.8     411.5        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance  Std.Dev.
+ ID_ma  (Intercept) 0.0012707 0.03565 
+ ID_pa  (Intercept) 0.0006415 0.02533 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      2.119236   0.016570  127.89   <2e-16 ***
+Weight.g.scaled -0.004701   0.014817   -0.32    0.751    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+===== Segment 8 =====
+
+=====================================
+           chr    start      end estimate_T1      SE_T1      z_T1 pvalue_T1 status_T1
+        <char>    <int>    <int>       <num>      <num>     <num>     <num>    <char>
+1: NC_059442.1 16607520 16671239  0.01169091 0.04821029 0.2424983 0.8083941        OK
+   estimate_T2      SE_T2     z_T2    pvalue_T2 status_T2
+         <num>      <num>    <num>        <num>    <char>
+1:   0.2052108 0.05721363 3.586746 0.0003348301        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  37.00   83.75  109.00  107.25  131.25  164.00 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    608.7     616.0    -300.3     600.7        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.08917  0.2986  
+ ID_pa  (Intercept) 0.02562  0.1601  
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)     -0.83590    0.10341  -8.084 6.29e-16 ***
+Weight.g.scaled  0.01169    0.04821   0.242    0.808    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    627.9     635.2    -309.9     619.9        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.14404  0.3795  
+ ID_pa  (Intercept) 0.06197  0.2489  
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)     -0.68515    0.13483  -5.082 3.74e-07 ***
+Weight.g.scaled  0.20521    0.05721   3.587 0.000335 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+===== Segment 9 =====
+
+=====================================
+           chr    start      end estimate_T1      SE_T1     z_T1 pvalue_T1 status_T1
+        <char>    <int>    <int>       <num>      <num>    <num>     <num>    <char>
+1: NC_059442.1 16716711 16799525  0.05581882 0.04276505 1.305244 0.1918099        OK
+   estimate_T2      SE_T2       z_T2 pvalue_T2 status_T2
+         <num>      <num>      <num>     <num>    <char>
+1: -0.04232664 0.05553346 -0.7621826  0.445951        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   93.0   160.0   189.5   191.4   217.2   305.0 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    293.3     300.6    -142.6     285.3        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.006212 0.07881 
+ ID_pa  (Intercept) 0.023220 0.15238 
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      2.32114    0.06248   37.15   <2e-16 ***
+Weight.g.scaled  0.05582    0.04277    1.31    0.192    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    315.7     323.0    -153.9     307.7        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.03070  0.1752  
+ ID_pa  (Intercept) 0.04478  0.2116  
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      2.22717    0.08770  25.396   <2e-16 ***
+Weight.g.scaled -0.04233    0.05553  -0.762    0.446    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+===== Segment 10 =====
+
+=====================================
+           chr    start      end estimate_T1      SE_T1      z_T1    pvalue_T1 status_T1
+        <char>    <int>    <int>       <num>      <num>     <num>        <num>    <char>
+1: NC_059442.1 16799574 16804071  -0.1261209 0.03456525 -3.648776 0.0002634929        OK
+   estimate_T2     SE_T2     z_T2 pvalue_T2 status_T2
+         <num>     <num>    <num>     <num>    <char>
+1:  0.01330852 0.0314331 0.423392 0.6720093        OK
+
+Samples: 92 
+
+Coverage summary:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   32.0   188.8   222.0   216.5   249.5   317.0 
+
+Zero coverage: 0 
+
+========== T1 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    500.8     508.2    -246.4     492.8        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.06152  0.2480  
+ ID_pa  (Intercept) 0.03088  0.1757  
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      0.10793    0.09072   1.190 0.234174    
+Weight.g.scaled -0.12612    0.03457  -3.649 0.000263 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+========== T2 ==========
+ Family: binomial  ( logit )
+Formula:          cbind(meth_reads, unmeth_reads) ~ Weight.g.scaled + (1 | ID_ma) +  
+    (1 | ID_pa)
+Data: data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    466.1     473.5    -229.1     458.1        42 
+
+Random effects:
+
+Conditional model:
+ Groups Name        Variance Std.Dev.
+ ID_ma  (Intercept) 0.01316  0.1147  
+ ID_pa  (Intercept) 0.01811  0.1346  
+Number of obs: 46, groups:  ID_ma, 12; ID_pa, 12
+
+Conditional model:
+                Estimate Std. Error z value Pr(>|z|)
+(Intercept)      0.02108    0.05495   0.384    0.701
+Weight.g.scaled  0.01331    0.03143   0.423    0.672
+
