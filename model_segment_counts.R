@@ -548,3 +548,110 @@ tot_segs=sum(segment_summary$n_segments)
 nrow(bad_T1)/tot_segs
 nrow(bad_T2)/tot_segs
 
+###alternative fit_model_sc function that saves the model summaries better
+fit_region_sc <- function(i){
+  
+  d <- dat[chr==regions$chr[i] &
+             start==regions$start[i] &
+             end==regions$end[i]]
+  
+  d_T1 <- d[TimePoint=="T1"]
+  d_T2 <- d[TimePoint=="T2"]
+  
+  out <- data.table(
+    chr=regions$chr[i], start=regions$start[i], end=regions$end[i],
+    estimate_T1=NA_real_, SE_T1=NA_real_, z_T1=NA_real_, pvalue_T1=NA_real_, status_T1="NOT_RUN",
+    estimate_T2=NA_real_, SE_T2=NA_real_, z_T2=NA_real_, pvalue_T2=NA_real_, status_T2="NOT_RUN"
+  )
+  
+  ## T1
+  if(nrow(d_T1)>=10 && length(unique(d_T1$Weight.g))>1){
+    
+    tryCatch({
+      
+      d_T1$Weight_sc <- as.numeric(scale(d_T1$Weight.g))
+      
+      model_T1 <- glmmTMB(
+        cbind(meth_reads,unmeth_reads) ~ Weight_sc + (1|ID_ma) + (1|ID_pa),
+        data=d_T1,
+        family=betabinomial(link="logit")
+      )
+      
+      coefs <- summary(model_T1)$coefficients$cond
+      
+      out$estimate_T1 <- coefs["Weight_sc","Estimate"]
+      out$SE_T1 <- coefs["Weight_sc","Std. Error"]
+      out$z_T1 <- coefs["Weight_sc","z value"]
+      out$pvalue_T1 <- coefs["Weight_sc","Pr(>|z|)"]
+      
+      out$status_T1 <- if(!is.null(model_T1$sdr) &&
+                          isTRUE(model_T1$sdr$pdHess))
+        "OK" else "NON_POSITIVE_HESSIAN"
+      
+      key_T1 <- paste(regions$chr[i],regions$start[i],
+                      regions$end[i],"T1",sep="_")
+      
+      assign(key_T1,model_T1,envir=model_store)
+      assign(key_T1,summary(model_T1),envir=summary_store)
+      
+    }, error=function(e){
+      
+      out$status_T1 <<- paste0("ERROR: ",conditionMessage(e))
+      
+    })
+    
+  } else out$status_T1 <- "INSUFFICIENT_DATA"
+  
+  ## T2
+  if(nrow(d_T2)>=10 && length(unique(d_T2$Weight.g))>1){
+    
+    tryCatch({
+      
+      d_T2$Weight_sc <- as.numeric(scale(d_T2$Weight.g))
+      
+      model_T2 <- glmmTMB(
+        cbind(meth_reads,unmeth_reads) ~ Weight_sc + (1|ID_ma) + (1|ID_pa),
+        data=d_T2,
+        family=betabinomial(link="logit")
+      )
+      
+      coefs <- summary(model_T2)$coefficients$cond
+      
+      out$estimate_T2 <- coefs["Weight_sc","Estimate"]
+      out$SE_T2 <- coefs["Weight_sc","Std. Error"]
+      out$z_T2 <- coefs["Weight_sc","z value"]
+      out$pvalue_T2 <- coefs["Weight_sc","Pr(>|z|)"]
+      
+      out$status_T2 <- if(!is.null(model_T2$sdr) &&
+                          isTRUE(model_T2$sdr$pdHess))
+        "OK" else "NON_POSITIVE_HESSIAN"
+      
+      key_T2 <- paste(regions$chr[i],regions$start[i],
+                      regions$end[i],"T2",sep="_")
+      
+      assign(key_T2,model_T2,envir=model_store)
+      assign(key_T2,summary(model_T2),envir=summary_store)
+      
+    }, error=function(e){
+      
+      out$status_T2 <<- paste0("ERROR: ",conditionMessage(e))
+      
+    })
+    
+  } else out$status_T2 <- "INSUFFICIENT_DATA"
+  
+  out
+}
+
+#to save these we need
+save_file <- file.path(
+  out_dir,
+  paste0(chr_name, "_all_models_and_summaries.RData")
+)
+
+save(
+  model_store,
+  summary_store,
+  results,
+  file = save_file
+)

@@ -1,0 +1,6 @@
+------------------------------
+r-env 4.5.2
+https://docs.csc.fi/apps/r-env
+------------------------------
+srun: error: rc6136: task 0: Exited with exit code 2
+srun: Terminating StepId=289895.0

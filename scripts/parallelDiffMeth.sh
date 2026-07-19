@@ -13,5 +13,5 @@
 module load r-env
 
 # Run the script
-srun Rscript diffMeth.R
+srun Rscript diff_meth_3_samples_removed.R
 
