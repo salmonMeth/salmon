@@ -3,3 +3,4 @@
 .RData
 .Ruserdata
 DiffMethylTools/
+*_all_models_and_summaries.RData
