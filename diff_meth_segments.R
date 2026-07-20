@@ -78,10 +78,19 @@ mb <- new(
   resolution = "region"
 )
 
-mbdb <- makeMethylDB(
-  mb,
-  "methylDB"
-)
+##############
+#possibly unnecessary bits
+n <- length(sample_ids)
+coverage_idx <- seq(5, by = 3, length.out = n)
+numCs_idx    <- seq(6, by = 3, length.out = n)
+numTs_idx    <- seq(7, by = 3, length.out = n)
+mb@coverage.index <- coverage_idx
+mb@numCs.index <- numCs_idx
+mb@numTs.index <- numTs_idx
+#############
+
+mbdb <- makeMethylDB(mb, "methylDB")
+
 
 diff <- calculateDiffMeth(mbdb)
 

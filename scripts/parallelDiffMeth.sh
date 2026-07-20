@@ -11,7 +11,9 @@
 
 # Load r-env
 module load r-env
+echo "Job started on $(hostname)"
+echo "Working directory: $(pwd)"
+echo "CPUs: $SLURM_CPUS_PER_TASK"
 
-# Run the script
-srun Rscript diff_meth_3_samples_removed.R
-
+cd /scratch/project_2010912/ezel/salmon
+Rscript diff_meth_3_samples_removed.R

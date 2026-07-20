@@ -1,0 +1,3 @@
+Job started on rc6136
+Working directory: /scratch/project_2010912/ezel/salmon/scripts
+CPUs: 36
