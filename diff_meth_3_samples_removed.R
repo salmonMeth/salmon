@@ -12,6 +12,19 @@ path_db="/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/db
 path_diff_meth="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_3_samples_removed_with_overdispersion_difference_10.csv"
 
 db=readRDS(path_db)
+
+###################################
+#REMOVE THE SAMPLES and create a new rds object
+samples_to_remove <- c("746_T2", "176_T1", "861_T2")
+samples_to_keep <- setdiff(db@sample.ids, samples_to_remove)
+
+db_samples_removed <- reorganize(
+  db,
+  sample.ids = samples_to_keep,
+  treatment = db@treatment[match(samples_to_keep, db@sample.ids)]
+)
+###################################
+###################################
 n = db@num.records
 # Remove specific samples
 samples_to_remove <- c("746_T2", "176_T1", "861_T2")
@@ -320,3 +333,68 @@ write.csv(
   file = path_diff_meth,
   row.names = FALSE
 )
+###########################################
+###########################################
+###########################################
+####checking for overdispersion
+#using the normalized Cpgs
+path_db="/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/db_meth_normalized.rds"
+mb=readRDS(path_db)
+Tcols <- mb@numTs.index
+Ccols <- Tcols - 1
+# extract count matrix
+cntlist <- split(as.matrix(getData(mb)[, c(Ccols, Tcols)]),
+                 1:nrow(getData(mb)))
+vars <- data.frame(treatment = mb@treatment)
+modelMat <- model.matrix(~ treatment, vars)
+phis <- sapply(cntlist, function(x) {
+  estimatePhi(x,
+              modelMat = modelMat,
+              treatment = mb@treatment)[1]
+})
+methylKit:::estimatePhi
+phis <- sapply(cntlist, function(x)
+  methylKit:::estimatePhi(
+    counts = x,
+    modelMat = modelMat,
+    treatment = mb@treatment
+  )[1]
+)
+summary(phis)
+mean(phis)
+median(phis)
+quantile(phis, c(0.9, 0.95, 0.99))
+mean(phis > 1)      # any overdispersion
+mean(phis > 1.5)    # moderate
+mean(phis > 2)      # substantial
+mean(phis > 5)      # extreme
+
+
+#######for the segments
+####checking for overdispersion
+path_db="/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/segment_matrix_3_samples_removed.rds"
+mb=readRDS(path_db)
+Tcols <- mb@numTs.index
+Ccols <- Tcols - 1
+# extract count matrix
+cntlist <- split(as.matrix(getData(mb)[, c(Ccols, Tcols)]),
+                 1:nrow(getData(mb)))
+vars <- data.frame(treatment = mb@treatment)
+modelMat <- model.matrix(~ treatment, vars)
+
+
+phis <- sapply(cntlist, function(x)
+  methylKit:::estimatePhi(
+    counts = x,
+    modelMat = modelMat,
+    treatment = mb@treatment
+  )[1]
+)
+summary(phis)
+mean(phis)
+median(phis)
+quantile(phis, c(0.9, 0.95, 0.99))
+mean(phis > 1)      # any overdispersion
+mean(phis > 1.5)    # moderate
+mean(phis > 2)      # substantial
+mean(phis > 5)      # extreme

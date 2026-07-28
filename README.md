@@ -48,9 +48,19 @@ except the ones specified as different params in the data files.
 17. model_segment_counts.R : has the code needed to model the methylated&unmethylated Cpg counts using weight, ma&pa ID has covariates.
 Has code both for the pooled model and one where we fit two different models to T1 and T2 samples. Also fits two different models, one with weight scaled and one not.
 
+## Comparing the DSS DMR/DML with the Methylkit segments
+
+18. dss_dmr_dml.R : has the code to execute the DSS DMR/DML as well, compares the differentially methylated CpGs found by DSS to the Methylkit ones, their locations, the difference detected by each method, and compares the DSS segments to the Methylkit ones
+
+## Annotating the differentially methylated bases/segments:
+
+19. annot_diff_meth_DLM_DMR.R : annotates the differentially methylated bases/segments identified by DSS and Methylkit, 
+also has some code to compare the distribution of the genomic features identified and has some plots.
+
+20. gene_ontology_diff_meth.R : does the gene ontology for the annotated bases/segments
 ## Assesing the model performance
 
-18. model_problem_segments.R : checks out the segments where the model didn't converge, trying to identify the coverage, coefs etc. Also has code
+19. model_problem_segments.R : checks out the segments where the model didn't converge, trying to identify the coverage, coefs etc. Also has code
 to compare the performance of different models (with weight scaled or unscaled) regarding how many segments throw errors.
 
 ----------------------------------------------------------------------
@@ -132,6 +142,75 @@ Also contains the subfolder:
 
 c.2) data_files/model_results/weight_rescaled_T1_T2_separated/problem_segments: which has some stats and example model outputs of the segments where the model
 didn't converge.
+
+## Differential methylation using methseg
+
+a)  data_files/objects_intermediary/db_meth_normalized.rds: is the filtered and normalized (using the builtin functions from MethylKit) methylBase object
+
+## Diff. methylated base/segment annotation/gene ontology
+
+### Annotations
+
+a)  diff_meth_results_base_segments/annotated:
+
+a.1)  	dss_diff_meth_bases.csv : has the annotation for all the bases identified by DSS
+
+a.2)    methylkit_diff_meth_bases.csv : has the annotation for all the bases identified by methylkit
+
+a.3)    methylkit_diff_meth_segs.csv : has the annotation for all the segments identified by methylKit.
+
+### Genes comparison:
+
+b.1)  	genes/dss_diff_meth_bases_genes.csv 
+
+b.2) 	genes/methylkit_diff_meth_bases_genes.csv
+
+b.3 )	methylkit_diff_meth_segs_genes.csv : these have the gene names extracted from the annotation files, one name per line
+### Gene ontology
+
+c.1) genes/gene_ontology/zebrafish_orthologs_all_methods.csv : has the ontology for the genes found by all 3 methods, based on the zebrafish onthology
+## Things that are in data_files/objects_intermediary
+
+
+### Base based (as opposed to segments) objects 
+
+Raw objects
+
+a) db.rds: contains the info for all 95 samples
+
+b) db_3_samples_removed.rds : the same info but the bad samples removed
+
+For the methylated base and total coverage *counts*
+
+a) cpg_coverage_total_matrix_3_samples_removed.rds
+
+b) cpg_meth_total_matrix_3_samples_removed.rds
+
+Percent methylation
+
+a) 	cpg_meth_percent_matrix_3_samples_removed.rds
+
+Filtered&normalized using Methylkit's builtin functions
+
+a) 	db_meth_normalized.rds : has the coverage, methylated and unmethylated base counts for the bases that passed the normalization&filtering
+
+### Using DSS
+
+The results of differentially methylated base detection, w and w/o smoothing
+
+a) DMLtest_no_smoothing.rds
+
+b) DMLtest_smoothing.rds
+
+Construcing differentially methylated regions using the results of the DMLtest
+
+a) DSS_DMRs_no_smoothing.rds
+
+b) DSS_DMRs_smoothing.rds
+
+### Segments 
+
+a) 	db_segments.rds has the coverage, methylated and unmethylated base counts accumulated over the segments
 
 # Visualization
 
