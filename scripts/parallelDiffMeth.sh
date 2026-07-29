@@ -16,4 +16,4 @@ echo "Working directory: $(pwd)"
 echo "CPUs: $SLURM_CPUS_PER_TASK"
 
 cd /scratch/project_2010912/ezel/salmon
-Rscript diff_meth_3_samples_removed.R
+Rscript diff_meth_normalized_cpg.R

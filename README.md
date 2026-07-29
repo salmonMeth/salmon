@@ -192,7 +192,7 @@ a) 	cpg_meth_percent_matrix_3_samples_removed.rds
 
 Filtered&normalized using Methylkit's builtin functions
 
-a) 	db_meth_normalized.rds : has the coverage, methylated and unmethylated base counts for the bases that passed the normalization&filtering
+a) 	db_meth_normalized.rds : has the coverage, methylated and unmethylated base counts for the bases that passed the normalization&filtering(also does NOT contain the 3 bad samples)
 
 ### Using DSS
 

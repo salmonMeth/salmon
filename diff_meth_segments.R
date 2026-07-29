@@ -1,6 +1,6 @@
 library(methylKit)
 
-base_dir <- "/scratch/project_2010912/ezel/salmon/data_files/segment_cs_cov_3_samples_removed"
+base_dir <- "/scratch/project_2010912/ezel/salmon/data_files/segmentation/segment_cs_cov_3_samples_removed"
 path_diff_meth =  "/scratch/project_2010912/ezel/salmon/data_files/diff_meth_segments"
 # Find files
 cov_files <- list.files(base_dir, pattern = "_segment_coverage\\.csv$", full.names = TRUE)
@@ -68,6 +68,9 @@ df <- df[, c(
   ))
 )]
 
+
+df <- df[order(df$chr, df$start, df$end), ]
+
 mb <- new(
   "methylBase",
   df,
@@ -78,32 +81,54 @@ mb <- new(
   resolution = "region"
 )
 
-##############
-#possibly unnecessary bits
-n <- length(sample_ids)
-coverage_idx <- seq(5, by = 3, length.out = n)
-numCs_idx    <- seq(6, by = 3, length.out = n)
-numTs_idx    <- seq(7, by = 3, length.out = n)
-mb@coverage.index <- coverage_idx
-mb@numCs.index <- numCs_idx
-mb@numTs.index <- numTs_idx
-#############
+####
 
-mbdb <- makeMethylDB(mb, "methylDB")
+#mbdb <- makeMethylDB(mb, "methylDB")
+######
+######
+#to apply the calculateDiffMeth(overdispersion) parameter, it turns out we need to get rid of the rows(segments)
+#that have zero coverage for any of the samples
 
+test_df <- getData(mb)
 
-diff <- calculateDiffMeth(mbdb)
+cov_cols <- paste0("coverage_", sample_ids)
 
-differ <- 15
+zero_cov_rows <- which(
+  apply(test_df[, cov_cols], 1, function(x) any(x == 0))
+)
+
+length(zero_cov_rows)
+
+df_nozero <- test_df[-zero_cov_rows, ]
+
+dim(df_nozero)
+
+mb_nozero <- new(
+  "methylBase",
+  df_nozero,
+  sample.ids = sample_ids,
+  assembly = "-",
+  context = "CpG",
+  treatment = new_treatment,
+  resolution = "region"
+)
+#########
+
+diff_nozero <- calculateDiffMeth(
+  mb_nozero,
+  overdispersion="MN"
+)
+#diff <- calculateDiffMeth(mbdb)
+
+differ <- 10
 
 dmr <- getMethylDiff(
-  diff,
+  diff_nozero,
   differ,
   qvalue = 0.01
 )
 
 write.csv(
-  getData(dmr),
-  file = paste0(path_diff_meth, "_difference_", differ, ".csv"),
+  getData(dmr),"/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/diff_meth_segments_overdispersion_diff_10_ACTUAL_OVERDISPERSE.csv",
   row.names = FALSE
 )

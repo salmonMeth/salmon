@@ -23,7 +23,11 @@ rownames(Cov) <- NULL
 colnames(M) <- db_norm@sample.ids
 colnames(Cov) <- db_norm@sample.ids
 
-#somewhere in between here we removed the NA values from the matrix
+keep <- rowSums(is.na(M)) == 0 &
+  rowSums(is.na(Cov)) == 0
+M <- M[keep, , drop = FALSE]
+Cov <- Cov[keep, , drop = FALSE]
+
 
 gr <- GRanges(
   seqnames = df$chr,
@@ -38,7 +42,6 @@ BSobj <- BSseq(
   sampleNames = db_norm@sample.ids
 )
 
-library(DSS)
 cat("Starting DMLtest 1\n")
 flush.console()
 dmlTest_no_smoothing <- DMLtest(

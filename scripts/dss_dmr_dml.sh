@@ -10,4 +10,4 @@
 
 module load r-env
 
-Rscript /scratch/project_2010912/ezel/salmon/dss_dml_dmr.R
+Rscript /scratch/project_2010912/ezel/salmon/delete_later.R

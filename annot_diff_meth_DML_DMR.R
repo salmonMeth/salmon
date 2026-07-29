@@ -12,8 +12,8 @@ txdb <- txdbmaker::makeTxDbFromGFF(path_annot)
 
 
 ########
-path_mk_bases= "/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/diff_meth_normalized_with_difference_10.csv"
-path_mk_segs ="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/diff_meth_segments_difference_10.csv"
+path_mk_bases= "/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/diff_meth_normalized_with_overdispersion_difference_10.csv"
+path_mk_segs ="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/diff_meth_segments_overdispersion_diff_10_ACTUAL_OVERDISPERSE.csv"
 path_dss_bases= "/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/dss/diff_meth_smoothed_fdr0.01_difference0.1.csv"
 
 mk_bases= read.csv(path_mk_bases)
@@ -33,10 +33,7 @@ ref_chr <- sort(unique(mk_bases$chr))
 ens_chr <- as.character(seq_along(ref_chr))
 chr_map <- setNames(ens_chr, ref_chr)
 mk_segs$chr_ens <- chr_map[mk_segs$chr]
-################
-################
 #get the annotations
-
 genes_gr <- genes(txdb)
 tx_gr <- transcripts(txdb)
 promoters_gr <- promoters(
@@ -57,8 +54,7 @@ introns_gr <- unlist(
   intronsByTranscript(txdb),
   use.names = FALSE
 )
-###################
-###################
+
 #create the granges objects
 #for the mk_segs
 dm_seg_gr <- GRanges(
@@ -515,6 +511,12 @@ feature_comparison <- merge(
 library(tidyr)
 library(ggplot2)
 
+
+plot_data <- rbind(
+  summary_mk[, c("feature", "percent", "method")],
+  summary_dss[, c("feature", "percent", "method")]
+)
+
 p <- ggplot(
   plot_data,
   aes(
@@ -615,7 +617,28 @@ feature_summary <- function(x){
 
 dmr_summary <- feature_summary(dmr_seg)
 
-dmr_summary
+p <- ggplot(
+  dmr_summary,
+  aes(
+    x = feature,
+    y = percent
+  )
+) +
+  geom_col(
+    fill = "steelblue"
+  ) +
+  theme_bw() +
+  ylab("% of DMRs") +
+  xlab("") +
+  ggtitle("Genomic feature distribution of differentially methylated regions") +
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,
+      size = 14,
+      face = "bold"
+    )
+  )
+
 
 ggsave(
   "/scratch/project_2010912/ezel/salmon/data_files/use_in_thesis/DMR_segment_feature_distribution.png",
