@@ -42,22 +42,17 @@ dim(Cov)
 #gr <- GRanges(seqnames = df$chr,ranges = IRanges(df$start, df$end))
 BSobj <- BSseq(gr = gr, M = M,Cov = Cov,sampleNames = db_norm@sample.ids)
 cat("Starting DMLtest 1\n")
-flush.console()
-dmlTest_no_smoothing <- DMLtest(
-  BSobj,
-  group1 = which(treatment == 0),
-  group2 = which(treatment == 1)
-)
+
 
 cat("Starting DMLtest 2\n")
 flush.console()
 dmlTest_smoothing <- DMLtest(
-  BSobj,
-  group1 = which(treatment == 0),
-  group2 = which(treatment == 1),smoothing=TRUE)
+  BSobj, group1 = which(treatment == 1),
+  group2 = which(treatment == 0),
+  smoothing=TRUE)
 
 # Save the DML test object
-saveRDS(dmlTest_no_smoothing, "/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/DMLtest_no_smoothing_NOTNORMALIZED.rds")
-saveRDS(dmlTest_smoothing, "/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/DMLtest_smoothing_NOTNORMALIZED.rds")
+#saveRDS(dmlTest_no_smoothing, "/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/DMLtest_no_smoothing_NOTNORMALIZED.rds")
+saveRDS(dmlTest_smoothing, "/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/DMLtest_smoothing_checkSign.rds")
 
 

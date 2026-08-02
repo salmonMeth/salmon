@@ -512,10 +512,18 @@ library(tidyr)
 library(ggplot2)
 
 
-plot_data <- rbind(
-  summary_mk[, c("feature", "percent", "method")],
-  summary_dss[, c("feature", "percent", "method")]
-)
+plot_data <- feature_comparison %>%
+  dplyr::select(
+    feature,
+    percent_Methylkit, n_Methylkit,
+    percent_DSS, n_DSS
+  ) %>%
+  tidyr::pivot_longer(
+    cols = -feature,
+    names_to = c(".value", "method"),
+    names_sep = "_"
+  )
+
 
 p <- ggplot(
   plot_data,
@@ -525,10 +533,14 @@ p <- ggplot(
     fill = method
   )
 ) +
-  geom_col(
-    position = "dodge"
-  ) +
-  theme_bw() +
+  geom_col(position = position_dodge(0.9)) +
+  geom_text(
+    aes(label = n),
+    position = position_dodge2(width = 0.9),
+    vjust = 1.5,
+    size = 2.8,
+    colour = "black",  fontface = "bold"
+  )+
   ylab("% of DMLs") +
   xlab("") +
   ggtitle("Genomic feature distribution of differentially methylated bases") +
@@ -624,10 +636,14 @@ p <- ggplot(
     y = percent
   )
 ) +
-  geom_col(
-    fill = "steelblue"
+  geom_col(fill = "#DA70D6") +
+  geom_text(
+    aes(label = n),
+    vjust = 1.3,       # puts text inside the bars
+    colour = "white",
+    size = 3,
+    fontface = "bold"
   ) +
-  theme_bw() +
   ylab("% of DMRs") +
   xlab("") +
   ggtitle("Genomic feature distribution of differentially methylated regions") +

@@ -5,36 +5,15 @@ path_output_annot="/scratch/project_2010912/ezel/diff_meth_Full_Annot.csv"
 
 #we get this from the supplement of the paper
 #https://pmc.ncbi.nlm.nih.gov/articles/PMC8127823/
-homeol_path <- "/scratch/project_2010912/ezel/homeologs.xlsx"
+homeol_path <- "/scratch/project_2010912/ezel/synteny_AtlanticSalmon_Ssal_v3.1.tsv"
 #now we get the homeologs and match them
 
-homeologs <- read_excel(homeol_path)
+homeologs <- read.delim(homeol_path)
 homeologs <- as.data.frame(homeologs)
-
-#we need to fix the formatting a lil
-
-colnames(homeologs) <- c(
-  "block",
-  "homeolog_block",
-  "chr_x",
-  "start_x",
-  "end_x",
-  "chr_y",
-  "start_y",
-  "end_y",
-  "direction"
-)
-
-
-homeologs$chr_y <- sub("^ssa", "", homeologs$chr_y)
-homeologs$chr_x <- sub("^ssa", "", homeologs$chr_x)
-
-homeologs$chr_y <- as.integer(homeologs$chr_y)
-homeologs$chr_x <- as.integer(homeologs$chr_x)
 
 dat= read.csv(path_output_annot)
 
-dat$chr_num <- as.integer(dat$chr_num)
+dat$chr_num <- as.integer(dat$chr_ncbi)
 ##initialize the new cols for our partner chromosome data
 dat$in_homeolog_block <- FALSE
 dat$homeolog_block_name <- NA
@@ -81,5 +60,5 @@ for (i in seq_len(nrow(homeologs))) {
   }
 }
 
-path_output_homeo="/scratch/project_2010912/ezel/diff_meth_Full_With_Homeo.csv"
+path_output_homeo="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/annotated/homeologs/mk_with_homeos.csv"
 write.csv(dat, path_output_homeo, row.names = FALSE)

@@ -44,18 +44,18 @@ BSobj <- BSseq(
 
 cat("Starting DMLtest 1\n")
 flush.console()
-dmlTest_no_smoothing <- DMLtest(
-  BSobj,
-  group1 = which(treatment == 0),
-  group2 = which(treatment == 1)
-)
+dmlTest_smoothing <- DMLtest(
+  BSobj, group1 = which(treatment == 1),
+  group2 = which(treatment == 0))
+
 
 cat("Starting DMLtest 2\n")
 flush.console()
 dmlTest_smoothing <- DMLtest(
-  BSobj,
-  group1 = which(treatment == 0),
-  group2 = which(treatment == 1),smoothing=TRUE)
+  BSobj, group1 = which(treatment == 1),
+  group2 = which(treatment == 0),
+  smoothing=TRUE)
+
 
 # Save the DML test object
 saveRDS(dmlTest_no_smoothing, "/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/DMLtest_no_smoothing.rds")

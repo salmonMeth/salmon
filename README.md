@@ -161,14 +161,43 @@ a.3)    methylkit_diff_meth_segs.csv : has the annotation for all the segments i
 
 ### Genes comparison:
 
+data_files/diff_meth_results_base_segments/annotated/genes
+
 b.1)  	genes/dss_diff_meth_bases_genes.csv 
 
 b.2) 	genes/methylkit_diff_meth_bases_genes.csv
 
 b.3 )	methylkit_diff_meth_segs_genes.csv : these have the gene names extracted from the annotation files, one name per line
+
 ### Gene ontology
 
-c.1) genes/gene_ontology/zebrafish_orthologs_all_methods.csv : has the ontology for the genes found by all 3 methods, based on the zebrafish onthology
+data_files/diff_meth_results_base_segments/annotated/genes/
+
+c.1) data_files/diff_meth_results_base_segments/annotated/genes/gene_ontology :
+
+Currently has the pike orthologues, the specific mappings of the differentially methylated salmon genes to pike genes.
+
+The word clouds are also here
+
+
+### Enrichment analysis 
+
+We analyzed the functional enrichment of the salmon genes and pike orthologues, also investigated the pathways the enriched terms take part in.
+
+d) /data_files/diff_meth_results_base_segments/annotated/genes/enrichment: 
+
+d.1) MethylKit: has both csv format tables and png tables for the results of the enrichment analysis(for both salmon and pike)
+
+d.2) DSS: same but for the genes obtained as the result of DSS diff-meth algorithm
+
+d.3) Segments: same
+
+e) data_files/diff_meth_results_base_segments/annotated/genes/enrichment/enrichment_networks:
+
+examines the bigger pathways the detected genes take part in. 
+
+Have one file per organism*method cross (pike, salmon) and (MethylKit, DSS, segments (MethylKit))
+
 ## Things that are in data_files/objects_intermediary
 
 

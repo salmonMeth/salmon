@@ -10,6 +10,8 @@ library(GenomeInfoDb)
 library(dplyr)
 library(gprofiler2)
 library(biomaRt)
+library(tidyr)
+
 ##############################
 ##############################
 #some extra code
@@ -216,3 +218,7 @@ save_enrichment_tables <- function(gene_sets, method_name,
 save_enrichment_tables(mk_sets, "MethylKit")
 save_enrichment_tables(dss_sets, "DSS")
 save_enrichment_tables(seg_sets, "Segments")
+
+
+################################
+################################

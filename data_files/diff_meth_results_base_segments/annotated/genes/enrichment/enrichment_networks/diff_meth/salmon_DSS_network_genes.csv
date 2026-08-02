@@ -1,0 +1,5 @@
+"ensembl_gene_id","external_gene_name","elucius_homolog_ensembl_gene","elucius_homolog_associated_gene_name","elucius_homolog_orthology_type","elucius_homolog_orthology_confidence","method"
+"ENSSSAG00000010802","","ENSELUG00000040158","","ortholog_many2many",1,"DSS"
+"ENSSSAG00000010802","","ENSELUG00000036783","fthl31","ortholog_many2many",1,"DSS"
+"ENSSSAG00000010802","","ENSELUG00000041025","fthl31","ortholog_many2many",1,"DSS"
+"ENSSSAG00000067965","","ENSELUG00000003796","ahr1b","ortholog_one2many",1,"DSS"

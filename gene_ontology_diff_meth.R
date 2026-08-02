@@ -8,6 +8,36 @@ library(GenomeInfoDb)
 library(dplyr)
 library(gprofiler2)
 library(biomaRt)
+###############
+###############
+#extract the gene lists
+
+mk_bases="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/annotated/methylkit_diff_meth_bases.csv"
+dss_bases="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/annotated/dss_diff_meth_bases.csv"
+mk_segs="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/annotated/methylkit_diff_meth_segs.csv"
+
+mk_b=read.csv(mk_bases)
+mk_s=read.csv(mk_segs)
+dss_b=read.csv(dss_bases)
+
+out_mk_b="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/annotated/genes/methylkit_diff_meth_bases_genes.csv"
+out_mk_s="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/annotated/genes/methylkit_diff_meth_segs_genes.csv"
+out_dss_s="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/annotated/genes/dss_diff_meth_bases_genes.csv"
+writeLines(
+  unique(unlist(strsplit(na.omit(mk_b$gene_id), ";"))),
+  out_mk_b
+)
+
+writeLines(
+  unique(unlist(strsplit(na.omit(mk_s$gene_id), ";"))),
+  out_mk_s
+)
+
+writeLines(
+  unique(unlist(strsplit(na.omit(dss_b$gene_id), ";"))),
+  out_dss_s
+)
+
 
 ############
 
@@ -15,9 +45,9 @@ path_dml_dss="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_
 path_dml_mk="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/annotated/genes/methylkit_diff_meth_bases_genes.csv"
 path_dmr_mk="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/annotated/genes/methylkit_diff_meth_segs_genes.csv"
 
-methylkit_dml <- read.csv(path_dml_mk)
-dss_dml <- read.csv(path_dml_dss)
-dmr_seg <- read.csv(path_dmr_mk)
+methylkit_dml <- read.csv(path_dml_mk,header=FALSE)
+dss_dml <- read.csv(path_dml_dss,header=FALSE)
+dmr_seg <- read.csv(path_dmr_mk,header=FALSE)
 
 
 #############################################
@@ -84,21 +114,11 @@ get_orthologs <- function(genes, mart, organism) {
   
   res
 }
-
-
 get_gene_list <- function(x){
-  
-  genes <- unique(
-    na.omit(x$gene_id)
-  )
-  
-  # remove multiple genes if separated by ;
-  genes <- unlist(
-    strsplit(genes, ";")
-  )
-  
-  unique(genes)
+  unique(na.omit(x$V1))
 }
+
+genes_methylkit <- get_gene_list(methylkit_dml)
 
 
 genes_methylkit <- get_gene_list(methylkit_dml)
