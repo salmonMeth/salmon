@@ -1,0 +1,312 @@
+
+====================================
+Chromosome 1 
+====================================
+Number of significant CpGs: 9 
+Mean nearest-neighbour distance: 1726529 bp
+Median nearest-neighbour distance: 24 bp
+Standard deviation: 5152082 bp
+25th percentile: 16 bp
+75th percentile: 36628 bp
+90th percentile: 3122372 bp
+95th percentile: 9293860 bp
+
+====================================
+Chromosome 2 
+====================================
+Number of significant CpGs: 91 
+Mean nearest-neighbour distance: 174075.4 bp
+Median nearest-neighbour distance: 1 bp
+Standard deviation: 820596.3 bp
+25th percentile: 1 bp
+75th percentile: 46 bp
+90th percentile: 26511 bp
+95th percentile: 312936 bp
+
+====================================
+Chromosome 3 
+====================================
+Number of significant CpGs: 94 
+Mean nearest-neighbour distance: 72176.02 bp
+Median nearest-neighbour distance: 6 bp
+Standard deviation: 520718.1 bp
+25th percentile: 1 bp
+75th percentile: 251 bp
+90th percentile: 68083.7 bp
+95th percentile: 152147 bp
+
+====================================
+Chromosome 4 
+====================================
+Number of significant CpGs: 19 
+Mean nearest-neighbour distance: 982164.6 bp
+Median nearest-neighbour distance: 6 bp
+Standard deviation: 4227679 bp
+25th percentile: 1 bp
+75th percentile: 35.5 bp
+90th percentile: 46915.6 bp
+95th percentile: 2032024 bp
+
+====================================
+Chromosome 5 
+====================================
+Number of significant CpGs: 22 
+Mean nearest-neighbour distance: 331903 bp
+Median nearest-neighbour distance: 9 bp
+Standard deviation: 1547938 bp
+25th percentile: 2 bp
+75th percentile: 78 bp
+90th percentile: 5793.5 bp
+95th percentile: 30266.05 bp
+
+====================================
+Chromosome 6 
+====================================
+Number of significant CpGs: 8 
+Mean nearest-neighbour distance: 4598178 bp
+Median nearest-neighbour distance: 200771 bp
+Standard deviation: 10263008 bp
+25th percentile: 73.75 bp
+75th percentile: 2726712 bp
+90th percentile: 12128868 bp
+95th percentile: 20902236 bp
+
+====================================
+Chromosome 7 
+====================================
+Number of significant CpGs: 13 
+Mean nearest-neighbour distance: 2659.92 bp
+Median nearest-neighbour distance: 15 bp
+Standard deviation: 6529.23 bp
+25th percentile: 6 bp
+75th percentile: 80 bp
+90th percentile: 11217.2 bp
+95th percentile: 16465.6 bp
+
+====================================
+Chromosome 8 
+====================================
+Number of significant CpGs: 62 
+Mean nearest-neighbour distance: 4536.24 bp
+Median nearest-neighbour distance: 6 bp
+Standard deviation: 32290.69 bp
+25th percentile: 1 bp
+75th percentile: 38 bp
+90th percentile: 73.1 bp
+95th percentile: 8152.1 bp
+
+====================================
+Chromosome 9 
+====================================
+Number of significant CpGs: 20 
+Mean nearest-neighbour distance: 13.85 bp
+Median nearest-neighbour distance: 1 bp
+Standard deviation: 20.45 bp
+25th percentile: 1 bp
+75th percentile: 16.25 bp
+90th percentile: 46.9 bp
+95th percentile: 55 bp
+
+====================================
+Chromosome 10 
+====================================
+Number of significant CpGs: 11 
+Mean nearest-neighbour distance: 5026598 bp
+Median nearest-neighbour distance: 1 bp
+Standard deviation: 12951074 bp
+25th percentile: 1 bp
+75th percentile: 18.5 bp
+90th percentile: 13041373 bp
+95th percentile: 27646258 bp
+
+====================================
+Chromosome 11 
+====================================
+Number of significant CpGs: 5 
+Mean nearest-neighbour distance: 95.2 bp
+Median nearest-neighbour distance: 108 bp
+Standard deviation: 77.64 bp
+25th percentile: 24 bp
+75th percentile: 108 bp
+90th percentile: 170.4 bp
+95th percentile: 191.2 bp
+
+====================================
+Chromosome 12 
+====================================
+Number of significant CpGs: 18 
+Mean nearest-neighbour distance: 374336.9 bp
+Median nearest-neighbour distance: 19 bp
+Standard deviation: 1577310 bp
+25th percentile: 13 bp
+75th percentile: 31.75 bp
+90th percentile: 21662 bp
+95th percentile: 1022581 bp
+
+====================================
+Chromosome 13 
+====================================
+Number of significant CpGs: 22 
+Mean nearest-neighbour distance: 512569.8 bp
+Median nearest-neighbour distance: 11 bp
+Standard deviation: 2403470 bp
+25th percentile: 1 bp
+75th percentile: 43.5 bp
+90th percentile: 225.6 bp
+95th percentile: 2390.75 bp
+
+====================================
+Chromosome 14 
+====================================
+Number of significant CpGs: 10 
+Mean nearest-neighbour distance: 2235452 bp
+Median nearest-neighbour distance: 31 bp
+Standard deviation: 7066627 bp
+25th percentile: 4 bp
+75th percentile: 63 bp
+90th percentile: 2240947 bp
+95th percentile: 12294186 bp
+
+====================================
+Chromosome 15 
+====================================
+Number of significant CpGs: 6 
+Mean nearest-neighbour distance: 76 bp
+Median nearest-neighbour distance: 42 bp
+Standard deviation: 78.77 bp
+25th percentile: 18 bp
+75th percentile: 142.5 bp
+90th percentile: 176 bp
+95th percentile: 176 bp
+
+====================================
+Chromosome 16 
+====================================
+Number of significant CpGs: 37 
+Mean nearest-neighbour distance: 988041.8 bp
+Median nearest-neighbour distance: 1 bp
+Standard deviation: 3763593 bp
+25th percentile: 1 bp
+75th percentile: 9 bp
+90th percentile: 1046123 bp
+95th percentile: 4305741 bp
+
+====================================
+Chromosome 17 
+====================================
+Number of significant CpGs: 7 
+Mean nearest-neighbour distance: 2101974 bp
+Median nearest-neighbour distance: 111001 bp
+Standard deviation: 3128264 bp
+25th percentile: 55501 bp
+75th percentile: 3926553 bp
+90th percentile: 6638708 bp
+95th percentile: 6638708 bp
+
+====================================
+Chromosome 18 
+====================================
+Number of significant CpGs: 9 
+Mean nearest-neighbour distance: 1125755 bp
+Median nearest-neighbour distance: 48 bp
+Standard deviation: 2857196 bp
+25th percentile: 1 bp
+75th percentile: 117 bp
+90th percentile: 2927983 bp
+95th percentile: 5778389 bp
+
+====================================
+Chromosome 19 
+====================================
+Number of significant CpGs: 7 
+Mean nearest-neighbour distance: 14841.57 bp
+Median nearest-neighbour distance: 24 bp
+Standard deviation: 39200.08 bp
+25th percentile: 21.5 bp
+75th percentile: 32 bp
+90th percentile: 41519.6 bp
+95th percentile: 72629.3 bp
+
+====================================
+Chromosome 20 
+====================================
+Number of significant CpGs: 1 
+Mean nearest-neighbour distance: NaN bp
+Median nearest-neighbour distance: NA bp
+Standard deviation: NA bp
+25th percentile: NA bp
+75th percentile: NA bp
+90th percentile: NA bp
+95th percentile: NA bp
+
+====================================
+Chromosome 21 
+====================================
+Number of significant CpGs: 32 
+Mean nearest-neighbour distance: 1191.44 bp
+Median nearest-neighbour distance: 1 bp
+Standard deviation: 6113.69 bp
+25th percentile: 1 bp
+75th percentile: 3.5 bp
+90th percentile: 104.4 bp
+95th percentile: 1499 bp
+
+====================================
+Chromosome 22 
+====================================
+Number of significant CpGs: 40 
+Mean nearest-neighbour distance: 2.98 bp
+Median nearest-neighbour distance: 1 bp
+Standard deviation: 5.46 bp
+25th percentile: 1 bp
+75th percentile: 1 bp
+90th percentile: 5.3 bp
+95th percentile: 17 bp
+
+====================================
+Chromosome 23 
+====================================
+Number of significant CpGs: 21 
+Mean nearest-neighbour distance: 760.33 bp
+Median nearest-neighbour distance: 8 bp
+Standard deviation: 3380.45 bp
+25th percentile: 1 bp
+75th percentile: 35 bp
+90th percentile: 123 bp
+95th percentile: 123 bp
+
+====================================
+Chromosome 24 
+====================================
+Number of significant CpGs: 1 
+Mean nearest-neighbour distance: NaN bp
+Median nearest-neighbour distance: NA bp
+Standard deviation: NA bp
+25th percentile: NA bp
+75th percentile: NA bp
+90th percentile: NA bp
+95th percentile: NA bp
+
+====================================
+Chromosome 25 
+====================================
+Number of significant CpGs: 4 
+Mean nearest-neighbour distance: 2133.5 bp
+Median nearest-neighbour distance: 79.5 bp
+Standard deviation: 4146.69 bp
+25th percentile: 22 bp
+75th percentile: 2191 bp
+90th percentile: 5888.2 bp
+95th percentile: 7120.6 bp
+
+====================================
+Chromosome 26 
+====================================
+Number of significant CpGs: 8 
+Mean nearest-neighbour distance: 1522907 bp
+Median nearest-neighbour distance: 4 bp
+Standard deviation: 4307408 bp
+25th percentile: 1.75 bp
+75th percentile: 19.25 bp
+90th percentile: 3654980 bp
+95th percentile: 7919089 bp

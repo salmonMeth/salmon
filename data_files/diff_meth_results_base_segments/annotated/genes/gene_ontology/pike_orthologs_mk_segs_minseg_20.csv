@@ -1,0 +1,3 @@
+"ensembl_gene_id","external_gene_name","elucius_homolog_ensembl_gene","elucius_homolog_associated_gene_name","elucius_homolog_orthology_type","elucius_homolog_orthology_confidence","method"
+"ENSSSAG00000022430","anapc13","ENSELUG00000015201","ANAPC13","ortholog_one2many",1,"Segment_minseg_20"
+"ENSSSAG00000069768","CRY2","ENSELUG00000021019","CRY2","ortholog_one2one",1,"Segment_minseg_20"

@@ -1,0 +1,236 @@
+MODEL QUALITY CONTROL REPORT
+============================
+
+Chromosome: NC_059470.1 
+Models assessed: 20 
+Segments: 10 
+
+SUMMARY BY TIMEPOINT
+===================
+
+   TimePoint n_models convergence_fail non_positive_hessian mean_AIC median_AIC
+      <char>    <int>            <int>                <int>    <num>      <num>
+1:        T1       10                0                    0 623.0335   477.7288
+2:        T2       10                0                    0 610.1739   491.5756
+
+
+CONVERGENCE
+===========
+
+   TimePoint      V1
+      <char> <table>
+1:        T1      10
+2:        T2      10
+
+Optimizer messages:
+   TimePoint                             convergence_message     N
+      <char>                                          <char> <int>
+1:        T1                        relative convergence (4)    10
+2:        T2                        relative convergence (4)     9
+3:        T2 both X-convergence and relative convergence (5)     1
+
+
+HESSIAN STATUS
+==============
+
+   TimePoint      V1
+      <char> <table>
+1:        T1      10
+2:        T2      10
+
+
+AIC SUMMARY
+===========
+
+   TimePoint  min_AIC   q1_AIC median_AIC mean_AIC   q3_AIC  max_AIC
+      <char>    <num>    <num>      <num>    <num>    <num>    <num>
+1:        T1 365.0280 435.5431   477.7288 623.0335 856.7543 1069.954
+2:        T2 385.6359 437.7592   491.5756 610.1739 850.0211  967.071
+
+
+PEARSON RESIDUALS
+=================
+
+   TimePoint mean_res_sd median_res_sd mean_abs2 mean_abs3
+      <char>       <num>         <num>     <num>     <num>
+1:        T1    2.041979      1.658331      14.0       6.7
+2:        T2    1.967639      1.645778      14.3       6.3
+
+
+RANDOM EFFECT SUMMARY
+=====================
+
+   TimePoint mean_ID_ma median_ID_ma mean_ID_pa median_ID_pa
+      <char>      <num>        <num>      <num>        <num>
+1:        T1 0.11216007   0.04248558 0.07509272   0.03286926
+2:        T2 0.09439587   0.05424326 0.08027973   0.03256208
+
+
+PARENT EFFECT DISTRIBUTION SUMMARY
+==================================
+
+   dispersion_class parent_type     n fraction_near_zero mean_abs_effect
+             <char>      <char> <int>              <num>           <num>
+1:               OK       ID_ma   180         0.00000000      0.04742236
+2:               OK       ID_pa   180         0.13333333      0.02325066
+3:  UNDERDISPERSION       ID_ma    24         0.00000000      0.32073679
+4:  UNDERDISPERSION       ID_pa    24         0.00000000      0.24927128
+5:   OVERDISPERSION       ID_ma    36         0.00000000      0.01832334
+6:   OVERDISPERSION       ID_pa    36         0.02777778      0.03312079
+   median_abs_effect max_abs_effect
+               <num>          <num>
+1:        0.02399856     0.39695954
+2:        0.01394425     0.21391987
+3:        0.25947343     0.93297838
+4:        0.21576033     0.85549229
+5:        0.01086859     0.05834884
+6:        0.02022881     0.15054982
+
+
+PREDICTED METHYLATION BY DISPERSION CLASS
+========================================
+
+   TimePoint DHARMa_dispersion_class n_models mean_prediction median_prediction
+      <char>                  <char>    <int>           <num>             <num>
+1:        T1         UNDERDISPERSION        1       0.4731182         0.4731182
+2:        T2         UNDERDISPERSION        1       0.4540407         0.4540407
+3:        T2          OVERDISPERSION        1       0.1799388         0.1799388
+4:        T1          OVERDISPERSION        2       0.9001794         0.9001794
+   min_prediction max_prediction mean_pred_sd median_pred_sd
+            <num>          <num>        <num>          <num>
+1:      0.4731182      0.4731182  0.131122636    0.131122636
+2:      0.4540407      0.4540407  0.128968140    0.128968140
+3:      0.1799388      0.1799388  0.013491282    0.013491282
+4:      0.8710988      0.9292601  0.003391997    0.003391997
+
+Random effects > 0.01
+======================
+
+   TimePoint large_RE total
+      <char>    <int> <int>
+1:        T1       10    10
+2:        T2       10    10
+
+Both ID_ma and ID_pa < 1e-4
+============================
+
+   TimePoint both_RE_near_zero total
+      <char>             <int> <int>
+1:        T1                 0    10
+2:        T2                 0    10
+
+
+PREDICTIONS
+===========
+
+   TimePoint mean_prediction sd_prediction min_prediction max_prediction
+      <char>           <num>         <num>          <num>          <num>
+1:        T1       0.5549891    0.01990949    0.002981904      0.9375555
+2:        T2       0.5411475    0.02049756    0.003552894      0.9203012
+
+
+DHARMa DIAGNOSTICS
+==================
+
+   TimePoint uniformity_fail dispersion_fail outlier_fail total
+      <char>           <int>           <int>        <int> <int>
+1:        T1               0               3            2    10
+2:        T2               1               2            1    10
+
+
+UNDER/OVER DISPERSION
+=====================
+
+   TimePoint DHARMa_dispersion_class     N
+      <char>                  <char> <int>
+1:        T1                      OK     7
+2:        T2                      OK     8
+3:        T1         UNDERDISPERSION     1
+4:        T2         UNDERDISPERSION     1
+5:        T2          OVERDISPERSION     1
+6:        T1          OVERDISPERSION     2
+
+
+UNDERDISPERSED SEGMENTS
+=======================
+
+Number: 2 
+
+   model_index         chr    start      end TimePoint pred_mean   pred_sd
+         <int>      <char>    <int>    <int>    <char>     <num>     <num>
+1:           2 NC_059470.1 36984605 37646179        T1 0.4731182 0.1311226
+2:           2 NC_059470.1 36984605 37646179        T2 0.4540407 0.1289681
+    pred_min  pred_max  sd_ID_ma  sd_ID_pa DHARMa_dispersion DHARMa_dispersion_stat
+       <num>     <num>     <num>     <num>             <num>                  <num>
+1: 0.2611674 0.8298324 0.5191187 0.3302375                 0              0.3496435
+2: 0.2211544 0.7376148 0.3937449 0.4244264                 0              0.2467125
+
+
+OVERDISPERSED SEGMENTS
+======================
+
+Number: 3 
+
+   model_index         chr    start      end TimePoint pred_mean     pred_sd
+         <int>      <char>    <int>    <int>    <char>     <num>       <num>
+1:           6 NC_059470.1 42203194 42203448        T2 0.1799388 0.013491282
+2:           7 NC_059470.1 42203536 42217382        T1 0.9292601 0.003793883
+3:           9 NC_059470.1 42233653 42995993        T1 0.8710988 0.002990112
+    pred_min  pred_max   sd_ID_ma   sd_ID_pa DHARMa_dispersion
+       <num>     <num>      <num>      <num>             <num>
+1: 0.1476608 0.2057490 0.02510617 0.09204866             0.008
+2: 0.9193728 0.9375555 0.04694081 0.04237873             0.000
+3: 0.8641751 0.8766543 0.03803034 0.01132569             0.000
+   DHARMa_dispersion_stat
+                    <num>
+1:               1.351937
+2:               1.029845
+3:               1.103679
+
+
+RANDOM EFFECT SDs BY DISPERSION CLASS
+=====================================
+
+   TimePoint DHARMa_dispersion_class n_models mean_ID_ma median_ID_ma  min_ID_ma
+      <char>                  <char>    <int>      <num>        <num>      <num>
+1:        T1         UNDERDISPERSION        1 0.51911867   0.51911867 0.51911867
+2:        T2         UNDERDISPERSION        1 0.39374486   0.39374486 0.39374486
+3:        T2          OVERDISPERSION        1 0.02510617   0.02510617 0.02510617
+4:        T1          OVERDISPERSION        2 0.04248558   0.04248558 0.03803034
+    max_ID_ma mean_ID_pa median_ID_pa  min_ID_pa  max_ID_pa
+        <num>      <num>        <num>      <num>      <num>
+1: 0.51911867 0.33023749   0.33023749 0.33023749 0.33023749
+2: 0.39374486 0.42442637   0.42442637 0.42442637 0.42442637
+3: 0.02510617 0.09204866   0.09204866 0.09204866 0.09204866
+4: 0.04694081 0.02685221   0.02685221 0.01132569 0.04237873
+
+
+LARGE RANDOM EFFECT SEGMENTS
+============================
+
+Number: 20 
+
+    model_index         chr    start      end TimePoint   sd_ID_ma     sd_ID_pa
+          <int>      <char>    <int>    <int>    <char>      <num>        <num>
+ 1:           1 NC_059470.1      126 36690105        T1 0.03112447 2.259282e-02
+ 2:           1 NC_059470.1      126 36690105        T2 0.02300873 2.044746e-02
+ 3:           2 NC_059470.1 36984605 37646179        T1 0.51911867 3.302375e-01
+ 4:           2 NC_059470.1 36984605 37646179        T2 0.39374486 4.244264e-01
+ 5:           3 NC_059470.1 37646221 42176886        T1 0.01774508 2.335978e-02
+ 6:           3 NC_059470.1 37646221 42176886        T2 0.02933807 2.152533e-02
+ 7:           4 NC_059470.1 42176890 42177006        T1 0.01559740 3.747533e-06
+ 8:           4 NC_059470.1 42176890 42177006        T2 0.04299323 1.858816e-05
+ 9:           5 NC_059470.1 42177006 42203161        T1 0.02949429 2.230016e-02
+10:           5 NC_059470.1 42177006 42203161        T2 0.01793933 1.880129e-02
+11:           6 NC_059470.1 42203194 42203448        T1 0.08641372 6.411357e-02
+12:           6 NC_059470.1 42203194 42203448        T2 0.02510617 9.204866e-02
+13:           7 NC_059470.1 42203536 42217382        T1 0.04694081 4.237873e-02
+14:           7 NC_059470.1 42203536 42217382        T2 0.06780300 3.350709e-02
+15:           8 NC_059470.1 42228278 42233653        T1 0.23162331 1.530331e-01
+16:           8 NC_059470.1 42228278 42233653        T2 0.20358357 1.011737e-01
+17:           9 NC_059470.1 42233653 42995993        T1 0.03803034 1.132569e-02
+18:           9 NC_059470.1 42233653 42995993        T2 0.06549328 5.923171e-02
+19:          10 NC_059470.1 42995996 43043304        T1 0.10551265 8.158209e-02
+20:          10 NC_059470.1 42995996 43043304        T2 0.07494850 3.161706e-02
+    model_index         chr    start      end TimePoint   sd_ID_ma     sd_ID_pa
+          <int>      <char>    <int>    <int>    <char>      <num>        <num>
