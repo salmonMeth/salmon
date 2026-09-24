@@ -117,7 +117,7 @@ a) data_files/segment_overlap_results : contains information on all the chromoso
 
 b) data_files/segment_overlap_results/disagreement_regions: contains the disagreeing segments and their annotations
 
-##3way segmentation matches
+## 3way segmentation matches
 
 a)data_files/segmentation_3way_overlap: the csv files contain information about the mathcing segments found for each chromosome,
 the cumulative consensus is used as the reference.
@@ -146,6 +146,13 @@ didn't converge.
 ## Differential methylation using methseg
 
 a)  data_files/objects_intermediary/db_meth_normalized.rds: is the filtered and normalized (using the builtin functions from MethylKit) methylBase object
+
+## Diff meth DSS-MethylKit comparison
+
+a) data_files/diff_meth_results_base_segments/dss_distance_summary.txt
+
+a.1)data_files/diff_meth_results_base_segments/mk_distance_summary.txt : both have stats regarding the distances to the nearest identified CpGs, the spread of these distances etc,
+to check the theory that DSS results are considerably more concentrated than MK results.
 
 ## Diff. methylated base/segment annotation/gene ontology
 
@@ -198,6 +205,22 @@ examines the bigger pathways the detected genes take part in.
 
 Have one file per organism*method cross (pike, salmon) and (MethylKit, DSS, segments (MethylKit))
 
+### Homeologs
+
+f) /data_files/diff_meth_results_base_segments/annotated/homeologs/common_homeolog_blocks_mk_dss_counts.pdf : this and
+density contain plots regarding the number of CpGs found in the homeolog blocks which satisfy the following criteria : both sides of the block (x and y) have diff-methylated CpGs 
+identified by both algorithms.
+
+g) /data_files/diff_meth_results_base_segments/annotated/homeologs/mk/mk_diff_meth_paired.csv:
+
+g.1) /data_files/diff_meth_results_base_segments/annotated/homeologs/dss/dss_diff_meth_paired.csv : these append a new column to the 
+existing diff-meth CpG files, addingthe label of the homeolog block they belong to (if any)
+
+h) /data_files/diff_meth_results_base_segments/annotated/homeologs/mk/mk_homeolog_blocks.csv:
+
+h.1) /data_files/diff_meth_results_base_segments/annotated/homeologs/dss/dss_homeolog_blocks.csv: these examine the blocks for whom there are hits on both sides(
+both x and y sides have CpGs mapped to)
+)
 ## Things that are in data_files/objects_intermediary
 
 

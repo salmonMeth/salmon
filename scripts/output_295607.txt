@@ -1,3 +1,0 @@
-Job started on rc5138
-Working directory: /scratch/project_2010912/ezel/salmon/scripts
-CPUs: 36

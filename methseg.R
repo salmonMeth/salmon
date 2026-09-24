@@ -95,6 +95,7 @@ mcols(gr)$meth <- consensus_meth[keep]
 ############################################
 #try it with 1 chromosome
 chr <- unique(as.character(seqnames(gr)))[1]
+gr_chr <- gr[seqnames(gr) == chr]
 gr_chr <- dropSeqlevels(
   gr_chr,
   setdiff(seqlevels(gr_chr), "NC_059442.1"),
@@ -360,12 +361,8 @@ for (i in seq_along(chroms)) {
   png(paste0("/scratch/project_2010912/ezel/salmon/data_files/segmentation_output_3_samples_removed/diagnostics/", chr, "_diagnostic.png"),
       width = 1200, height = 800)
   
-  seg_chr <- methSeg(
-    gr_chr,
-    diagnostic.plot = TRUE,
-    minSeg = 10,
-    maxInt = 100
-  )
+
+  
   
   dev.off()
   

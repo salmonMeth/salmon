@@ -5,7 +5,6 @@
 library(dplyr)
 library(ggplot2)
 
-# Load data
 blocks <- read.csv("/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/annotated/homeologs/mk/mk_stats_for_paired_blocks.csv")
 # Keep blocks with CpGs on both sides
 blocks_filtered <- blocks %>%

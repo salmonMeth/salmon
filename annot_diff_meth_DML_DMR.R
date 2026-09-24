@@ -12,9 +12,9 @@ txdb <- txdbmaker::makeTxDbFromGFF(path_annot)
 
 
 ########
-path_mk_bases= "/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/diff_meth_normalized_with_overdispersion_difference_10.csv"
-path_mk_segs ="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/diff_meth_segments_overdispersion_diff_10_ACTUAL_OVERDISPERSE.csv"
-path_dss_bases= "/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/dss/diff_meth_smoothed_fdr0.01_difference0.1.csv"
+path_mk_bases= "/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/diff_meth_mk.csv"
+path_mk_segs ="/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/	diff_meth_segs.csv.csv"
+path_dss_bases= "/scratch/project_2010912/ezel/salmon/data_files/diff_meth_results_base_segments/diff_meth_segs.csv"
 
 mk_bases= read.csv(path_mk_bases)
 mk_segs= read.csv(path_mk_segs)
