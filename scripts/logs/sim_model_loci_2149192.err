@@ -1,0 +1,16 @@
+------------------------------
+r-env 4.6.1
+https://docs.csc.fi/apps/r-env
+------------------------------
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:base’:
+
+    %notin%
+
+Starting chromosome NC_059442.1
+Error in eval(jsub, SDenv, parent.frame()) : 
+  object 'true_beta_weight' not found
+Calls: [ -> [.data.table -> eval -> eval
+Execution halted

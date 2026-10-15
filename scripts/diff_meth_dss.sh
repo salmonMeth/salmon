@@ -6,8 +6,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=36
 #SBATCH --mem=64G                
-#SBATCH --output=diff_meth_dss_ou%j.txt
-#SBATCH --error=diff_meth_dss_er%j.txt
+#SBATCH --output=diff_meth_dss_via_mk_ou%j.txt
+#SBATCH --error=diff_meth_dss_via_mk_er%j.txt
 
 # Load r-env
 module load r-env

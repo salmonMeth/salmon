@@ -1,0 +1,1614 @@
+------------------------------
+r-env 4.6.1
+https://docs.csc.fi/apps/r-env
+------------------------------
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:base’:
+
+    %notin%
+
+Starting chromosome NC_059442.1
+Timing stopped at: 0.115 0.001 0.117
+Timing stopped at: 0.118 0 0.118
+Timing stopped at: 0.089 0 0.09
+Timing stopped at: 0.059 0 0.059
+Timing stopped at: 0.218 0.001 0.219
+Timing stopped at: 0.082 0.002 0.084
+Timing stopped at: 0.078 0 0.079
+Timing stopped at: 0.126 0.002 0.128
+Timing stopped at: 0.095 0.001 0.097
+Timing stopped at: 0.059 0.001 0.061
+Timing stopped at: 0.118 0.001 0.119
+Chromosome NC_059442.1: 100 / 1000 loci completed
+Timing stopped at: 0.06 0 0.061
+Timing stopped at: 0.038 0 0.037
+Timing stopped at: 0.07 0.001 0.072
+Chromosome NC_059442.1: 200 / 1000 loci completed
+Timing stopped at: 0.097 0.001 0.098
+Timing stopped at: 0.137 0 0.137
+Timing stopped at: 0.043 0 0.043
+Chromosome NC_059442.1: 300 / 1000 loci completed
+Timing stopped at: 0.121 0.003 0.125
+Timing stopped at: 0.066 0.003 0.069
+Timing stopped at: 0.103 0.001 0.104
+Timing stopped at: 0.087 0 0.088
+Timing stopped at: 0.038 0 0.038
+Chromosome NC_059442.1: 400 / 1000 loci completed
+Timing stopped at: 0.064 0 0.064
+Timing stopped at: 0.106 0.001 0.107
+Timing stopped at: 0.119 0 0.12
+Timing stopped at: 0.015 0 0.015
+Timing stopped at: 0.135 0.002 0.138
+Chromosome NC_059442.1: 500 / 1000 loci completed
+Timing stopped at: 0.134 0.001 0.135
+Timing stopped at: 0.058 0 0.058
+Timing stopped at: 0.064 0.001 0.066
+Chromosome NC_059442.1: 600 / 1000 loci completed
+Timing stopped at: 0.095 0 0.096
+Timing stopped at: 0.138 0 0.138
+Timing stopped at: 0.179 0.001 0.181
+Chromosome NC_059442.1: 700 / 1000 loci completed
+Timing stopped at: 0.108 0 0.108
+Timing stopped at: 0.09 0.001 0.092
+Chromosome NC_059442.1: 800 / 1000 loci completed
+Timing stopped at: 0.062 0 0.062
+Timing stopped at: 0.042 0 0.043
+Timing stopped at: 0.082 0 0.083
+Timing stopped at: 0.115 0 0.116
+Timing stopped at: 0.056 0 0.057
+Chromosome NC_059442.1: 900 / 1000 loci completed
+Timing stopped at: 0.082 0.001 0.083
+Timing stopped at: 0.775 0 0.777
+Timing stopped at: 0.092 0 0.092
+Timing stopped at: 0.124 0 0.124
+Chromosome NC_059442.1: 1000 / 1000 loci completed
+Saved chromosome NC_059442.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059442.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059442.1_model_results.rds
+Starting chromosome NC_059443.1
+Timing stopped at: 0.084 0 0.084
+Timing stopped at: 0.085 0.001 0.086
+Timing stopped at: 0.132 0 0.132
+Chromosome NC_059443.1: 100 / 1000 loci completed
+Timing stopped at: 0.05 0 0.051
+Timing stopped at: 0.103 0 0.103
+Timing stopped at: 0.042 0 0.042
+Timing stopped at: 0.057 0 0.056
+Timing stopped at: 0.142 0 0.142
+Timing stopped at: 0.052 0 0.052
+Chromosome NC_059443.1: 200 / 1000 loci completed
+Timing stopped at: 0.064 0 0.064
+Timing stopped at: 0.142 0 0.142
+Timing stopped at: 0.067 0 0.067
+Chromosome NC_059443.1: 300 / 1000 loci completed
+Timing stopped at: 0.101 0.002 0.103
+Timing stopped at: 0.133 0 0.133
+Timing stopped at: 0.013 0 0.013
+Chromosome NC_059443.1: 400 / 1000 loci completed
+Timing stopped at: 0.086 0 0.087
+Timing stopped at: 0.092 0 0.092
+Timing stopped at: 0.139 0 0.14
+Timing stopped at: 0.107 0.001 0.109
+Timing stopped at: 0.097 0.001 0.099
+Timing stopped at: 0.078 0 0.078
+Chromosome NC_059443.1: 500 / 1000 loci completed
+Timing stopped at: 0.104 0.001 0.105
+Timing stopped at: 0.1 0.001 0.101
+Timing stopped at: 0.12 0.001 0.12
+Timing stopped at: 0.098 0 0.098
+Timing stopped at: 0.112 0.002 0.114
+Timing stopped at: 0.161 0 0.162
+Chromosome NC_059443.1: 600 / 1000 loci completed
+Timing stopped at: 0.046 0 0.046
+Timing stopped at: 0.186 0.001 0.187
+Timing stopped at: 0.094 0.001 0.095
+Timing stopped at: 0.186 0 0.187
+Timing stopped at: 0.12 0 0.121
+Timing stopped at: 0.092 0 0.093
+Chromosome NC_059443.1: 700 / 1000 loci completed
+Timing stopped at: 0.108 0 0.108
+Timing stopped at: 0.125 0 0.125
+Chromosome NC_059443.1: 800 / 1000 loci completed
+Timing stopped at: 0.131 0.001 0.132
+Timing stopped at: 0.184 0.002 0.186
+Timing stopped at: 0.079 0.001 0.081
+Timing stopped at: 0.11 0 0.111
+Timing stopped at: 0.095 0.001 0.096
+Chromosome NC_059443.1: 900 / 1000 loci completed
+Timing stopped at: 0.119 0 0.12
+Timing stopped at: 0.119 0 0.119
+Timing stopped at: 0.165 0.001 0.167
+Timing stopped at: 0.062 0.001 0.063
+Chromosome NC_059443.1: 1000 / 1000 loci completed
+Saved chromosome NC_059443.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059443.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059443.1_model_results.rds
+Starting chromosome NC_059444.1
+Timing stopped at: 0.141 0.001 0.142
+Timing stopped at: 0.101 0 0.101
+Chromosome NC_059444.1: 100 / 1000 loci completed
+Timing stopped at: 0.117 0 0.117
+Timing stopped at: 0.114 0 0.115
+Timing stopped at: 0.068 0 0.068
+Chromosome NC_059444.1: 200 / 1000 loci completed
+Timing stopped at: 0.082 0 0.083
+Timing stopped at: 0.038 0.002 0.04
+Chromosome NC_059444.1: 300 / 1000 loci completed
+Timing stopped at: 0.074 0.001 0.074
+Timing stopped at: 0.097 0 0.098
+Timing stopped at: 0.081 0 0.081
+Timing stopped at: 0.144 0 0.144
+Timing stopped at: 0.089 0 0.089
+Chromosome NC_059444.1: 400 / 1000 loci completed
+Timing stopped at: 0.042 0 0.043
+Timing stopped at: 0.057 0 0.058
+Timing stopped at: 0.122 0.001 0.123
+Timing stopped at: 0.136 0.001 0.137
+Timing stopped at: 0.041 0 0.041
+Chromosome NC_059444.1: 500 / 1000 loci completed
+Timing stopped at: 0.069 0 0.069
+Timing stopped at: 0.094 0.001 0.095
+Timing stopped at: 0.154 0 0.154
+Chromosome NC_059444.1: 600 / 1000 loci completed
+Timing stopped at: 0.185 0.001 0.186
+Timing stopped at: 0.132 0.001 0.133
+Timing stopped at: 0.134 0 0.133
+Timing stopped at: 0.153 0 0.154
+Chromosome NC_059444.1: 700 / 1000 loci completed
+Timing stopped at: 0.199 0 0.2
+Timing stopped at: 0.135 0.001 0.136
+Chromosome NC_059444.1: 800 / 1000 loci completed
+Timing stopped at: 0.156 0 0.157
+Timing stopped at: 0.152 0 0.153
+Chromosome NC_059444.1: 900 / 1000 loci completed
+Timing stopped at: 0.089 0.001 0.09
+Timing stopped at: 0.122 0 0.122
+Timing stopped at: 0.076 0 0.076
+Chromosome NC_059444.1: 1000 / 1000 loci completed
+Saved chromosome NC_059444.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059444.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059444.1_model_results.rds
+Starting chromosome NC_059445.1
+Timing stopped at: 0.077 0 0.078
+Timing stopped at: 0.068 0 0.068
+Chromosome NC_059445.1: 100 / 1000 loci completed
+Timing stopped at: 0.036 0 0.036
+Timing stopped at: 0.097 0 0.098
+Timing stopped at: 0.049 0 0.05
+Timing stopped at: 0.086 0.001 0.087
+Timing stopped at: 0.095 0 0.095
+Timing stopped at: 0.15 0.001 0.152
+Chromosome NC_059445.1: 200 / 1000 loci completed
+Timing stopped at: 0.072 0 0.072
+Timing stopped at: 0.067 0 0.067
+Timing stopped at: 0.142 0 0.142
+Chromosome NC_059445.1: 300 / 1000 loci completed
+Timing stopped at: 0.06 0 0.06
+Chromosome NC_059445.1: 400 / 1000 loci completed
+Timing stopped at: 0.078 0 0.078
+Timing stopped at: 0.077 0 0.078
+Timing stopped at: 0.144 0.002 0.146
+Timing stopped at: 0.037 0 0.037
+Chromosome NC_059445.1: 500 / 1000 loci completed
+Timing stopped at: 0.159 0 0.16
+Timing stopped at: 0.061 0 0.06
+Timing stopped at: 0.118 0 0.119
+Timing stopped at: 0.069 0.002 0.071
+Timing stopped at: 0.146 0.001 0.148
+Timing stopped at: 0.11 0.001 0.112
+Chromosome NC_059445.1: 600 / 1000 loci completed
+Timing stopped at: 0.117 0.002 0.119
+Timing stopped at: 0.145 0 0.146
+Timing stopped at: 0.119 0 0.12
+Timing stopped at: 0.086 0 0.085
+Chromosome NC_059445.1: 700 / 1000 loci completed
+Timing stopped at: 0.107 0.002 0.109
+Timing stopped at: 0.059 0 0.059
+Chromosome NC_059445.1: 800 / 1000 loci completed
+Timing stopped at: 0.089 0.001 0.09
+Timing stopped at: 0.039 0 0.039
+Timing stopped at: 0.205 0 0.206
+Timing stopped at: 0.096 0 0.096
+Timing stopped at: 0.097 0.002 0.099
+Timing stopped at: 0.243 0.001 0.245
+Timing stopped at: 0.065 0.001 0.066
+Chromosome NC_059445.1: 900 / 1000 loci completed
+Timing stopped at: 0.084 0.001 0.086
+Timing stopped at: 0.094 0 0.094
+Timing stopped at: 0.085 0.001 0.087
+Chromosome NC_059445.1: 1000 / 1000 loci completed
+Saved chromosome NC_059445.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059445.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059445.1_model_results.rds
+Starting chromosome NC_059446.1
+Timing stopped at: 0.087 0 0.087
+Timing stopped at: 0.097 0 0.097
+Timing stopped at: 0.13 0 0.13
+Timing stopped at: 0.084 0.001 0.086
+Chromosome NC_059446.1: 100 / 1000 loci completed
+Timing stopped at: 0.132 0.001 0.134
+Timing stopped at: 0.104 0 0.105
+Chromosome NC_059446.1: 200 / 1000 loci completed
+Timing stopped at: 0.06 0.001 0.061
+Timing stopped at: 0.117 0 0.118
+Timing stopped at: 0.066 0 0.066
+Timing stopped at: 0.125 0.001 0.127
+Timing stopped at: 0.081 0 0.081
+Timing stopped at: 0.073 0 0.073
+Timing stopped at: 0.061 0 0.061
+Chromosome NC_059446.1: 300 / 1000 loci completed
+Timing stopped at: 0.056 0 0.056
+Timing stopped at: 0.182 0 0.183
+Timing stopped at: 0.05 0.001 0.052
+Timing stopped at: 0.056 0 0.057
+Chromosome NC_059446.1: 400 / 1000 loci completed
+Timing stopped at: 0.066 0 0.066
+Chromosome NC_059446.1: 500 / 1000 loci completed
+Timing stopped at: 0.17 0.002 0.173
+Chromosome NC_059446.1: 600 / 1000 loci completed
+Timing stopped at: 0.167 0 0.167
+Timing stopped at: 0.075 0 0.076
+Timing stopped at: 0.15 0 0.15
+Timing stopped at: 0.165 0.001 0.165
+Chromosome NC_059446.1: 700 / 1000 loci completed
+Timing stopped at: 0.167 0.001 0.169
+Timing stopped at: 0.17 0.001 0.171
+Timing stopped at: 0.135 0 0.136
+Timing stopped at: 0.054 0.001 0.055
+Chromosome NC_059446.1: 800 / 1000 loci completed
+Timing stopped at: 0.072 0.001 0.073
+Timing stopped at: 0.173 0 0.173
+Timing stopped at: 0.138 0 0.138
+Timing stopped at: 0.087 0.002 0.089
+Chromosome NC_059446.1: 900 / 1000 loci completed
+Timing stopped at: 0.147 0.001 0.149
+Timing stopped at: 0.118 0 0.118
+Timing stopped at: 0.132 0.001 0.133
+Timing stopped at: 0.076 0.001 0.078
+Timing stopped at: 0.116 0 0.117
+Timing stopped at: 0.101 0.001 0.103
+Chromosome NC_059446.1: 1000 / 1000 loci completed
+Saved chromosome NC_059446.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059446.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059446.1_model_results.rds
+Starting chromosome NC_059447.1
+Timing stopped at: 0.101 0 0.101
+Timing stopped at: 0.116 0 0.116
+Chromosome NC_059447.1: 100 / 1000 loci completed
+Timing stopped at: 0.051 0 0.052
+Timing stopped at: 0.048 0 0.048
+Timing stopped at: 0.068 0 0.07
+Chromosome NC_059447.1: 200 / 1000 loci completed
+Timing stopped at: 0.103 0 0.104
+Timing stopped at: 0.055 0 0.056
+Timing stopped at: 0.104 0.003 0.108
+Timing stopped at: 0.056 0.001 0.058
+Timing stopped at: 0.129 0 0.129
+Chromosome NC_059447.1: 300 / 1000 loci completed
+Timing stopped at: 0.146 0 0.147
+Timing stopped at: 0.075 0 0.075
+Timing stopped at: 0.113 0 0.114
+Timing stopped at: 0.1 0 0.1
+Timing stopped at: 0.169 0.001 0.171
+Chromosome NC_059447.1: 400 / 1000 loci completed
+Timing stopped at: 0.073 0 0.073
+Timing stopped at: 0.128 0 0.128
+Timing stopped at: 0.068 0 0.067
+Timing stopped at: 0.101 0 0.102
+Timing stopped at: 0.091 0.001 0.093
+Chromosome NC_059447.1: 500 / 1000 loci completed
+Timing stopped at: 0.164 0.001 0.166
+Timing stopped at: 0.086 0 0.086
+Timing stopped at: 0.047 0 0.046
+Chromosome NC_059447.1: 600 / 1000 loci completed
+Timing stopped at: 0.099 0 0.099
+Timing stopped at: 0.151 0.001 0.152
+Timing stopped at: 0.059 0 0.06
+Timing stopped at: 0.067 0 0.067
+Timing stopped at: 0.028 0 0.028
+Timing stopped at: 0.075 0 0.075
+Chromosome NC_059447.1: 700 / 1000 loci completed
+Timing stopped at: 0.126 0 0.127
+Timing stopped at: 0.059 0 0.059
+Timing stopped at: 0.11 0.001 0.112
+Timing stopped at: 0.082 0 0.083
+Chromosome NC_059447.1: 800 / 1000 loci completed
+Timing stopped at: 0.133 0 0.133
+Timing stopped at: 0.066 0.001 0.067
+Timing stopped at: 0.147 0.001 0.148
+Timing stopped at: 0.07 0 0.071
+Chromosome NC_059447.1: 900 / 1000 loci completed
+Timing stopped at: 0.133 0 0.133
+Timing stopped at: 0.096 0.001 0.098
+Timing stopped at: 0.15 0.002 0.153
+Timing stopped at: 0.053 0 0.054
+Timing stopped at: 0.054 0 0.054
+Timing stopped at: 0.128 0.002 0.129
+Timing stopped at: 0.074 0 0.074
+Chromosome NC_059447.1: 1000 / 1000 loci completed
+Saved chromosome NC_059447.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059447.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059447.1_model_results.rds
+Starting chromosome NC_059448.1
+Timing stopped at: 0.078 0.001 0.079
+Chromosome NC_059448.1: 100 / 1000 loci completed
+Timing stopped at: 0.141 0 0.141
+Chromosome NC_059448.1: 200 / 1000 loci completed
+Timing stopped at: 0.126 0 0.127
+Timing stopped at: 0.066 0.001 0.067
+Timing stopped at: 0.072 0 0.071
+Timing stopped at: 0.065 0 0.066
+Chromosome NC_059448.1: 300 / 1000 loci completed
+Timing stopped at: 0.087 0 0.087
+Timing stopped at: 0.095 0.002 0.097
+Timing stopped at: 0.092 0 0.092
+Timing stopped at: 0.092 0 0.091
+Chromosome NC_059448.1: 400 / 1000 loci completed
+Timing stopped at: 0.117 0 0.118
+Timing stopped at: 0.092 0 0.093
+Timing stopped at: 0.085 0.002 0.087
+Timing stopped at: 0.115 0 0.115
+Timing stopped at: 0.072 0 0.072
+Timing stopped at: 0.054 0 0.055
+Chromosome NC_059448.1: 500 / 1000 loci completed
+Timing stopped at: 0.049 0 0.049
+Timing stopped at: 0.158 0 0.158
+Timing stopped at: 0.089 0 0.089
+Chromosome NC_059448.1: 600 / 1000 loci completed
+Timing stopped at: 0.047 0 0.046
+Timing stopped at: 0.063 0 0.063
+Timing stopped at: 0.113 0.002 0.116
+Timing stopped at: 0.082 0 0.081
+Timing stopped at: 0.101 0.001 0.102
+Chromosome NC_059448.1: 700 / 1000 loci completed
+Timing stopped at: 0.108 0 0.109
+Timing stopped at: 0.111 0 0.111
+Timing stopped at: 0.082 0 0.082
+Timing stopped at: 0.121 0.001 0.123
+Timing stopped at: 0.162 0 0.161
+Chromosome NC_059448.1: 800 / 1000 loci completed
+Timing stopped at: 0.121 0 0.122
+Timing stopped at: 0.108 0.002 0.11
+Timing stopped at: 0.058 0 0.058
+Timing stopped at: 0.05 0 0.051
+Timing stopped at: 0.152 0 0.153
+Chromosome NC_059448.1: 900 / 1000 loci completed
+Timing stopped at: 0.073 0 0.073
+Timing stopped at: 0.049 0.001 0.05
+Timing stopped at: 0.08 0 0.081
+Timing stopped at: 0.114 0 0.115
+Chromosome NC_059448.1: 1000 / 1000 loci completed
+Saved chromosome NC_059448.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059448.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059448.1_model_results.rds
+Starting chromosome NC_059449.1
+Chromosome NC_059449.1: 100 / 1000 loci completed
+Timing stopped at: 0.088 0 0.089
+Timing stopped at: 0.158 0.001 0.159
+Timing stopped at: 0.237 0.001 0.238
+Timing stopped at: 0.089 0 0.089
+Timing stopped at: 0.102 0.001 0.104
+Chromosome NC_059449.1: 200 / 1000 loci completed
+Timing stopped at: 0.063 0 0.063
+Timing stopped at: 0.048 0 0.048
+Timing stopped at: 0.078 0.001 0.079
+Timing stopped at: 0.098 0 0.098
+Chromosome NC_059449.1: 300 / 1000 loci completed
+Timing stopped at: 0.157 0 0.157
+Timing stopped at: 0.09 0 0.09
+Timing stopped at: 0.055 0 0.056
+Timing stopped at: 0.077 0.001 0.078
+Timing stopped at: 0.081 0 0.082
+Timing stopped at: 0.049 0 0.048
+Timing stopped at: 0.126 0.001 0.129
+Chromosome NC_059449.1: 400 / 1000 loci completed
+Timing stopped at: 0.11 0 0.111
+Timing stopped at: 0.123 0 0.124
+Timing stopped at: 0.129 0.001 0.131
+Timing stopped at: 0.111 0.001 0.113
+Timing stopped at: 0.165 0 0.166
+Timing stopped at: 0.219 0.001 0.221
+Timing stopped at: 0.171 0.001 0.173
+Timing stopped at: 0.035 0.001 0.036
+Timing stopped at: 0.128 0 0.129
+Chromosome NC_059449.1: 500 / 1000 loci completed
+Chromosome NC_059449.1: 600 / 1000 loci completed
+Timing stopped at: 0.107 0 0.108
+Timing stopped at: 0.092 0.001 0.094
+Timing stopped at: 0.065 0 0.065
+Timing stopped at: 0.143 0 0.144
+Timing stopped at: 0.062 0 0.063
+Timing stopped at: 0.107 0 0.107
+Timing stopped at: 0.083 0 0.084
+Chromosome NC_059449.1: 700 / 1000 loci completed
+Timing stopped at: 0.181 0 0.182
+Timing stopped at: 0.077 0 0.078
+Timing stopped at: 0.045 0 0.045
+Timing stopped at: 0.102 0 0.103
+Timing stopped at: 0.13 0 0.131
+Chromosome NC_059449.1: 800 / 1000 loci completed
+Timing stopped at: 0.094 0 0.095
+Timing stopped at: 0.051 0.001 0.052
+Chromosome NC_059449.1: 900 / 1000 loci completed
+Timing stopped at: 0.087 0.001 0.089
+Timing stopped at: 0.083 0 0.084
+Chromosome NC_059449.1: 1000 / 1000 loci completed
+Saved chromosome NC_059449.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059449.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059449.1_model_results.rds
+Starting chromosome NC_059450.1
+Timing stopped at: 0.069 0 0.069
+Timing stopped at: 0.07 0 0.07
+Chromosome NC_059450.1: 100 / 1000 loci completed
+Timing stopped at: 0.049 0 0.049
+Timing stopped at: 0.154 0 0.155
+Timing stopped at: 0.09 0.001 0.091
+Timing stopped at: 0.095 0.001 0.097
+Timing stopped at: 0.117 0 0.117
+Timing stopped at: 0.1 0 0.1
+Timing stopped at: 0.082 0.001 0.084
+Timing stopped at: 0.092 0 0.092
+Chromosome NC_059450.1: 200 / 1000 loci completed
+Timing stopped at: 0.053 0 0.053
+Chromosome NC_059450.1: 300 / 1000 loci completed
+Timing stopped at: 0.063 0 0.063
+Timing stopped at: 0.131 0.002 0.134
+Timing stopped at: 0.142 0.001 0.144
+Timing stopped at: 0.085 0 0.085
+Timing stopped at: 0.078 0 0.078
+Timing stopped at: 0.116 0 0.116
+Chromosome NC_059450.1: 400 / 1000 loci completed
+Timing stopped at: 0.145 0 0.146
+Timing stopped at: 0.087 0 0.088
+Timing stopped at: 0.119 0 0.119
+Chromosome NC_059450.1: 500 / 1000 loci completed
+Timing stopped at: 0.124 0.001 0.126
+Timing stopped at: 0.162 0.002 0.165
+Timing stopped at: 0.082 0 0.082
+Timing stopped at: 0.192 0.002 0.195
+Chromosome NC_059450.1: 600 / 1000 loci completed
+Timing stopped at: 0.077 0 0.077
+Timing stopped at: 0.13 0.001 0.131
+Chromosome NC_059450.1: 700 / 1000 loci completed
+Timing stopped at: 0.097 0 0.097
+Timing stopped at: 0.052 0.001 0.052
+Timing stopped at: 0.076 0 0.076
+Timing stopped at: 0.077 0 0.077
+Chromosome NC_059450.1: 800 / 1000 loci completed
+Timing stopped at: 0.098 0 0.098
+Timing stopped at: 0.094 0 0.094
+Timing stopped at: 0.04 0 0.04
+Timing stopped at: 0.079 0 0.079
+Timing stopped at: 0.125 0.001 0.127
+Chromosome NC_059450.1: 900 / 1000 loci completed
+Timing stopped at: 0.157 0 0.158
+Chromosome NC_059450.1: 1000 / 1000 loci completed
+Saved chromosome NC_059450.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059450.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059450.1_model_results.rds
+Starting chromosome NC_059451.1
+Timing stopped at: 0.129 0 0.13
+Timing stopped at: 0.045 0.001 0.046
+Chromosome NC_059451.1: 100 / 1000 loci completed
+Timing stopped at: 0.054 0 0.054
+Timing stopped at: 0.046 0.001 0.047
+Timing stopped at: 0.09 0.001 0.091
+Timing stopped at: 0.092 0 0.092
+Timing stopped at: 0.058 0 0.058
+Chromosome NC_059451.1: 200 / 1000 loci completed
+Timing stopped at: 0.088 0 0.088
+Timing stopped at: 0.105 0 0.105
+Timing stopped at: 0.054 0.001 0.056
+Timing stopped at: 0.08 0.001 0.081
+Timing stopped at: 0.121 0 0.121
+Timing stopped at: 0.086 0 0.087
+Timing stopped at: 0.084 0 0.084
+Chromosome NC_059451.1: 300 / 1000 loci completed
+Timing stopped at: 0.084 0 0.084
+Timing stopped at: 0.079 0 0.079
+Timing stopped at: 0.125 0.001 0.126
+Timing stopped at: 0.079 0 0.079
+Chromosome NC_059451.1: 400 / 1000 loci completed
+Timing stopped at: 0.093 0 0.093
+Timing stopped at: 0.17 0.003 0.173
+Timing stopped at: 0.112 0.001 0.114
+Chromosome NC_059451.1: 500 / 1000 loci completed
+Timing stopped at: 0.163 0.002 0.165
+Timing stopped at: 0.162 0.001 0.163
+Timing stopped at: 0.081 0 0.081
+Chromosome NC_059451.1: 600 / 1000 loci completed
+Timing stopped at: 0.12 0 0.119
+Timing stopped at: 0.115 0 0.115
+Timing stopped at: 0.085 0 0.085
+Timing stopped at: 0.193 0 0.194
+Timing stopped at: 0.046 0 0.047
+Timing stopped at: 0.064 0.001 0.066
+Chromosome NC_059451.1: 700 / 1000 loci completed
+Timing stopped at: 0.074 0 0.075
+Timing stopped at: 0.144 0.001 0.145
+Timing stopped at: 0.133 0.001 0.134
+Chromosome NC_059451.1: 800 / 1000 loci completed
+Timing stopped at: 0.063 0 0.064
+Timing stopped at: 0.132 0 0.133
+Timing stopped at: 0.057 0 0.057
+Timing stopped at: 0.087 0 0.087
+Timing stopped at: 0.145 0 0.145
+Chromosome NC_059451.1: 900 / 1000 loci completed
+Timing stopped at: 0.074 0.001 0.074
+Timing stopped at: 0.078 0 0.078
+Timing stopped at: 0.119 0 0.12
+Timing stopped at: 0.046 0 0.045
+Chromosome NC_059451.1: 1000 / 1000 loci completed
+Saved chromosome NC_059451.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059451.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059451.1_model_results.rds
+Starting chromosome NC_059452.1
+Timing stopped at: 0.05 0 0.051
+Timing stopped at: 0.097 0.001 0.098
+Timing stopped at: 0.048 0 0.048
+Timing stopped at: 0.073 0.001 0.075
+Timing stopped at: 0.079 0 0.079
+Timing stopped at: 0.066 0 0.066
+Timing stopped at: 0.092 0 0.093
+Timing stopped at: 0.163 0 0.163
+Chromosome NC_059452.1: 100 / 1000 loci completed
+Timing stopped at: 0.118 0.001 0.119
+Timing stopped at: 0.136 0.002 0.138
+Chromosome NC_059452.1: 200 / 1000 loci completed
+Timing stopped at: 0.069 0 0.069
+Timing stopped at: 0.109 0 0.109
+Chromosome NC_059452.1: 300 / 1000 loci completed
+Timing stopped at: 0.147 0.002 0.15
+Chromosome NC_059452.1: 400 / 1000 loci completed
+Timing stopped at: 0.073 0 0.072
+Timing stopped at: 0.128 0 0.129
+Timing stopped at: 0.056 0 0.057
+Timing stopped at: 0.117 0 0.118
+Chromosome NC_059452.1: 500 / 1000 loci completed
+Timing stopped at: 0.114 0.001 0.116
+Timing stopped at: 0.077 0 0.078
+Timing stopped at: 0.097 0 0.097
+Timing stopped at: 0.235 0.003 0.238
+Timing stopped at: 0.112 0 0.112
+Chromosome NC_059452.1: 600 / 1000 loci completed
+Timing stopped at: 0.1 0.001 0.101
+Timing stopped at: 0.111 0.001 0.113
+Timing stopped at: 0.051 0 0.051
+Timing stopped at: 0.102 0 0.103
+Chromosome NC_059452.1: 700 / 1000 loci completed
+Timing stopped at: 0.153 0 0.154
+Timing stopped at: 0.075 0 0.076
+Timing stopped at: 0.063 0 0.064
+Timing stopped at: 0.079 0 0.079
+Chromosome NC_059452.1: 800 / 1000 loci completed
+Timing stopped at: 0.118 0.001 0.119
+Timing stopped at: 0.063 0.001 0.063
+Timing stopped at: 0.073 0 0.073
+Timing stopped at: 0.106 0 0.106
+Timing stopped at: 0.073 0 0.074
+Timing stopped at: 0.093 0 0.093
+Timing stopped at: 0.089 0.001 0.09
+Timing stopped at: 0.066 0.001 0.066
+Timing stopped at: 0.139 0 0.139
+Timing stopped at: 0.086 0.002 0.088
+Timing stopped at: 0.18 0 0.181
+Chromosome NC_059452.1: 900 / 1000 loci completed
+Timing stopped at: 0.085 0.001 0.086
+Timing stopped at: 0.085 0 0.084
+Timing stopped at: 0.116 0 0.116
+Timing stopped at: 0.08 0 0.08
+Timing stopped at: 0.105 0.001 0.106
+Chromosome NC_059452.1: 1000 / 1000 loci completed
+Saved chromosome NC_059452.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059452.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059452.1_model_results.rds
+Starting chromosome NC_059453.1
+Timing stopped at: 0.096 0 0.096
+Timing stopped at: 0.12 0 0.12
+Chromosome NC_059453.1: 100 / 1000 loci completed
+Timing stopped at: 0.078 0.001 0.079
+Timing stopped at: 0.056 0 0.057
+Timing stopped at: 0.119 0 0.119
+Chromosome NC_059453.1: 200 / 1000 loci completed
+Timing stopped at: 0.115 0 0.115
+Timing stopped at: 0.083 0 0.084
+Chromosome NC_059453.1: 300 / 1000 loci completed
+Timing stopped at: 0.133 0.001 0.133
+Timing stopped at: 0.056 0 0.056
+Timing stopped at: 0.088 0 0.088
+Timing stopped at: 0.156 0.001 0.157
+Chromosome NC_059453.1: 400 / 1000 loci completed
+Timing stopped at: 0.121 0.001 0.122
+Timing stopped at: 0.101 0 0.101
+Timing stopped at: 0.07 0.001 0.071
+Timing stopped at: 0.063 0 0.064
+Timing stopped at: 0.076 0 0.076
+Timing stopped at: 0.103 0.002 0.105
+Timing stopped at: 0.037 0 0.037
+Timing stopped at: 0.041 0 0.042
+Timing stopped at: 0.119 0.001 0.121
+Timing stopped at: 0.067 0 0.068
+Timing stopped at: 0.075 0 0.075
+Chromosome NC_059453.1: 500 / 1000 loci completed
+Timing stopped at: 0.134 0 0.134
+Timing stopped at: 0.071 0 0.07
+Timing stopped at: 0.147 0 0.147
+Timing stopped at: 0.09 0 0.09
+Chromosome NC_059453.1: 600 / 1000 loci completed
+Timing stopped at: 0.074 0 0.075
+Timing stopped at: 0.099 0 0.098
+Timing stopped at: 0.116 0 0.116
+Timing stopped at: 0.04 0 0.041
+Timing stopped at: 0.126 0 0.127
+Timing stopped at: 0.089 0 0.089
+Chromosome NC_059453.1: 700 / 1000 loci completed
+Timing stopped at: 0.098 0 0.099
+Timing stopped at: 0.08 0 0.08
+Timing stopped at: 0.115 0.001 0.116
+Timing stopped at: 0.073 0.001 0.074
+Timing stopped at: 0.121 0 0.122
+Timing stopped at: 0.076 0.002 0.078
+Chromosome NC_059453.1: 800 / 1000 loci completed
+Timing stopped at: 0.084 0.001 0.085
+Timing stopped at: 0.115 0 0.115
+Timing stopped at: 0.07 0 0.07
+Timing stopped at: 0.123 0 0.122
+Timing stopped at: 0.112 0 0.113
+Timing stopped at: 0.167 0.001 0.169
+Chromosome NC_059453.1: 900 / 1000 loci completed
+Timing stopped at: 0.097 0 0.098
+Chromosome NC_059453.1: 1000 / 1000 loci completed
+Saved chromosome NC_059453.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059453.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059453.1_model_results.rds
+Starting chromosome NC_059454.1
+Timing stopped at: 0.081 0.001 0.083
+Timing stopped at: 0.107 0 0.107
+Timing stopped at: 0.11 0 0.11
+Timing stopped at: 0.157 0.001 0.159
+Timing stopped at: 0.058 0.001 0.06
+Timing stopped at: 0.107 0 0.108
+Chromosome NC_059454.1: 100 / 1000 loci completed
+Timing stopped at: 0.109 0 0.109
+Timing stopped at: 0.104 0 0.105
+Timing stopped at: 0.145 0.001 0.146
+Timing stopped at: 0.052 0 0.052
+Timing stopped at: 0.084 0 0.085
+Timing stopped at: 0.156 0 0.157
+Chromosome NC_059454.1: 200 / 1000 loci completed
+Timing stopped at: 0.054 0 0.055
+Timing stopped at: 0.049 0 0.05
+Timing stopped at: 0.097 0.001 0.098
+Timing stopped at: 0.056 0 0.056
+Timing stopped at: 0.158 0 0.158
+Timing stopped at: 0.148 0 0.149
+Timing stopped at: 0.135 0.001 0.136
+Chromosome NC_059454.1: 300 / 1000 loci completed
+Timing stopped at: 0.067 0 0.066
+Timing stopped at: 0.117 0 0.118
+Timing stopped at: 0.081 0 0.081
+Timing stopped at: 0.083 0 0.084
+Timing stopped at: 0.096 0 0.096
+Chromosome NC_059454.1: 400 / 1000 loci completed
+Timing stopped at: 0.08 0 0.08
+Timing stopped at: 0.103 0 0.103
+Timing stopped at: 0.102 0.001 0.103
+Timing stopped at: 0.035 0 0.036
+Timing stopped at: 0.056 0 0.055
+Chromosome NC_059454.1: 500 / 1000 loci completed
+Timing stopped at: 0.098 0 0.098
+Timing stopped at: 0.146 0.001 0.148
+Chromosome NC_059454.1: 600 / 1000 loci completed
+Timing stopped at: 0.092 0.001 0.093
+Timing stopped at: 0.165 0.001 0.167
+Timing stopped at: 0.097 0 0.098
+Timing stopped at: 0.093 0 0.094
+Chromosome NC_059454.1: 700 / 1000 loci completed
+Timing stopped at: 0.182 0 0.183
+Timing stopped at: 0.112 0 0.113
+Timing stopped at: 0.111 0 0.112
+Timing stopped at: 0.087 0 0.087
+Timing stopped at: 0.127 0.001 0.127
+Timing stopped at: 0.107 0 0.107
+Timing stopped at: 0.086 0 0.087
+Timing stopped at: 0.033 0 0.033
+Timing stopped at: 0.12 0.002 0.122
+Chromosome NC_059454.1: 800 / 1000 loci completed
+Timing stopped at: 0.066 0 0.066
+Timing stopped at: 0.071 0 0.07
+Timing stopped at: 0.122 0 0.122
+Timing stopped at: 0.073 0.002 0.074
+Chromosome NC_059454.1: 900 / 1000 loci completed
+Timing stopped at: 0.046 0 0.046
+Timing stopped at: 0.065 0 0.065
+Chromosome NC_059454.1: 1000 / 1000 loci completed
+Saved chromosome NC_059454.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059454.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059454.1_model_results.rds
+Starting chromosome NC_059455.1
+Timing stopped at: 0.11 0.001 0.111
+Timing stopped at: 0.07 0 0.07
+Timing stopped at: 0.147 0 0.147
+Timing stopped at: 0.108 0 0.108
+Timing stopped at: 0.073 0.001 0.074
+Chromosome NC_059455.1: 100 / 1000 loci completed
+Timing stopped at: 0.056 0.001 0.057
+Timing stopped at: 0.051 0 0.051
+Timing stopped at: 0.072 0 0.073
+Timing stopped at: 0.077 0.001 0.078
+Timing stopped at: 0.057 0.001 0.058
+Chromosome NC_059455.1: 200 / 1000 loci completed
+Timing stopped at: 0.082 0 0.082
+Timing stopped at: 0.074 0 0.075
+Timing stopped at: 0.042 0.001 0.043
+Timing stopped at: 0.085 0 0.085
+Timing stopped at: 0.104 0.002 0.106
+Timing stopped at: 0.104 0.001 0.105
+Timing stopped at: 0.09 0 0.091
+Chromosome NC_059455.1: 300 / 1000 loci completed
+Timing stopped at: 0.084 0 0.084
+Timing stopped at: 0.066 0 0.066
+Timing stopped at: 0.038 0 0.038
+Timing stopped at: 0.069 0 0.07
+Chromosome NC_059455.1: 400 / 1000 loci completed
+Timing stopped at: 0.092 0.001 0.093
+Timing stopped at: 0.079 0 0.079
+Chromosome NC_059455.1: 500 / 1000 loci completed
+Timing stopped at: 0.163 0.002 0.164
+Timing stopped at: 0.143 0.001 0.144
+Chromosome NC_059455.1: 600 / 1000 loci completed
+Timing stopped at: 0.125 0 0.125
+Timing stopped at: 0.103 0 0.103
+Timing stopped at: 0.103 0.001 0.104
+Timing stopped at: 0.065 0 0.065
+Chromosome NC_059455.1: 700 / 1000 loci completed
+Timing stopped at: 0.143 0 0.143
+Timing stopped at: 0.108 0.001 0.109
+Timing stopped at: 0.065 0 0.066
+Timing stopped at: 0.08 0 0.08
+Timing stopped at: 0.067 0.001 0.068
+Timing stopped at: 0.045 0 0.045
+Chromosome NC_059455.1: 800 / 1000 loci completed
+Timing stopped at: 0.085 0.001 0.087
+Timing stopped at: 0.158 0 0.158
+Timing stopped at: 0.092 0.001 0.094
+Timing stopped at: 0.077 0.001 0.078
+Timing stopped at: 0.08 0.001 0.082
+Chromosome NC_059455.1: 900 / 1000 loci completed
+Timing stopped at: 0.101 0 0.101
+Timing stopped at: 0.05 0 0.051
+Timing stopped at: 0.156 0 0.156
+Timing stopped at: 0.111 0.002 0.114
+Chromosome NC_059455.1: 1000 / 1000 loci completed
+Saved chromosome NC_059455.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059455.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059455.1_model_results.rds
+Starting chromosome NC_059456.1
+Timing stopped at: 0.117 0 0.117
+Timing stopped at: 0.144 0.001 0.145
+Timing stopped at: 0.106 0 0.106
+Timing stopped at: 0.07 0 0.071
+Chromosome NC_059456.1: 100 / 1000 loci completed
+Timing stopped at: 0.098 0 0.098
+Timing stopped at: 0.059 0 0.059
+Timing stopped at: 0.073 0.001 0.074
+Chromosome NC_059456.1: 200 / 1000 loci completed
+Timing stopped at: 0.14 0 0.14
+Chromosome NC_059456.1: 300 / 1000 loci completed
+Timing stopped at: 0.142 0.002 0.145
+Timing stopped at: 0.131 0.001 0.133
+Timing stopped at: 0.056 0 0.057
+Timing stopped at: 0.088 0.002 0.09
+Timing stopped at: 0.086 0.001 0.087
+Timing stopped at: 0.121 0 0.122
+Chromosome NC_059456.1: 400 / 1000 loci completed
+Timing stopped at: 0.193 0.001 0.195
+Timing stopped at: 0.114 0 0.114
+Timing stopped at: 0.024 0 0.023
+Timing stopped at: 0.077 0 0.078
+Timing stopped at: 0.151 0.002 0.153
+Timing stopped at: 0.069 0 0.07
+Timing stopped at: 0.074 0.001 0.075
+Timing stopped at: 0.083 0 0.083
+Timing stopped at: 0.065 0.001 0.067
+Chromosome NC_059456.1: 500 / 1000 loci completed
+Timing stopped at: 0.108 0 0.108
+Timing stopped at: 0.116 0.002 0.118
+Chromosome NC_059456.1: 600 / 1000 loci completed
+Timing stopped at: 0.16 0.001 0.161
+Timing stopped at: 0.17 0 0.17
+Timing stopped at: 0.108 0.001 0.11
+Timing stopped at: 0.094 0.003 0.097
+Chromosome NC_059456.1: 700 / 1000 loci completed
+Timing stopped at: 0.163 0 0.163
+Timing stopped at: 0.204 0 0.204
+Timing stopped at: 0.11 0 0.11
+Chromosome NC_059456.1: 800 / 1000 loci completed
+Timing stopped at: 0.1 0 0.101
+Timing stopped at: 0.079 0.001 0.081
+Timing stopped at: 0.115 0 0.116
+Timing stopped at: 0.084 0 0.084
+Chromosome NC_059456.1: 900 / 1000 loci completed
+Timing stopped at: 0.096 0 0.096
+Timing stopped at: 0.171 0.001 0.173
+Timing stopped at: 0.182 0.001 0.184
+Timing stopped at: 0.107 0 0.107
+Chromosome NC_059456.1: 1000 / 1000 loci completed
+Saved chromosome NC_059456.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059456.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059456.1_model_results.rds
+Starting chromosome NC_059457.1
+Timing stopped at: 0.045 0 0.046
+Timing stopped at: 0.053 0 0.054
+Timing stopped at: 0.176 0 0.176
+Timing stopped at: 0.073 0.002 0.075
+Chromosome NC_059457.1: 100 / 1000 loci completed
+Timing stopped at: 0.1 0 0.1
+Timing stopped at: 0.185 0.002 0.188
+Timing stopped at: 0.084 0.001 0.085
+Chromosome NC_059457.1: 200 / 1000 loci completed
+Timing stopped at: 0.108 0 0.108
+Timing stopped at: 0.138 0 0.14
+Timing stopped at: 0.081 0 0.081
+Timing stopped at: 0.093 0 0.093
+Chromosome NC_059457.1: 300 / 1000 loci completed
+Timing stopped at: 0.079 0 0.079
+Timing stopped at: 0.182 0.001 0.183
+Timing stopped at: 0.044 0 0.043
+Chromosome NC_059457.1: 400 / 1000 loci completed
+Timing stopped at: 0.042 0 0.042
+Timing stopped at: 0.145 0 0.145
+Timing stopped at: 0.038 0 0.038
+Chromosome NC_059457.1: 500 / 1000 loci completed
+Timing stopped at: 0.151 0.003 0.154
+Timing stopped at: 0.13 0 0.131
+Timing stopped at: 0.095 0 0.095
+Timing stopped at: 0.044 0 0.045
+Timing stopped at: 0.139 0.001 0.14
+Timing stopped at: 0.081 0 0.081
+Timing stopped at: 0.195 0.003 0.199
+Timing stopped at: 0.127 0 0.127
+Chromosome NC_059457.1: 600 / 1000 loci completed
+Timing stopped at: 0.105 0.002 0.106
+Timing stopped at: 0.094 0 0.095
+Timing stopped at: 0.059 0 0.06
+Timing stopped at: 0.014 0 0.014
+Timing stopped at: 0.058 0 0.058
+Timing stopped at: 0.078 0 0.079
+Timing stopped at: 0.055 0 0.055
+Chromosome NC_059457.1: 700 / 1000 loci completed
+Timing stopped at: 0.05 0.001 0.051
+Timing stopped at: 0.129 0.002 0.131
+Timing stopped at: 0.047 0 0.046
+Timing stopped at: 0.086 0.001 0.088
+Chromosome NC_059457.1: 800 / 1000 loci completed
+Timing stopped at: 0.058 0.001 0.059
+Timing stopped at: 0.066 0 0.066
+Timing stopped at: 0.086 0 0.086
+Timing stopped at: 0.078 0 0.078
+Timing stopped at: 0.093 0 0.094
+Chromosome NC_059457.1: 900 / 1000 loci completed
+Chromosome NC_059457.1: 1000 / 1000 loci completed
+Saved chromosome NC_059457.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059457.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059457.1_model_results.rds
+Starting chromosome NC_059458.1
+Timing stopped at: 0.066 0 0.065
+Timing stopped at: 0.112 0.002 0.114
+Timing stopped at: 0.118 0.001 0.119
+Chromosome NC_059458.1: 100 / 1000 loci completed
+Timing stopped at: 0.098 0 0.098
+Timing stopped at: 0.05 0 0.051
+Chromosome NC_059458.1: 200 / 1000 loci completed
+Timing stopped at: 0.092 0 0.092
+Timing stopped at: 0.138 0.001 0.139
+Chromosome NC_059458.1: 300 / 1000 loci completed
+Timing stopped at: 0.058 0 0.058
+Timing stopped at: 0.069 0 0.068
+Timing stopped at: 0.073 0.002 0.075
+Chromosome NC_059458.1: 400 / 1000 loci completed
+Timing stopped at: 0.077 0 0.077
+Timing stopped at: 0.123 0.001 0.125
+Chromosome NC_059458.1: 500 / 1000 loci completed
+Timing stopped at: 0.136 0.001 0.137
+Timing stopped at: 0.054 0 0.054
+Timing stopped at: 0.124 0 0.124
+Timing stopped at: 0.11 0.001 0.11
+Timing stopped at: 0.088 0 0.088
+Timing stopped at: 0.124 0 0.125
+Timing stopped at: 0.072 0 0.072
+Chromosome NC_059458.1: 600 / 1000 loci completed
+Timing stopped at: 0.077 0 0.077
+Timing stopped at: 0.129 0.001 0.13
+Timing stopped at: 0.111 0 0.112
+Timing stopped at: 0.092 0 0.092
+Timing stopped at: 0.124 0 0.125
+Timing stopped at: 0.048 0 0.049
+Timing stopped at: 0.079 0.001 0.08
+Chromosome NC_059458.1: 700 / 1000 loci completed
+Timing stopped at: 0.124 0 0.123
+Timing stopped at: 0.135 0.001 0.137
+Timing stopped at: 0.082 0 0.081
+Timing stopped at: 0.083 0 0.084
+Timing stopped at: 0.124 0 0.124
+Chromosome NC_059458.1: 800 / 1000 loci completed
+Timing stopped at: 0.084 0 0.084
+Timing stopped at: 0.098 0 0.099
+Timing stopped at: 0.159 0 0.159
+Timing stopped at: 0.094 0 0.094
+Timing stopped at: 0.083 0.001 0.085
+Timing stopped at: 0.11 0.001 0.112
+Timing stopped at: 0.061 0 0.061
+Timing stopped at: 0.095 0.001 0.095
+Chromosome NC_059458.1: 900 / 1000 loci completed
+Timing stopped at: 0.057 0.001 0.058
+Timing stopped at: 0.145 0.003 0.149
+Timing stopped at: 0.045 0 0.045
+Chromosome NC_059458.1: 1000 / 1000 loci completed
+Saved chromosome NC_059458.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059458.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059458.1_model_results.rds
+Starting chromosome NC_059459.1
+Timing stopped at: 0.114 0.001 0.115
+Timing stopped at: 0.081 0 0.081
+Timing stopped at: 0.092 0.001 0.093
+Chromosome NC_059459.1: 100 / 1000 loci completed
+Timing stopped at: 0.049 0.001 0.051
+Timing stopped at: 0.092 0.001 0.092
+Timing stopped at: 0.076 0.001 0.077
+Chromosome NC_059459.1: 200 / 1000 loci completed
+Timing stopped at: 0.079 0 0.079
+Timing stopped at: 0.115 0 0.115
+Timing stopped at: 0.08 0 0.08
+Timing stopped at: 0.083 0.001 0.084
+Timing stopped at: 0.083 0 0.083
+Timing stopped at: 0.108 0.002 0.111
+Timing stopped at: 0.107 0 0.107
+Chromosome NC_059459.1: 300 / 1000 loci completed
+Timing stopped at: 0.08 0.003 0.083
+Timing stopped at: 0.039 0 0.039
+Timing stopped at: 0.052 0 0.052
+Timing stopped at: 0.095 0 0.095
+Timing stopped at: 0.059 0 0.059
+Timing stopped at: 0.148 0.001 0.149
+Chromosome NC_059459.1: 400 / 1000 loci completed
+Timing stopped at: 0.106 0.001 0.108
+Timing stopped at: 0.075 0 0.075
+Timing stopped at: 0.068 0 0.067
+Timing stopped at: 0.082 0 0.083
+Timing stopped at: 0.112 0 0.112
+Timing stopped at: 0.125 0 0.126
+Timing stopped at: 0.119 0 0.119
+Timing stopped at: 0.095 0 0.096
+Timing stopped at: 0.069 0.001 0.07
+Timing stopped at: 0.072 0 0.072
+Timing stopped at: 0.089 0.001 0.09
+Chromosome NC_059459.1: 500 / 1000 loci completed
+Timing stopped at: 0.097 0.001 0.098
+Timing stopped at: 0.173 0.001 0.175
+Chromosome NC_059459.1: 600 / 1000 loci completed
+Timing stopped at: 0.19 0.001 0.192
+Timing stopped at: 0.16 0.001 0.161
+Timing stopped at: 0.044 0 0.045
+Chromosome NC_059459.1: 700 / 1000 loci completed
+Timing stopped at: 0.102 0 0.103
+Timing stopped at: 0.165 0 0.165
+Timing stopped at: 0.062 0 0.063
+Chromosome NC_059459.1: 800 / 1000 loci completed
+Timing stopped at: 0.149 0.001 0.15
+Timing stopped at: 0.044 0 0.043
+Timing stopped at: 0.084 0 0.084
+Timing stopped at: 0.067 0 0.066
+Chromosome NC_059459.1: 900 / 1000 loci completed
+Timing stopped at: 0.064 0 0.064
+Timing stopped at: 0.038 0 0.037
+Timing stopped at: 0.112 0 0.112
+Timing stopped at: 0.111 0.001 0.113
+Chromosome NC_059459.1: 1000 / 1000 loci completed
+Saved chromosome NC_059459.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059459.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059459.1_model_results.rds
+Starting chromosome NC_059460.1
+Timing stopped at: 0.155 0.001 0.157
+Timing stopped at: 0.123 0 0.125
+Timing stopped at: 0.074 0 0.075
+Timing stopped at: 0.109 0 0.109
+Timing stopped at: 0.095 0 0.096
+Chromosome NC_059460.1: 100 / 1000 loci completed
+Timing stopped at: 0.101 0 0.102
+Timing stopped at: 0.093 0 0.094
+Timing stopped at: 0.154 0.001 0.155
+Timing stopped at: 0.07 0.001 0.072
+Timing stopped at: 0.039 0 0.039
+Timing stopped at: 0.088 0 0.088
+Chromosome NC_059460.1: 200 / 1000 loci completed
+Timing stopped at: 0.14 0 0.141
+Timing stopped at: 0.043 0 0.043
+Timing stopped at: 0.066 0.001 0.068
+Timing stopped at: 0.103 0 0.104
+Timing stopped at: 0.108 0.001 0.11
+Timing stopped at: 0.077 0 0.077
+Timing stopped at: 0.131 0 0.131
+Chromosome NC_059460.1: 300 / 1000 loci completed
+Timing stopped at: 0.061 0 0.062
+Timing stopped at: 0.06 0.001 0.061
+Timing stopped at: 0.071 0 0.071
+Chromosome NC_059460.1: 400 / 1000 loci completed
+Timing stopped at: 0.17 0 0.171
+Timing stopped at: 0.152 0 0.153
+Timing stopped at: 0.125 0 0.125
+Timing stopped at: 0.092 0.001 0.094
+Chromosome NC_059460.1: 500 / 1000 loci completed
+Timing stopped at: 0.133 0.002 0.136
+Timing stopped at: 0.082 0.001 0.083
+Timing stopped at: 0.077 0 0.078
+Chromosome NC_059460.1: 600 / 1000 loci completed
+Timing stopped at: 0.135 0.001 0.137
+Timing stopped at: 0.082 0.001 0.084
+Timing stopped at: 0.065 0.001 0.067
+Timing stopped at: 0.08 0 0.08
+Timing stopped at: 0.108 0 0.109
+Timing stopped at: 0.152 0 0.154
+Timing stopped at: 0.113 0.002 0.116
+Timing stopped at: 0.109 0.002 0.112
+Timing stopped at: 0.127 0.001 0.129
+Timing stopped at: 0.01 0 0.01
+Chromosome NC_059460.1: 700 / 1000 loci completed
+Timing stopped at: 0.062 0 0.063
+Timing stopped at: 0.078 0 0.078
+Timing stopped at: 0.074 0.001 0.076
+Timing stopped at: 0.078 0.001 0.079
+Chromosome NC_059460.1: 800 / 1000 loci completed
+Timing stopped at: 0.074 0 0.074
+Chromosome NC_059460.1: 900 / 1000 loci completed
+Timing stopped at: 0.149 0.002 0.151
+Timing stopped at: 0.07 0 0.07
+Timing stopped at: 0.102 0 0.102
+Chromosome NC_059460.1: 1000 / 1000 loci completed
+Saved chromosome NC_059460.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059460.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059460.1_model_results.rds
+Starting chromosome NC_059461.1
+Timing stopped at: 0.102 0 0.102
+Timing stopped at: 0.051 0 0.051
+Timing stopped at: 0.04 0 0.04
+Chromosome NC_059461.1: 100 / 1000 loci completed
+Timing stopped at: 0.128 0 0.129
+Timing stopped at: 0.105 0.001 0.106
+Chromosome NC_059461.1: 200 / 1000 loci completed
+Timing stopped at: 0.134 0 0.135
+Chromosome NC_059461.1: 300 / 1000 loci completed
+Timing stopped at: 0.136 0 0.137
+Timing stopped at: 0.061 0 0.062
+Timing stopped at: 0.096 0 0.096
+Timing stopped at: 0.08 0.001 0.081
+Timing stopped at: 0.062 0 0.063
+Chromosome NC_059461.1: 400 / 1000 loci completed
+Timing stopped at: 0.076 0 0.077
+Timing stopped at: 0.128 0.001 0.129
+Timing stopped at: 0.066 0 0.067
+Chromosome NC_059461.1: 500 / 1000 loci completed
+Timing stopped at: 0.073 0 0.073
+Timing stopped at: 0.081 0 0.082
+Timing stopped at: 0.042 0 0.041
+Chromosome NC_059461.1: 600 / 1000 loci completed
+Timing stopped at: 0.04 0.001 0.042
+Timing stopped at: 0.091 0.001 0.092
+Timing stopped at: 0.059 0 0.059
+Timing stopped at: 0.099 0 0.099
+Timing stopped at: 0.074 0 0.074
+Chromosome NC_059461.1: 700 / 1000 loci completed
+Timing stopped at: 0.098 0 0.099
+Timing stopped at: 0.121 0 0.122
+Timing stopped at: 0.104 0.001 0.106
+Timing stopped at: 0.041 0.001 0.042
+Timing stopped at: 0.057 0.001 0.058
+Timing stopped at: 0.103 0 0.103
+Timing stopped at: 0.062 0 0.062
+Chromosome NC_059461.1: 800 / 1000 loci completed
+Timing stopped at: 0.054 0 0.055
+Timing stopped at: 0.091 0 0.091
+Timing stopped at: 0.082 0 0.082
+Chromosome NC_059461.1: 900 / 1000 loci completed
+Timing stopped at: 0.07 0 0.071
+Timing stopped at: 0.07 0 0.071
+Timing stopped at: 0.095 0.001 0.097
+Timing stopped at: 0.081 0 0.082
+Timing stopped at: 0.104 0 0.105
+Timing stopped at: 0.147 0.002 0.15
+Timing stopped at: 0.098 0 0.099
+Chromosome NC_059461.1: 1000 / 1000 loci completed
+Saved chromosome NC_059461.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059461.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059461.1_model_results.rds
+Starting chromosome NC_059462.1
+Timing stopped at: 0.135 0.001 0.137
+Timing stopped at: 0.047 0 0.047
+Timing stopped at: 0.11 0.001 0.112
+Timing stopped at: 0.087 0 0.087
+Timing stopped at: 0.078 0.001 0.08
+Chromosome NC_059462.1: 100 / 1000 loci completed
+Timing stopped at: 0.056 0 0.057
+Timing stopped at: 0.095 0 0.096
+Chromosome NC_059462.1: 200 / 1000 loci completed
+Timing stopped at: 0.107 0 0.106
+Timing stopped at: 0.093 0.001 0.094
+Timing stopped at: 0.082 0 0.083
+Chromosome NC_059462.1: 300 / 1000 loci completed
+Timing stopped at: 0.102 0 0.103
+Timing stopped at: 0.075 0 0.075
+Timing stopped at: 0.054 0.002 0.057
+Chromosome NC_059462.1: 400 / 1000 loci completed
+Timing stopped at: 0.069 0 0.07
+Timing stopped at: 0.084 0 0.085
+Timing stopped at: 0.157 0.001 0.159
+Timing stopped at: 0.135 0.001 0.137
+Timing stopped at: 0.113 0.001 0.116
+Timing stopped at: 0.057 0.001 0.058
+Timing stopped at: 0.098 0 0.098
+Chromosome NC_059462.1: 500 / 1000 loci completed
+Timing stopped at: 0.059 0.001 0.061
+Timing stopped at: 0.119 0 0.119
+Timing stopped at: 0.092 0 0.092
+Timing stopped at: 0.133 0 0.133
+Timing stopped at: 0.066 0 0.066
+Chromosome NC_059462.1: 600 / 1000 loci completed
+Timing stopped at: 0.063 0 0.063
+Timing stopped at: 0.121 0 0.121
+Timing stopped at: 0.054 0 0.054
+Timing stopped at: 0.136 0 0.137
+Chromosome NC_059462.1: 700 / 1000 loci completed
+Timing stopped at: 0.102 0 0.103
+Timing stopped at: 0.067 0 0.067
+Chromosome NC_059462.1: 800 / 1000 loci completed
+Timing stopped at: 0.149 0.003 0.152
+Timing stopped at: 0.061 0 0.062
+Chromosome NC_059462.1: 900 / 1000 loci completed
+Timing stopped at: 0.107 0 0.107
+Timing stopped at: 0.073 0.002 0.076
+Timing stopped at: 0.039 0 0.04
+Timing stopped at: 0.14 0.001 0.141
+Chromosome NC_059462.1: 1000 / 1000 loci completed
+Saved chromosome NC_059462.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059462.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059462.1_model_results.rds
+Starting chromosome NC_059463.1
+Timing stopped at: 0.052 0 0.053
+Timing stopped at: 0.127 0 0.128
+Chromosome NC_059463.1: 100 / 1000 loci completed
+Chromosome NC_059463.1: 200 / 1000 loci completed
+Timing stopped at: 0.055 0 0.054
+Timing stopped at: 0.1 0 0.101
+Timing stopped at: 0.139 0 0.14
+Chromosome NC_059463.1: 300 / 1000 loci completed
+Chromosome NC_059463.1: 400 / 1000 loci completed
+Timing stopped at: 0.097 0 0.098
+Chromosome NC_059463.1: 500 / 1000 loci completed
+Timing stopped at: 0.133 0 0.134
+Timing stopped at: 0.127 0.001 0.129
+Timing stopped at: 0.113 0 0.113
+Chromosome NC_059463.1: 600 / 1000 loci completed
+Timing stopped at: 0.124 0.001 0.125
+Timing stopped at: 0.101 0 0.101
+Timing stopped at: 0.063 0.001 0.064
+Chromosome NC_059463.1: 700 / 1000 loci completed
+Timing stopped at: 0.114 0.002 0.118
+Chromosome NC_059463.1: 800 / 1000 loci completed
+Timing stopped at: 0.051 0 0.051
+Timing stopped at: 0.113 0.001 0.115
+Timing stopped at: 0.172 0.002 0.176
+Chromosome NC_059463.1: 900 / 1000 loci completed
+Timing stopped at: 0.036 0 0.036
+Timing stopped at: 0.072 0.001 0.073
+Timing stopped at: 0.134 0 0.135
+Chromosome NC_059463.1: 1000 / 1000 loci completed
+Saved chromosome NC_059463.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059463.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059463.1_model_results.rds
+Starting chromosome NC_059464.1
+Timing stopped at: 0.095 0 0.095
+Chromosome NC_059464.1: 100 / 1000 loci completed
+Timing stopped at: 0.068 0.001 0.069
+Timing stopped at: 0.052 0.001 0.053
+Chromosome NC_059464.1: 200 / 1000 loci completed
+Timing stopped at: 0.064 0 0.064
+Timing stopped at: 0.054 0 0.054
+Chromosome NC_059464.1: 300 / 1000 loci completed
+Timing stopped at: 0.079 0.001 0.08
+Timing stopped at: 0.069 0.001 0.07
+Timing stopped at: 0.096 0.001 0.097
+Timing stopped at: 0.037 0.001 0.038
+Timing stopped at: 0.042 0 0.043
+Timing stopped at: 0.161 0.001 0.163
+Timing stopped at: 0.086 0.001 0.087
+Chromosome NC_059464.1: 400 / 1000 loci completed
+Timing stopped at: 0.135 0 0.135
+Chromosome NC_059464.1: 500 / 1000 loci completed
+Timing stopped at: 0.072 0 0.072
+Timing stopped at: 0.122 0 0.122
+Timing stopped at: 0.117 0 0.118
+Timing stopped at: 0.1 0.001 0.101
+Timing stopped at: 0.013 0 0.013
+Chromosome NC_059464.1: 600 / 1000 loci completed
+Timing stopped at: 0.15 0.002 0.152
+Timing stopped at: 0.091 0 0.092
+Chromosome NC_059464.1: 700 / 1000 loci completed
+Timing stopped at: 0.051 0 0.051
+Chromosome NC_059464.1: 800 / 1000 loci completed
+Timing stopped at: 0.099 0 0.099
+Timing stopped at: 0.087 0.001 0.089
+Timing stopped at: 0.096 0 0.096
+Timing stopped at: 0.135 0 0.136
+Timing stopped at: 0.106 0 0.107
+Timing stopped at: 0.135 0 0.136
+Chromosome NC_059464.1: 900 / 1000 loci completed
+Timing stopped at: 0.121 0.001 0.122
+Timing stopped at: 0.12 0 0.119
+Timing stopped at: 0.086 0.001 0.087
+Chromosome NC_059464.1: 1000 / 1000 loci completed
+Saved chromosome NC_059464.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059464.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059464.1_model_results.rds
+Starting chromosome NC_059465.1
+Timing stopped at: 0.151 0 0.152
+Timing stopped at: 0.077 0.001 0.078
+Timing stopped at: 0.119 0 0.119
+Timing stopped at: 0.042 0 0.043
+Timing stopped at: 0.101 0 0.102
+Chromosome NC_059465.1: 100 / 1000 loci completed
+Timing stopped at: 0.105 0 0.106
+Chromosome NC_059465.1: 200 / 1000 loci completed
+Timing stopped at: 0.154 0.001 0.156
+Timing stopped at: 0.052 0 0.053
+Timing stopped at: 0.036 0 0.037
+Timing stopped at: 0.083 0 0.083
+Timing stopped at: 0.078 0 0.079
+Chromosome NC_059465.1: 300 / 1000 loci completed
+Timing stopped at: 0.046 0 0.046
+Timing stopped at: 0.14 0.001 0.141
+Timing stopped at: 0.066 0.002 0.068
+Chromosome NC_059465.1: 400 / 1000 loci completed
+Timing stopped at: 0.146 0 0.146
+Timing stopped at: 0.067 0 0.068
+Timing stopped at: 0.082 0.001 0.083
+Timing stopped at: 0.044 0 0.045
+Chromosome NC_059465.1: 500 / 1000 loci completed
+Timing stopped at: 0.098 0.001 0.099
+Timing stopped at: 0.124 0.001 0.125
+Timing stopped at: 0.094 0.001 0.095
+Timing stopped at: 0.112 0 0.112
+Timing stopped at: 0.094 0 0.094
+Timing stopped at: 0.136 0 0.137
+Timing stopped at: 0.046 0 0.046
+Timing stopped at: 0.154 0 0.154
+Timing stopped at: 0.122 0 0.123
+Timing stopped at: 0.041 0 0.042
+Chromosome NC_059465.1: 600 / 1000 loci completed
+Timing stopped at: 0.107 0 0.108
+Timing stopped at: 0.057 0 0.057
+Timing stopped at: 0.154 0 0.155
+Timing stopped at: 0.066 0 0.067
+Timing stopped at: 0.083 0 0.084
+Timing stopped at: 0.127 0 0.128
+Timing stopped at: 0.117 0 0.117
+Chromosome NC_059465.1: 700 / 1000 loci completed
+Timing stopped at: 0.085 0 0.085
+Timing stopped at: 0.096 0 0.097
+Timing stopped at: 0.093 0 0.093
+Timing stopped at: 0.099 0 0.1
+Timing stopped at: 0.079 0 0.079
+Timing stopped at: 0.054 0 0.054
+Timing stopped at: 0.097 0 0.097
+Timing stopped at: 0.072 0.001 0.074
+Chromosome NC_059465.1: 800 / 1000 loci completed
+Timing stopped at: 0.048 0 0.049
+Timing stopped at: 0.079 0.001 0.08
+Timing stopped at: 0.088 0.001 0.09
+Timing stopped at: 0.034 0 0.034
+Timing stopped at: 0.063 0 0.064
+Chromosome NC_059465.1: 900 / 1000 loci completed
+Timing stopped at: 0.113 0.001 0.114
+Timing stopped at: 0.058 0 0.058
+Timing stopped at: 0.085 0 0.086
+Chromosome NC_059465.1: 1000 / 1000 loci completed
+Saved chromosome NC_059465.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059465.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059465.1_model_results.rds
+Starting chromosome NC_059466.1
+Timing stopped at: 0.076 0 0.075
+Timing stopped at: 0.105 0 0.106
+Timing stopped at: 0.09 0 0.091
+Chromosome NC_059466.1: 100 / 1000 loci completed
+Timing stopped at: 0.121 0 0.122
+Timing stopped at: 0.104 0.001 0.106
+Timing stopped at: 0.056 0.002 0.058
+Timing stopped at: 0.034 0 0.034
+Timing stopped at: 0.097 0.001 0.098
+Chromosome NC_059466.1: 200 / 1000 loci completed
+Chromosome NC_059466.1: 300 / 1000 loci completed
+Timing stopped at: 0.159 0 0.16
+Timing stopped at: 0.086 0 0.086
+Timing stopped at: 0.158 0 0.158
+Chromosome NC_059466.1: 400 / 1000 loci completed
+Timing stopped at: 0.066 0.001 0.068
+Timing stopped at: 0.081 0 0.081
+Chromosome NC_059466.1: 500 / 1000 loci completed
+Timing stopped at: 0.074 0 0.074
+Timing stopped at: 0.138 0 0.139
+Timing stopped at: 0.14 0 0.14
+Timing stopped at: 0.141 0.001 0.142
+Chromosome NC_059466.1: 600 / 1000 loci completed
+Timing stopped at: 0.12 0 0.12
+Timing stopped at: 0.077 0.001 0.078
+Timing stopped at: 0.088 0 0.089
+Timing stopped at: 0.118 0 0.118
+Timing stopped at: 0.041 0.001 0.041
+Chromosome NC_059466.1: 700 / 1000 loci completed
+Timing stopped at: 0.126 0.001 0.128
+Timing stopped at: 0.042 0 0.042
+Timing stopped at: 0.085 0 0.085
+Timing stopped at: 0.079 0 0.079
+Timing stopped at: 0.084 0 0.084
+Timing stopped at: 0.066 0 0.066
+Timing stopped at: 0.055 0 0.056
+Chromosome NC_059466.1: 800 / 1000 loci completed
+Timing stopped at: 0.087 0 0.088
+Timing stopped at: 0.111 0.002 0.113
+Timing stopped at: 0.076 0 0.076
+Chromosome NC_059466.1: 900 / 1000 loci completed
+Timing stopped at: 0.068 0.001 0.069
+Timing stopped at: 0.062 0 0.062
+Timing stopped at: 0.074 0.001 0.075
+Timing stopped at: 0.077 0 0.077
+Timing stopped at: 0.075 0 0.076
+Chromosome NC_059466.1: 1000 / 1000 loci completed
+Saved chromosome NC_059466.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059466.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059466.1_model_results.rds
+Starting chromosome NC_059467.1
+Timing stopped at: 0.147 0.003 0.151
+Timing stopped at: 0.072 0.001 0.073
+Timing stopped at: 0.044 0 0.044
+Timing stopped at: 0.084 0.001 0.085
+Chromosome NC_059467.1: 100 / 1000 loci completed
+Timing stopped at: 0.068 0.001 0.07
+Timing stopped at: 0.056 0 0.057
+Timing stopped at: 0.112 0 0.112
+Timing stopped at: 0.079 0 0.079
+Timing stopped at: 0.076 0 0.076
+Chromosome NC_059467.1: 200 / 1000 loci completed
+Timing stopped at: 0.083 0 0.084
+Timing stopped at: 0.083 0.001 0.083
+Timing stopped at: 0.147 0.001 0.149
+Timing stopped at: 0.059 0 0.059
+Timing stopped at: 0.154 0 0.154
+Timing stopped at: 0.115 0 0.115
+Timing stopped at: 0.072 0 0.073
+Chromosome NC_059467.1: 300 / 1000 loci completed
+Timing stopped at: 0.072 0 0.073
+Timing stopped at: 0.081 0.001 0.082
+Timing stopped at: 0.068 0 0.068
+Timing stopped at: 0.103 0.001 0.105
+Timing stopped at: 0.037 0 0.038
+Timing stopped at: 0.086 0.001 0.087
+Chromosome NC_059467.1: 400 / 1000 loci completed
+Timing stopped at: 0.06 0.001 0.061
+Timing stopped at: 0.014 0 0.015
+Timing stopped at: 0.071 0.001 0.072
+Timing stopped at: 0.095 0.001 0.097
+Timing stopped at: 0.045 0.001 0.046
+Chromosome NC_059467.1: 500 / 1000 loci completed
+Timing stopped at: 0.054 0 0.055
+Timing stopped at: 0.101 0.002 0.103
+Timing stopped at: 0.058 0 0.059
+Timing stopped at: 0.043 0.001 0.044
+Timing stopped at: 0.096 0.001 0.097
+Timing stopped at: 0.133 0 0.134
+Timing stopped at: 0.051 0 0.051
+Timing stopped at: 0.118 0 0.119
+Timing stopped at: 0.063 0 0.063
+Timing stopped at: 0.145 0.001 0.147
+Chromosome NC_059467.1: 600 / 1000 loci completed
+Timing stopped at: 0.108 0.001 0.109
+Timing stopped at: 0.089 0.001 0.089
+Timing stopped at: 0.094 0 0.095
+Timing stopped at: 0.115 0.001 0.116
+Timing stopped at: 0.088 0 0.089
+Timing stopped at: 0.074 0 0.075
+Chromosome NC_059467.1: 700 / 1000 loci completed
+Timing stopped at: 0.141 0.001 0.143
+Timing stopped at: 0.095 0.001 0.096
+Timing stopped at: 0.054 0 0.054
+Timing stopped at: 0.064 0.001 0.066
+Timing stopped at: 0.098 0.002 0.1
+Timing stopped at: 0.092 0 0.091
+Timing stopped at: 0.144 0 0.145
+Timing stopped at: 0.098 0 0.098
+Timing stopped at: 0.125 0.001 0.127
+Chromosome NC_059467.1: 800 / 1000 loci completed
+Timing stopped at: 0.12 0 0.12
+Timing stopped at: 0.054 0 0.055
+Timing stopped at: 0.124 0 0.124
+Timing stopped at: 0.123 0.002 0.125
+Chromosome NC_059467.1: 900 / 1000 loci completed
+Timing stopped at: 0.091 0.002 0.093
+Timing stopped at: 0.063 0 0.063
+Timing stopped at: 0.024 0 0.024
+Timing stopped at: 0.122 0 0.123
+Timing stopped at: 0.056 0 0.056
+Timing stopped at: 0.075 0 0.075
+Chromosome NC_059467.1: 1000 / 1000 loci completed
+Saved chromosome NC_059467.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059467.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059467.1_model_results.rds
+Starting chromosome NC_059468.1
+Timing stopped at: 0.119 0 0.12
+Timing stopped at: 0.099 0.001 0.1
+Chromosome NC_059468.1: 100 / 1000 loci completed
+Timing stopped at: 0.102 0 0.102
+Timing stopped at: 0.067 0 0.067
+Timing stopped at: 0.086 0.001 0.087
+Chromosome NC_059468.1: 200 / 1000 loci completed
+Timing stopped at: 0.077 0 0.077
+Chromosome NC_059468.1: 300 / 1000 loci completed
+Timing stopped at: 0.104 0 0.104
+Timing stopped at: 0.134 0 0.135
+Timing stopped at: 0.125 0 0.125
+Timing stopped at: 0.055 0 0.055
+Timing stopped at: 0.082 0 0.083
+Chromosome NC_059468.1: 400 / 1000 loci completed
+Timing stopped at: 0.09 0 0.09
+Timing stopped at: 0.191 0.004 0.195
+Timing stopped at: 0.054 0.002 0.056
+Timing stopped at: 0.072 0.001 0.073
+Timing stopped at: 0.107 0.001 0.109
+Timing stopped at: 0.057 0 0.057
+Timing stopped at: 0.061 0 0.061
+Chromosome NC_059468.1: 500 / 1000 loci completed
+Timing stopped at: 0.045 0 0.046
+Chromosome NC_059468.1: 600 / 1000 loci completed
+Timing stopped at: 0.169 0 0.17
+Timing stopped at: 0.159 0.001 0.16
+Timing stopped at: 0.092 0.001 0.093
+Chromosome NC_059468.1: 700 / 1000 loci completed
+Timing stopped at: 0.122 0.001 0.123
+Timing stopped at: 0.075 0 0.076
+Timing stopped at: 0.051 0.001 0.052
+Chromosome NC_059468.1: 800 / 1000 loci completed
+Timing stopped at: 0.071 0 0.072
+Timing stopped at: 0.069 0 0.068
+Timing stopped at: 0.095 0.001 0.096
+Timing stopped at: 0.11 0 0.11
+Timing stopped at: 0.151 0.001 0.152
+Timing stopped at: 0.058 0 0.059
+Chromosome NC_059468.1: 900 / 1000 loci completed
+Timing stopped at: 0.129 0.001 0.13
+Timing stopped at: 0.091 0 0.091
+Timing stopped at: 0.071 0 0.071
+Timing stopped at: 0.059 0 0.059
+Timing stopped at: 0.122 0.001 0.123
+Timing stopped at: 0.11 0.001 0.112
+Timing stopped at: 0.177 0 0.178
+Timing stopped at: 0.161 0 0.162
+Timing stopped at: 0.147 0 0.149
+Chromosome NC_059468.1: 1000 / 1000 loci completed
+Saved chromosome NC_059468.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059468.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059468.1_model_results.rds
+Starting chromosome NC_059469.1
+Timing stopped at: 0.078 0 0.078
+Timing stopped at: 0.101 0 0.102
+Timing stopped at: 0.147 0 0.147
+Timing stopped at: 0.153 0.001 0.155
+Chromosome NC_059469.1: 100 / 1000 loci completed
+Timing stopped at: 0.05 0 0.051
+Timing stopped at: 0.136 0 0.136
+Timing stopped at: 0.048 0 0.048
+Timing stopped at: 0.058 0.001 0.06
+Timing stopped at: 0.095 0 0.095
+Timing stopped at: 0.153 0.001 0.155
+Chromosome NC_059469.1: 200 / 1000 loci completed
+Timing stopped at: 0.095 0.001 0.096
+Timing stopped at: 0.079 0 0.08
+Timing stopped at: 0.097 0 0.098
+Chromosome NC_059469.1: 300 / 1000 loci completed
+Timing stopped at: 0.073 0.001 0.074
+Timing stopped at: 0.104 0.001 0.105
+Timing stopped at: 0.039 0 0.039
+Timing stopped at: 0.092 0 0.093
+Timing stopped at: 0.092 0 0.092
+Timing stopped at: 0.129 0 0.13
+Chromosome NC_059469.1: 400 / 1000 loci completed
+Timing stopped at: 0.085 0.002 0.086
+Timing stopped at: 0.065 0 0.065
+Timing stopped at: 0.093 0 0.094
+Timing stopped at: 0.097 0 0.097
+Chromosome NC_059469.1: 500 / 1000 loci completed
+Timing stopped at: 0.06 0 0.06
+Timing stopped at: 0.091 0.001 0.092
+Timing stopped at: 0.159 0 0.159
+Timing stopped at: 0.072 0 0.073
+Timing stopped at: 0.087 0.001 0.088
+Timing stopped at: 0.052 0 0.052
+Timing stopped at: 0.14 0 0.141
+Timing stopped at: 0.085 0.001 0.086
+Chromosome NC_059469.1: 600 / 1000 loci completed
+Timing stopped at: 0.148 0 0.149
+Timing stopped at: 0.097 0 0.097
+Chromosome NC_059469.1: 700 / 1000 loci completed
+Timing stopped at: 0.121 0.002 0.124
+Timing stopped at: 0.125 0 0.126
+Timing stopped at: 0.089 0 0.089
+Timing stopped at: 0.03 0.001 0.031
+Timing stopped at: 0.059 0 0.059
+Chromosome NC_059469.1: 800 / 1000 loci completed
+Timing stopped at: 0.117 0 0.117
+Timing stopped at: 0.127 0 0.128
+Chromosome NC_059469.1: 900 / 1000 loci completed
+Timing stopped at: 0.094 0.001 0.095
+Timing stopped at: 0.065 0 0.066
+Timing stopped at: 0.051 0 0.05
+Timing stopped at: 0.103 0 0.103
+Timing stopped at: 0.076 0 0.077
+Timing stopped at: 0.1 0 0.1
+Timing stopped at: 0.093 0 0.094
+Chromosome NC_059469.1: 1000 / 1000 loci completed
+Saved chromosome NC_059469.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059469.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059469.1_model_results.rds
+Starting chromosome NC_059470.1
+Timing stopped at: 0.116 0 0.116
+Timing stopped at: 0.079 0 0.08
+Timing stopped at: 0.103 0 0.103
+Chromosome NC_059470.1: 100 / 1000 loci completed
+Timing stopped at: 0.065 0.001 0.065
+Timing stopped at: 0.089 0.001 0.091
+Timing stopped at: 0.056 0 0.056
+Timing stopped at: 0.137 0 0.137
+Chromosome NC_059470.1: 200 / 1000 loci completed
+Timing stopped at: 0.098 0 0.099
+Timing stopped at: 0.123 0 0.124
+Timing stopped at: 0.106 0.001 0.108
+Timing stopped at: 0.081 0 0.082
+Chromosome NC_059470.1: 300 / 1000 loci completed
+Timing stopped at: 0.057 0 0.057
+Timing stopped at: 0.085 0.002 0.087
+Timing stopped at: 0.065 0 0.066
+Timing stopped at: 0.163 0.001 0.164
+Timing stopped at: 0.121 0 0.122
+Timing stopped at: 0.056 0 0.057
+Timing stopped at: 0.071 0 0.071
+Chromosome NC_059470.1: 400 / 1000 loci completed
+Timing stopped at: 0.158 0.001 0.16
+Timing stopped at: 0.093 0 0.092
+Timing stopped at: 0.079 0 0.08
+Timing stopped at: 0.056 0 0.056
+Timing stopped at: 0.614 0.001 0.618
+Timing stopped at: 0.067 0 0.067
+Chromosome NC_059470.1: 500 / 1000 loci completed
+Timing stopped at: 0.115 0.001 0.116
+Timing stopped at: 0.088 0 0.089
+Chromosome NC_059470.1: 600 / 1000 loci completed
+Timing stopped at: 0.085 0 0.086
+Timing stopped at: 0.056 0 0.056
+Timing stopped at: 0.123 0.001 0.125
+Timing stopped at: 0.23 0 0.231
+Timing stopped at: 0.078 0.002 0.081
+Timing stopped at: 0.133 0 0.135
+Timing stopped at: 0.203 0 0.205
+Chromosome NC_059470.1: 700 / 1000 loci completed
+Chromosome NC_059470.1: 800 / 1000 loci completed
+Timing stopped at: 0.146 0 0.147
+Chromosome NC_059470.1: 900 / 1000 loci completed
+Timing stopped at: 0.064 0 0.064
+Timing stopped at: 0.117 0 0.119
+Timing stopped at: 0.114 0.001 0.115
+Timing stopped at: 0.052 0 0.052
+Chromosome NC_059470.1: 1000 / 1000 loci completed
+Saved chromosome NC_059470.1
+  CSV: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059470.1_model_results.csv
+  RDS: /scratch/project_2010912/ezel/salmon/data_files/simulated_loci/model_results_by_chromosome/chr_NC_059470.1_model_results.rds
+There were 50 or more warnings (use warnings() to see the first 50)
+All chromosomes finished.

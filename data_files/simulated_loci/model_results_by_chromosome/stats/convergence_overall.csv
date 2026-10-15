@@ -1,0 +1,3 @@
+model,n_attempted,n_converged,convergence_percent,n_fit_errors,n_optimizer_nonzero,n_pdHess_false
+REML,29000,19517,67.3,1123,7810,7781
+ML,29000,3739,12.8931034482759,72,17283,25013

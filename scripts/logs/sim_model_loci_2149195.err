@@ -1,0 +1,14 @@
+------------------------------
+r-env 4.6.1
+https://docs.csc.fi/apps/r-env
+------------------------------
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:base’:
+
+    %notin%
+
+Starting chromosome NC_059442.1
+Timing stopped at: 0.113 0.001 0.115
+[2026-10-10T08:35:45.485] error: *** JOB 2149195 ON rc5132 CANCELLED AT 2026-10-10T08:35:45 DUE to SIGNAL Terminated ***

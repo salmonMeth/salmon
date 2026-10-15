@@ -1,0 +1,15 @@
+------------------------------
+r-env 4.6.1
+https://docs.csc.fi/apps/r-env
+------------------------------
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:base’:
+
+    %notin%
+
+Starting chromosome NC_059442.1
+Error in extract_model(fit_reml, "REML", locus_id, dat) : 
+  unused arguments (locus_id, dat)
+Execution halted
