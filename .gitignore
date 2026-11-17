@@ -5,3 +5,14 @@
 DiffMethylTools/
 *_all_models_and_summaries.RData
 *.rds
+# Large data files
+data_files/V2_GCF_905237065.1_Ssal_v3.1.sorted.fa.out
+data_files/GCF_905237065.1_Ssal_v3.1.sorted.fa.out
+data_files/simulated_data/scaled_coverage/with_10_extra_samples_per_family/true_sample_parameters.csv
+data_files/simulated_data/with_extra_20_samples_per_family/true_sample_parameters.csv
+*/
+*/
+/*/
+data_files/simulated_data/with_extra_10_samples_per_family/true_sample_parameters.csv
+/*/
+data_files/simulated_data/with_extra_10_samples_per_family/true_sample_parameters.csv

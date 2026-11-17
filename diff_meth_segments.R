@@ -89,8 +89,7 @@ mb <- new(
 #to apply the calculateDiffMeth(overdispersion) parameter, it turns out we need to get rid of the rows(segments)
 #that have zero coverage for any of the samples
 
-test_df <- getData(mb)
-
+test_df <- as.data.frame(mb)
 cov_cols <- paste0("coverage_", sample_ids)
 
 zero_cov_rows <- which(

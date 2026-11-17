@@ -315,21 +315,18 @@ simulate_parental_methylation <- function(
 }
 
 
-path_ids="/scratch/project_2010912/ezel/hannu_methylation.selectedIDs_10Dec24.txt"
+path_ids="/scratch/project_2010912/ezel/salmon/data_files/simulated_loci/with_2_new_samples/simulated_with_2_extra_samples_metadata.csv"
+#"/scratch/project_2010912/ezel/hannu_methylation.selectedIDs_10Dec24.txt"
 meta <- fread(path_ids)
 
-meta[, sample := paste(Running.ID, TimePoint, sep = "_")]
+#meta[, sample := paste(Running.ID, TimePoint, sep = "_")]
 
-meta <- meta[
-  grepl("_T1$", sample) &
-    sample != "176_T1"
-]
+#meta <- meta[grepl("_T1$", sample) &sample != "176_T1"]
 
 db=readRDS("/scratch/project_2010912/ezel/salmon/data_files/objects_intermediary/db_3_samples_removed.rds")
 
-ch <- readRDS(
-  "/scratch/project_2010912/ezel/salmon/data_files/simulated_loci/simulated_T1_locus_coverage_1000per_chr.rds"
-)
+ch <- readRDS("/scratch/project_2010912/ezel/salmon/data_files/simulated_loci/with_2_new_samples/simulated_with_2_extra_samples_coverage_1000per_chr.rds")
+  #readRDS("/scratch/project_2010912/ezel/salmon/data_files/simulated_loci/simulated_T1_locus_coverage_1000per_chr.rds")
 
 sim_methylation <- simulate_parental_methylation(
   db = db,
@@ -342,5 +339,5 @@ sim_methylation <- simulate_parental_methylation(
 
 saveRDS(
   sim_methylation,
-  "/scratch/project_2010912/ezel/salmon/data_files/simulated_loci/simulated_T1_parental_methylation_1000per_chr.rds"
+  "/scratch/project_2010912/ezel/salmon/data_files/simulated_loci/with_2_new_samples/simulated_methyl_1000per_chr.rds"
 )
